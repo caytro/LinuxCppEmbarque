@@ -1,0 +1,17 @@
+**/buildroot-work/dl/
+**/buildroot-work/package/
+**/buildroot-work/support/
+**/buildroot-work/configs/
+**/buildroot-work/utils/
+**/buildroot-work/toolchain/
+**/buildroot-work/arch/
+**/buildroot-work/output/
+**/buildroot-work/fs/
+**/buildroot-work/docs/
+**/buildroot-work/boot/
+**/buildroot-work/linux/
+**/buildroot-work/system/
+**/buildroot-work/board/
+
+**/build*
+

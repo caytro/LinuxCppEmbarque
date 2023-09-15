@@ -61,6 +61,9 @@ int main()
     printf("Retour : %d\n",ret);
     printf("Chunk : %s\n",chunk.memory);
 
+    json ex2;
+    ex2 = string(chunk.memory);
+   cout << "Ozone : " <<  ex2["stations"][0]["OZONE"] <<endl;
 
 
     free(chunk.memory);
