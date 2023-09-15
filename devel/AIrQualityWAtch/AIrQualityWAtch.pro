@@ -4,4 +4,12 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-        main.cpp
+        main.cpp \
+        mycurl.cpp \
+        myparsing.cpp
+
+HEADERS += \
+    mycurl.h \
+    myparsing.h
+
+LIBS += -L/usr/lib/x86_64-linux-gnu/ -lcurl
