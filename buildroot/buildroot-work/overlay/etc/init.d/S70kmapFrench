@@ -1,0 +1,7 @@
+#!/bin/sh
+echo -n "loadkmap azerty: "
+
+loadkmap < /etc/azerty.kmap
+
+echo OK
+

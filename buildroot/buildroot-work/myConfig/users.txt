@@ -1,0 +1,3 @@
+sylvain	1000	sylvain 1000	=password /home/sylvain /bin/sh - User
+test	1001	test 1001	=password /home/test /bin/sh - User2
+

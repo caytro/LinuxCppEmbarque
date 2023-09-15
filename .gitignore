@@ -13,5 +13,5 @@
 **/buildroot-work/system/
 **/buildroot-work/board/
 
-**/build*
+**/devel/build-*
 

@@ -1,0 +1,6 @@
+#!/bin/sh
+echo -n "Demarrage de crond: "
+
+
+/usr/sbin/crond
+echo "Ok"
