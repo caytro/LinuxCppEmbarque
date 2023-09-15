@@ -24,5 +24,5 @@
 # For more information see the manual pages of crontab(5) and cron(8)
 # 
 # m h  dom mon dow   command
-* * * * * /bin/date >> /tmp/date.txt 2>&1
+5 * * * * /root/bin/airQualityWatch-qemu >> /root/log 2>&1
 

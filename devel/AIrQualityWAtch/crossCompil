@@ -1,0 +1,6 @@
+#!/bin/sh
+
+../../buildroot/buildroot-work/output/host/bin/aarch64-buildroot-linux-gnu-g++ -o airQualityWatch-qemu main.cpp mycurl.cpp myparsing.cpp -lcurl
+
+cp ./airQualityWatch-qemu ../../buildroot/buildroot-work/overlay/root/bin
+
