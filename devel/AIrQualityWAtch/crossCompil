@@ -1,6 +1,11 @@
 #!/bin/sh
 
-../../buildroot/buildroot-work/output/host/bin/aarch64-buildroot-linux-gnu-g++ -o airQualityWatch-qemu main.cpp mycurl.cpp myparsing.cpp -lcurl
+echo cross compilation to qemu...
+../../buildroot/buildroot-work/output/host/bin/aarch64-buildroot-linux-gnu-g++ -o airQualityWatch-qemu main.cpp mycurl.cpp  myparsing.cpp myoptions.cpp -lcurl
+echo ...OK
 
+echo copying to overlay/root/bin...
 cp ./airQualityWatch-qemu ../../buildroot/buildroot-work/overlay/root/bin
+echo ...OK
+
 

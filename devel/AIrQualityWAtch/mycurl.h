@@ -5,6 +5,7 @@
 #include <curl/curl.h>
 #include <memory.h>
 #include <string>
+#include "myoptions.h"
 
 using namespace std;
 
@@ -82,9 +83,10 @@ public:
     void getData(char**);
     ///
     /// \brief exec
+    /// \param options
     /// \return
     ///
-    CURLcode exec();
+    CURLcode exec(myOptions *options);
 };
 
 #endif // MYCURL_H

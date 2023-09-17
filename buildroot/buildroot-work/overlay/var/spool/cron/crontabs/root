@@ -25,4 +25,6 @@
 # 
 # m h  dom mon dow   command
 5 * * * * /root/bin/airQualityWatch-qemu >> /root/log 2>&1
+6 * * * * chown -R sylvain:sylvain /home/sylvain
+
 

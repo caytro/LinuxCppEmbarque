@@ -1,34 +1,42 @@
 #include <iostream>
+#include <ctime>
 #include "mycurl.h"
 #include "myparsing.h"
+#include "myoptions.h"
 
 
 using namespace std;
 
-int main()
-{
-    myCurl *curl = new myCurl();
+int downloadDatas(char** data, myOptions* options){
+    myCurl *mc = new myCurl();
 
-
-    curl->setLatitude("43.560537");
-    curl->setLongitude("1.404690");
-    // chez moi :o)
-    curl->setApi_key("b83fcfd7137ff81d96b92a34d3488506b7d3976bda58077cab133e94efd0a240");
-    cout << "Go ! \n";
-    CURLcode ret=curl->exec();
+    CURLcode ret=mc->exec(options);
     if (ret!=0) {
         cout << "Code erreur : " << ret << endl;
         return ret;
     }
-    char **data = (char**) malloc(sizeof(char*));
-    curl->getData(data);
-    myParsing* parser = new myParsing();
-    parser->fromChar(*data);
-    string fileName="/tmp/AirQualityWatch-";
-    fileName.append(parser->getMyJson()["stations"][0]["updatedAt"]);
-    fileName.append(".json");
-    parser->toFile(fileName);
+    mc->getData(data);
+    return ret;
+}
 
+
+
+int main()
+{
+    char **data = (char**) malloc(sizeof(char*));
+    *data=nullptr;
+
+    myOptions* options = new(myOptions);
+    options->readFromFile("/home/sylvain/AIQWA.config");
+
+    time_t now = time(0);
+    cout << "*** " << endl << ctime(&now) << endl << "***" << endl;
+    downloadDatas(data, options);
+
+    myParsing* parser = new myParsing();
+    parser->fromChar(*data)->toFile(options);
+
+    free(data);
 
     return 0;
 }

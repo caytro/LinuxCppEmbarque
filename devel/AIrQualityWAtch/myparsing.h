@@ -5,6 +5,7 @@
 #include <fstream>
 #include <iomanip>
 #include <nlohmann/json.hpp>
+#include "myoptions.h"
 
 using namespace  std;
 using json = nlohmann::json;
@@ -23,7 +24,7 @@ public:
     myParsing* fromChar(char* str);
     string toString();
     myParsing* fromFile(string fileName);
-    int toFile(string filename);
+    int toFile(myOptions* options);
     };
 
 #endif // MYPARSING_H

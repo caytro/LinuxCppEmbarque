@@ -58,34 +58,29 @@ void myCurl::getData(char **data)
     strncpy(*data, chunk.memory, chunk.size+1);
 }
 
-CURLcode myCurl::exec()
+CURLcode myCurl::exec(myOptions* options)
 {
     chunk = {.memory = (char *)malloc(1),.size = 0};
     CURL *hnd = curl_easy_init();
 
-    curl_easy_setopt(hnd, CURLOPT_CUSTOMREQUEST, "GET");
+    cout << "Downloading datas from " << options->getFullUrl() << endl;
 
-    string curlopt_url=string("https://api.ambeedata.com/latest/by-lat-lng?lat=");
-    curlopt_url.append(latitude);
-    curlopt_url.append("&lng=");
-    curlopt_url.append(longitude);
-    curl_easy_setopt(hnd, CURLOPT_URL, curlopt_url.c_str());
+    // CURLOPT
+    curl_easy_setopt(hnd, CURLOPT_CUSTOMREQUEST, "GET");
+    curl_easy_setopt(hnd, CURLOPT_URL, options->getFullUrl().c_str());
     curl_easy_setopt(hnd, CURLOPT_SSL_VERIFYPEER, 0);
 
+    // headers
     struct curl_slist *headers = NULL;
-    string curlopt_apiKey ="x-api-key:";
-    curlopt_apiKey.append(api_key);
-    headers = curl_slist_append(headers, curlopt_apiKey.c_str());
+    headers = curl_slist_append(headers, options->getApiKeyHeader().c_str());
     headers = curl_slist_append(headers, "Content-type: application/json");
     curl_easy_setopt(hnd, CURLOPT_HTTPHEADER, headers);
 
+    // Callback
     curl_easy_setopt(hnd, CURLOPT_WRITEFUNCTION, mem_cb);
     curl_easy_setopt(hnd, CURLOPT_WRITEDATA, (void *)&chunk);
-    printf("Before : \n");
+
     CURLcode ret = curl_easy_perform(hnd);
-    cout << "Retour";
-    printf("Retour : %d\n",ret);
-    printf("Chunk : %s\n",chunk.memory);
 
     return ret;
 }
