@@ -35,6 +35,7 @@ int main()
 
     myParsing* parser = new myParsing();
     parser->fromChar(*data)->toFile(options);
+    parser->appendToDatas(options);
 
     free(data);
 

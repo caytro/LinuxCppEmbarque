@@ -36,10 +36,34 @@ int myParsing::toFile(myOptions *options)
     fileName.append(myJson["stations"][0]["updatedAt"]).append(".json");
     cout << "Saving datas to " << fileName << endl;
 
-    std::ofstream o(fileName);
+    ofstream o(fileName);
     o << setw(4) << myJson << endl;
     o.close();
     return 0;
+}
+
+
+void myParsing::appendToDatas(myOptions *options)
+{
+    string fileName = options->getFullDataFileName().append(".json");
+    ifstream f(fileName);
+    json previousJson = json::parse(f);
+    previousJson.push_back(myJson);
+    f.close();
+    ofstream o(fileName);
+    o << setw(4) << previousJson << endl;
+    o.close();
+}
+
+void myParsing::appendFileToDatas(string fileName)
+{
+    ifstream f(fileName);
+    json previousJson = json::parse(f);
+    previousJson.push_back(myJson);
+    f.close();
+    ofstream o(fileName);
+    o << setw(4) << previousJson << endl;
+    o.close();
 }
 
 myParsing::myParsing()

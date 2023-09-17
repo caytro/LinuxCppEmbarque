@@ -25,6 +25,8 @@ public:
     string toString();
     myParsing* fromFile(string fileName);
     int toFile(myOptions* options);
+    void appendToDatas(myOptions* options);
+    void appendFileToDatas(string fileName);
     };
 
 #endif // MYPARSING_H

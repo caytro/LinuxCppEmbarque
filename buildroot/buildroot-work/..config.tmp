@@ -1,5 +1,5 @@
 deps_config := \
-	/home/sylvain/Documents/Travail/ajc-akkodis/formation/LinuxEmbarque/buildroot/buildroot-work/output/.br2-external.in.menus \
+	/home/sylvain/Documents/Travail/ajc-akkodis/formation/LinuxEmbarque/Projet/buildroot/buildroot-work/output/.br2-external.in.menus \
 	Config.in.legacy \
 	package/zstd/Config.in.host \
 	package/zip/Config.in.host \
@@ -1244,7 +1244,7 @@ deps_config := \
 	package/lcms2/Config.in \
 	package/kmsxx/Config.in \
 	package/jpeg-turbo/Config.in.options \
-	/home/sylvain/Documents/Travail/ajc-akkodis/formation/LinuxEmbarque/buildroot/buildroot-work/output/.br2-external.in.jpeg \
+	/home/sylvain/Documents/Travail/ajc-akkodis/formation/LinuxEmbarque/Projet/buildroot/buildroot-work/output/.br2-external.in.jpeg \
 	package/jpeg/Config.in \
 	package/jbig2dec/Config.in \
 	package/jasper/Config.in \
@@ -1325,7 +1325,7 @@ deps_config := \
 	package/tinydtls/Config.in \
 	package/rhash/Config.in \
 	package/pkcs11-helper/Config.in \
-	/home/sylvain/Documents/Travail/ajc-akkodis/formation/LinuxEmbarque/buildroot/buildroot-work/output/.br2-external.in.openssl \
+	/home/sylvain/Documents/Travail/ajc-akkodis/formation/LinuxEmbarque/Projet/buildroot/buildroot-work/output/.br2-external.in.openssl \
 	package/libressl/Config.in \
 	package/libopenssl/Config.in \
 	package/openssl/Config.in \
@@ -3091,11 +3091,11 @@ deps_config := \
 	package/busybox/Config.in \
 	package/Config.in \
 	package/linux-tools/Config.in \
-	/home/sylvain/Documents/Travail/ajc-akkodis/formation/LinuxEmbarque/buildroot/buildroot-work/output/.br2-external.in.linux \
+	/home/sylvain/Documents/Travail/ajc-akkodis/formation/LinuxEmbarque/Projet/buildroot/buildroot-work/output/.br2-external.in.linux \
 	linux/Config.ext.in \
 	linux/Config.in \
-	/home/sylvain/Documents/Travail/ajc-akkodis/formation/LinuxEmbarque/buildroot/buildroot-work/output/.br2-external.in.init \
-	/home/sylvain/Documents/Travail/ajc-akkodis/formation/LinuxEmbarque/buildroot/buildroot-work/output/.br2-external.in.skeleton \
+	/home/sylvain/Documents/Travail/ajc-akkodis/formation/LinuxEmbarque/Projet/buildroot/buildroot-work/output/.br2-external.in.init \
+	/home/sylvain/Documents/Travail/ajc-akkodis/formation/LinuxEmbarque/Projet/buildroot/buildroot-work/output/.br2-external.in.skeleton \
 	system/Config.in \
 	package/gdb/Config.in.host \
 	toolchain/toolchain-external/toolchain-external-custom/Config.in.options \
@@ -3114,7 +3114,7 @@ deps_config := \
 	toolchain/toolchain-external/toolchain-external-codesourcery-aarch64/Config.in.options \
 	toolchain/toolchain-external/toolchain-external-linaro-aarch64/Config.in.options \
 	toolchain/toolchain-external/toolchain-external-arm-aarch64/Config.in.options \
-	/home/sylvain/Documents/Travail/ajc-akkodis/formation/LinuxEmbarque/buildroot/buildroot-work/output/.br2-external.in.toolchains \
+	/home/sylvain/Documents/Travail/ajc-akkodis/formation/LinuxEmbarque/Projet/buildroot/buildroot-work/output/.br2-external.in.toolchains \
 	toolchain/toolchain-external/toolchain-external-custom/Config.in \
 	toolchain/toolchain-external/toolchain-external-bootlin/Config.in \
 	toolchain/toolchain-external/toolchain-external-codesourcery-niosII/Config.in \
@@ -3156,29 +3156,29 @@ deps_config := \
 	arch/Config.in.arm \
 	arch/Config.in.arc \
 	arch/Config.in \
-	/home/sylvain/Documents/Travail/ajc-akkodis/formation/LinuxEmbarque/buildroot/buildroot-work/output/.br2-external.in.paths \
+	/home/sylvain/Documents/Travail/ajc-akkodis/formation/LinuxEmbarque/Projet/buildroot/buildroot-work/output/.br2-external.in.paths \
 	Config.in
 
-/home/sylvain/Documents/Travail/ajc-akkodis/formation/LinuxEmbarque/buildroot/buildroot-work/output/build/buildroot-config/auto.conf: \
+/home/sylvain/Documents/Travail/ajc-akkodis/formation/LinuxEmbarque/Projet/buildroot/buildroot-work/output/build/buildroot-config/auto.conf: \
 	$(deps_config)
 
 ifneq "$(SKIP_LEGACY)" ""
-/home/sylvain/Documents/Travail/ajc-akkodis/formation/LinuxEmbarque/buildroot/buildroot-work/output/build/buildroot-config/auto.conf: FORCE
+/home/sylvain/Documents/Travail/ajc-akkodis/formation/LinuxEmbarque/Projet/buildroot/buildroot-work/output/build/buildroot-config/auto.conf: FORCE
 endif
 ifneq "$(BR2_DEFCONFIG)" ""
-/home/sylvain/Documents/Travail/ajc-akkodis/formation/LinuxEmbarque/buildroot/buildroot-work/output/build/buildroot-config/auto.conf: FORCE
+/home/sylvain/Documents/Travail/ajc-akkodis/formation/LinuxEmbarque/Projet/buildroot/buildroot-work/output/build/buildroot-config/auto.conf: FORCE
 endif
 ifneq "$(HOST_GCC_VERSION)" "9"
-/home/sylvain/Documents/Travail/ajc-akkodis/formation/LinuxEmbarque/buildroot/buildroot-work/output/build/buildroot-config/auto.conf: FORCE
+/home/sylvain/Documents/Travail/ajc-akkodis/formation/LinuxEmbarque/Projet/buildroot/buildroot-work/output/build/buildroot-config/auto.conf: FORCE
 endif
-ifneq "$(BASE_DIR)" "/home/sylvain/Documents/Travail/ajc-akkodis/formation/LinuxEmbarque/buildroot/buildroot-work/output"
-/home/sylvain/Documents/Travail/ajc-akkodis/formation/LinuxEmbarque/buildroot/buildroot-work/output/build/buildroot-config/auto.conf: FORCE
+ifneq "$(BASE_DIR)" "/home/sylvain/Documents/Travail/ajc-akkodis/formation/LinuxEmbarque/Projet/buildroot/buildroot-work/output"
+/home/sylvain/Documents/Travail/ajc-akkodis/formation/LinuxEmbarque/Projet/buildroot/buildroot-work/output/build/buildroot-config/auto.conf: FORCE
 endif
 ifneq "$(HOSTARCH)" "x86_64"
-/home/sylvain/Documents/Travail/ajc-akkodis/formation/LinuxEmbarque/buildroot/buildroot-work/output/build/buildroot-config/auto.conf: FORCE
+/home/sylvain/Documents/Travail/ajc-akkodis/formation/LinuxEmbarque/Projet/buildroot/buildroot-work/output/build/buildroot-config/auto.conf: FORCE
 endif
-ifneq "$(BR2_VERSION_FULL)" "2023.08"
-/home/sylvain/Documents/Travail/ajc-akkodis/formation/LinuxEmbarque/buildroot/buildroot-work/output/build/buildroot-config/auto.conf: FORCE
+ifneq "$(BR2_VERSION_FULL)" "-g1adbc87-dirty"
+/home/sylvain/Documents/Travail/ajc-akkodis/formation/LinuxEmbarque/Projet/buildroot/buildroot-work/output/build/buildroot-config/auto.conf: FORCE
 endif
 
 $(deps_config): ;
