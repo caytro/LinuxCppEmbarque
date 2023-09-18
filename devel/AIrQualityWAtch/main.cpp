@@ -3,6 +3,7 @@
 #include "mycurl.h"
 #include "myparsing.h"
 #include "myoptions.h"
+#include "mygraphics.h"
 
 
 using namespace std;
@@ -31,12 +32,15 @@ int main()
 
     time_t now = time(0);
     cout << "*** " << endl << ctime(&now) << endl << "***" << endl;
-    downloadDatas(data, options);
+//    downloadDatas(data, options);
 
     myParsing* parser = new myParsing();
-    parser->fromChar(*data)->toFile(options);
-    parser->appendToDatas(options);
-
+//    parser->fromChar(*data)->toFile(options);
+//    parser->appendToDatas(options);
+    json datas = parser->fromDatasFile(options);
+    myGraphics *curveChart = new myGraphics();
+    curveChart->curveChart(datas, options);
+    free (*data);
     free(data);
 
     return 0;

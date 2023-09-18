@@ -12,6 +12,9 @@
 #include <gdfontl.h>
 #include <gdfontg.h>
 
+#include "myoptions.h"
+#include "myparsing.h"
+
 using namespace std;
 
 typedef struct {
@@ -32,7 +35,7 @@ class myGraphics
 {
     string titre;
     char ficOut[255];
-    int imageSize = 512;
+    int imageSize = 1024;
     Color *myPalette[12];
     int gdColors[12];
     gdFontPtr fonts[5];
@@ -40,14 +43,15 @@ class myGraphics
     vector<DataElement> *dataVector;
     void initPalette();
     void initFonts();
-
+    Color *createColor(string nom, int indice, int red, int green, int blue);
 
 
 public:
     myGraphics();
-    Color *createColor(string nom, int indice, int red, int green, int blue);
+
     vector<DataElement>* appendDataVector(string label="", float abscisse=0.0, float value=0.0);
     void pieChart();
+    void curveChart(json datas, myOptions *options);
 
 };
 

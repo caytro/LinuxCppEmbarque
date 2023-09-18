@@ -62,5 +62,42 @@ vector<DataElement>* myGraphics::appendDataVector(string label, float abscisse, 
 void myGraphics::pieChart()
 {
     // Titre
-        gdImageString(im, fonts[4],(imageSize - titre.length() * 10) /2,50 ,(unsigned char *)titre.c_str(),gdColors[1]);
+    gdImageString(im, fonts[4],(imageSize - titre.length() * 10) /2,50 ,(unsigned char *)titre.c_str(),gdColors[1]);
+}
+
+
+void myGraphics::curveChart(json datas, myOptions *options)
+{
+    dataVector = new vector<DataElement>();
+    int nbMeasures = datas.size();
+    for (int i=0;i < nbMeasures; i++){
+        DataElement newDataElement;
+        newDataElement.abscisse = static_cast<float>(i);
+        newDataElement.value = datas[i]["stations"][0]["OZONE"];
+        newDataElement.label=datas[i]["stations"][0]["updatedAt"];
+        dataVector->push_back(newDataElement);
+    }
+    float max = dataVector->begin()->value;
+    for ( DataElement de : *dataVector){
+        if (de.value > max) max = de.value;
+    }
+
+
+    gdImageLine(im, 10,imageSize -10, imageSize-10, imageSize-10, 1);
+    gdImageLine(im, 10,imageSize -10, 10, 10, 1);
+    FILE *out = fopen("/home/sylvain/datas/chart.png","wb");
+    DataElement current = dataVector->data()[0];
+    for (int i=1; i<nbMeasures; i++){
+        DataElement next = dataVector->data()[i];
+
+        gdImageLine(im,static_cast<int>(10 + (i-1)*((imageSize-20)/nbMeasures)),current.value, static_cast<int>(10+i*((imageSize-20)/nbMeasures)),next.value, 7);
+        current = next;
+    }
+    gdImagePng(im,out);
+    fclose(out);
+
+    char commande[300];
+    sprintf(commande, "display %s &","/home/sylvain/datas/chart.png");
+    system(commande);
+
 }

@@ -27,6 +27,7 @@ public:
     int toFile(myOptions* options);
     void appendToDatas(myOptions* options);
     void appendFileToDatas(string fileName);
+    const json fromDatasFile(myOptions *options);
     };
 
 #endif // MYPARSING_H

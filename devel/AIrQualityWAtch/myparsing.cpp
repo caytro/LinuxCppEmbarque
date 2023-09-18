@@ -66,6 +66,14 @@ void myParsing::appendFileToDatas(string fileName)
     o.close();
 }
 
+const json myParsing::fromDatasFile(myOptions* options)
+{
+    ifstream f(options->getFullDataFileName().append(".json"));
+    json datas=json::parse(f);
+    return datas;
+}
+
+
 myParsing::myParsing()
 {
 
