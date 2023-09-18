@@ -44,6 +44,11 @@ typedef struct {
 
 } CurveChartParams;
 
+typedef struct {
+    string title;
+    int colorIndex;
+} legendParams;
+
 class myGraphics
 {
     string titre;

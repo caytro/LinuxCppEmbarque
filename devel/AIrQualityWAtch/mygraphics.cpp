@@ -128,23 +128,30 @@ void myGraphics::curveChartInit(CurveChartParams params, string title)
     gdImageLine(im, xOrigin , yOrigin -chartHeight, xOrigin -5 , yOrigin -chartHeight +5,1);
     gdImageLine(im, xOrigin , yOrigin -chartHeight, xOrigin +5 , yOrigin -chartHeight +5,1);
 
-
-    gdImageLine(im, 0, params.titleHeight, imageSize, params.titleHeight, 4);
-    gdImageLine(im, imageSize - params.legendWidth, params.titleHeight, imageSize -params.legendWidth, imageSize,4);
-
-    int xTitle = (imageSize /2) - title.length() *5;
-    int yTitle = params.titleHeight *0.5;
-    gdImageString(im, fonts[4],xTitle,yTitle,(unsigned char *)title.c_str() ,1);
-
     int yRatio = - static_cast<int>((chartHeight/((params.globalMax-params.globalMin+1))));
     for (int i=10; i<params.globalMax; i+=10){
         gdImageLine(im, xOrigin-3, yOrigin + i * yRatio, xOrigin+3, yOrigin + i * yRatio ,1);
+        gdImageDashedLine(im, xOrigin +3, yOrigin + i * yRatio, xOrigin+chartWidth, yOrigin + i * yRatio , 9);
         gdImageString(im, fonts[1], params.marginLeft - 20, yOrigin + i * yRatio - 20, (unsigned char *)to_string(i).c_str(),1);
     }
     int xRatio = static_cast<int>(chartWidth/params.nbMeasures);
     for(int i=1; i<params.nbMeasures; i++){
         gdImageLine(im, xOrigin + i * xRatio, yOrigin-3,xOrigin + i * xRatio, yOrigin+3,1);
     }
+
+    // frame
+    gdImageLine(im, 0, params.titleHeight, imageSize, params.titleHeight, 4);
+    gdImageLine(im, imageSize - params.legendWidth, params.titleHeight, imageSize -params.legendWidth, imageSize,4);
+
+    // title
+    int xTitle = (imageSize /2) - title.length() *5;
+    int yTitle = params.titleHeight *0.5;
+    gdImageString(im, fonts[4],xTitle,yTitle,(unsigned char *)title.c_str() ,1);
+
+    // legend title
+    int xLegendTitle = (imageSize - params.legendWidth/2) - 60;
+    int yLegendTitle = params.titleHeight +20;
+    gdImageString(im, fonts[4],xLegendTitle,yLegendTitle,(unsigned char *)string("Legend").c_str() ,1);
 
 }
 
@@ -209,7 +216,7 @@ void myGraphics::curveChart(json datas, myOptions *options)
 
 
 
-    curveChartInit(params,"AIrQualityWAtch");
+    curveChartInit(params,"AIr Quality WAtch");
     params.colorIndex = 7;
     curveChartAddCurve(ozoneVector, params);
     params.colorIndex =6;
@@ -217,12 +224,12 @@ void myGraphics::curveChart(json datas, myOptions *options)
     params.colorIndex =3;
     curveChartAddCurve(PM25Vector, params);
 
-    FILE *out = fopen("/home/sylvain/datas/chart.png","wb");
+    FILE *out = fopen(options->getFullDataCurveChartFileName().c_str(),"wb");
     gdImagePng(im,out);
     fclose(out);
 
     char commande[300];
-    sprintf(commande, "display %s &","/home/sylvain/datas/chart.png");
+    sprintf(commande, "display %s &",options->getFullDataCurveChartFileName().c_str());
     system(commande);
 
 }

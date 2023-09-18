@@ -60,7 +60,7 @@ string myOptions::getFullDataCurveChartFileName()
 {
     //cout << "entering " << __func__ << "... " << endl;
     string path = options["chartPath"];
-    string baseName = options["curve.png"];
+    string baseName = options["curveChartFileName"];
     string fullName = path.append("/").append(baseName);
     return fullName;
 
