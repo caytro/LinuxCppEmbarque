@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <algorithm>
 
 #include <gd.h>
 #include <gdfontt.h>
@@ -31,6 +32,18 @@ typedef struct {
     float value;
 } DataElement;
 
+typedef struct {
+    int nbMeasures;
+    int colorIndex;
+    int titleHeight;
+    int marginLeft;
+    int marginBottom;
+    int legendWidth;
+    float globalMax;
+    float globalMin;
+
+} CurveChartParams;
+
 class myGraphics
 {
     string titre;
@@ -44,12 +57,20 @@ class myGraphics
     void initPalette();
     void initFonts();
     Color *createColor(string nom, int indice, int red, int green, int blue);
-
+    float getDataVectorMaxValue();
+    float getDataVectorMinValue();
+    float getDataVectorMaxValue(vector<DataElement> *v);
+    float getDataVectorMinValue(vector<DataElement> *v);
+    vector<DataElement>* appendDataVector(string label="", float abscisse=0.0, float value=0.0);
+    vector<DataElement>* appendDataVector(vector<DataElement> *v,string label="", float abscisse=0.0, float value=0.0);
+    void setVector(vector<DataElement>* v, json datas, string dataSet);
+    void curveChartInit(CurveChartParams params, string title);
+    void curveChartAddCurve(vector<DataElement> *v, CurveChartParams params);
 
 public:
     myGraphics();
 
-    vector<DataElement>* appendDataVector(string label="", float abscisse=0.0, float value=0.0);
+
     void pieChart();
     void curveChart(json datas, myOptions *options);
 
