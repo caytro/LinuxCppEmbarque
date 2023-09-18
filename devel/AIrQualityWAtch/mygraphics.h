@@ -33,6 +33,14 @@ typedef struct {
 } DataElement;
 
 typedef struct {
+    string title;
+    int colorIndex;
+} legendParams;
+
+typedef struct {
+    string title;
+    string description;
+    vector<legendParams> *legend;
     int nbMeasures;
     int colorIndex;
     int titleHeight;
@@ -44,10 +52,7 @@ typedef struct {
 
 } CurveChartParams;
 
-typedef struct {
-    string title;
-    int colorIndex;
-} legendParams;
+
 
 class myGraphics
 {
@@ -71,6 +76,8 @@ class myGraphics
     void setVector(vector<DataElement>* v, json datas, string dataSet);
     void curveChartInit(CurveChartParams params, string title);
     void curveChartAddCurve(vector<DataElement> *v, CurveChartParams params);
+    void curveChartSetLegend(CurveChartParams params);
+
 
 public:
     myGraphics();

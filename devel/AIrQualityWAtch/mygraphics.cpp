@@ -121,6 +121,7 @@ void myGraphics::curveChartInit(CurveChartParams params, string title)
     int chartHeight = imageSize - params.marginBottom - params.titleHeight -10;
     int chartWidth = imageSize - params.marginLeft - params.legendWidth -10;
     // Axes
+    gdImageSetThickness(im,1);
     gdImageLine(im, xOrigin, yOrigin, xOrigin + chartWidth, yOrigin , 1);
     gdImageLine(im, xOrigin, yOrigin, xOrigin , yOrigin - chartHeight, 1);
     gdImageLine(im, xOrigin + chartWidth, yOrigin , xOrigin + chartWidth -5, yOrigin-5 ,1);
@@ -140,9 +141,15 @@ void myGraphics::curveChartInit(CurveChartParams params, string title)
     }
 
     // frame
-    gdImageLine(im, 0, params.titleHeight, imageSize, params.titleHeight, 4);
-    gdImageLine(im, imageSize - params.legendWidth, params.titleHeight, imageSize -params.legendWidth, imageSize,4);
+    gdImageSetThickness(im,2);
+    gdImageLine(im, 0, 0, imageSize-1,0, 4);
+    gdImageLine(im, imageSize-1, 0, imageSize-1,imageSize-1, 4);
+    gdImageLine(im, 0, imageSize-1, imageSize-1,imageSize-1, 4);
+    gdImageLine(im, 0, 0, 0,imageSize-1, 4);
 
+    gdImageLine(im, 1, params.titleHeight, imageSize-1, params.titleHeight, 4);
+    gdImageLine(im, imageSize - params.legendWidth, params.titleHeight, imageSize -params.legendWidth, imageSize-1,4);
+    gdImageSetThickness(im,1);
     // title
     int xTitle = (imageSize /2) - title.length() *5;
     int yTitle = params.titleHeight *0.5;
@@ -173,6 +180,17 @@ void myGraphics::curveChartAddCurve(vector<DataElement> *v, CurveChartParams par
         int y2 = yOrigin+next.value*yRatio;
         gdImageLine(im,x1, y1,x2 , y2 , params.colorIndex);
         current = next;
+    }
+}
+
+void myGraphics::curveChartSetLegend(CurveChartParams params)
+{
+    int xOrigin = imageSize - params.legendWidth +10;
+    int yOrigin = params.titleHeight + 50;
+    int ligne = 1;
+    for ( legendParams l : *params.legend){
+        gdImageString(im, fonts[2], xOrigin, yOrigin + ligne*20, (unsigned char*)l.title.c_str(),l.colorIndex);
+        ligne++;
     }
 }
 
@@ -213,8 +231,19 @@ void myGraphics::curveChart(json datas, myOptions *options)
     params.marginLeft = 50;
     params.globalMin = globalMin;
     params.globalMax = globalMax;
+    params.title = "AIr Quality WAtch";
+    params.description = "Ozone, particules fines 10 et 25 um";
 
 
+    legendParams lp1, lp2, lp3;
+    lp1.title = "Ozone (ppb)";
+    lp1.colorIndex = 7;
+    lp2.title = "Particules fines < 10 um (ug / m3)";
+    lp2.colorIndex = 6;
+    lp3.title = "Particules fines < 25 um (ug / m3)";
+    lp3.colorIndex = 3;
+    params.legend = new vector<legendParams>({lp1,lp2,lp3});
+    curveChartSetLegend(params);
 
     curveChartInit(params,"AIr Quality WAtch");
     params.colorIndex = 7;

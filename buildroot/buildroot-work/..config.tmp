@@ -3177,7 +3177,7 @@ endif
 ifneq "$(HOSTARCH)" "x86_64"
 /home/sylvain/Documents/Travail/ajc-akkodis/formation/LinuxEmbarque/Projet/buildroot/buildroot-work/output/build/buildroot-config/auto.conf: FORCE
 endif
-ifneq "$(BR2_VERSION_FULL)" "-g42c195a-dirty"
+ifneq "$(BR2_VERSION_FULL)" "-g6e8c1d5-dirty"
 /home/sylvain/Documents/Travail/ajc-akkodis/formation/LinuxEmbarque/Projet/buildroot/buildroot-work/output/build/buildroot-config/auto.conf: FORCE
 endif
 

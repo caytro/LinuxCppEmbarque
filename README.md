@@ -1,6 +1,7 @@
 # LinuxCppEmbarque AIQWA
 Exploitation d'une API en CPP sur Linux embarqué
 
+## L'echelle du graphique s'adapte automatiquement au nombre d'échantilleons et à l'amplitude des datas
 ## Sources C++ dans /devel/AIrQualityWAtch
 ## exemples de datas json dans /datas
 ## exemples de graphiques dans /charts
