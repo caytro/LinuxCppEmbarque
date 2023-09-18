@@ -24,6 +24,7 @@ public:
     string getFullDataCurveChartFileName();
     string getFullHistoChartFileName();
     string getFullPieChartFileName();
+    bool isDisplay();
 };
 
 #endif // MYOPTIONS_H

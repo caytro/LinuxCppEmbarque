@@ -13,12 +13,12 @@ void myGraphics::initPalette()
 {
     myPalette[0] = createColor("bgColor",0,0,0,0);
     myPalette[1] = createColor("fgColor",1,255,255,255);
-    myPalette[2] = createColor("rouge",2,255,0,0);
-    myPalette[3] = createColor("vert",2,0,255,0);
-    myPalette[4] = createColor("bleu",2,0,0,255);
-    myPalette[5] = createColor("bleuClair",2,180,180,255);
-    myPalette[6] = createColor("jaune",2,200,200,0);
-    myPalette[7] = createColor("orange",2,255,128,0);
+    myPalette[2] = createColor("orange",2,255,210,0);
+    myPalette[3] = createColor("orange2",3,210,110,10);
+    myPalette[4] = createColor("bleu",2,120,120,255);
+    myPalette[5] = createColor("bleu2",2,60,60,200);
+    myPalette[6] = createColor("violet",2,255,80,255);
+    myPalette[7] = createColor("violet2",2,180,40,180);
     myPalette[8] = createColor("violet",2,255,0,255);
     myPalette[9] = createColor("lightGray",2,200,200,200);
     myPalette[10] = createColor("darkGray",2,30,30,30);
@@ -114,7 +114,7 @@ void myGraphics::setVector(vector<DataElement> *v, json datas, string dataSet)
 
 }
 
-void myGraphics::curveChartInit(CurveChartParams params, string title)
+void myGraphics::curveChartInit(CurveChartParams params)
 {
     int xOrigin = params.marginLeft;
     int yOrigin = imageSize - params.marginBottom;
@@ -150,10 +150,11 @@ void myGraphics::curveChartInit(CurveChartParams params, string title)
     gdImageLine(im, 1, params.titleHeight, imageSize-1, params.titleHeight, 4);
     gdImageLine(im, imageSize - params.legendWidth, params.titleHeight, imageSize -params.legendWidth, imageSize-1,4);
     gdImageSetThickness(im,1);
+
     // title
-    int xTitle = (imageSize /2) - title.length() *5;
+    int xTitle = (imageSize /2) - params.title.length() *5;
     int yTitle = params.titleHeight *0.5;
-    gdImageString(im, fonts[4],xTitle,yTitle,(unsigned char *)title.c_str() ,1);
+    gdImageString(im, fonts[4],xTitle,yTitle,(unsigned char *)params.title.c_str() ,1);
 
     // legend title
     int xLegendTitle = (imageSize - params.legendWidth/2) - 60;
@@ -172,6 +173,8 @@ void myGraphics::curveChartAddCurve(vector<DataElement> *v, CurveChartParams par
     int xRatio = static_cast<int>(chartWidth/params.nbMeasures);
     int yRatio = - static_cast<int>((chartHeight/((params.globalMax-params.globalMin+1))));
     DataElement current = v->data()[0];
+    gdImageSetAntiAliased(im, params.colorIndex);
+    gdImageSetThickness(im,2);
     for (int i=1; i<params.nbMeasures; i++){
         DataElement next = v->data()[i];
         int x1 = xOrigin+(i-1)*xRatio;
@@ -181,6 +184,23 @@ void myGraphics::curveChartAddCurve(vector<DataElement> *v, CurveChartParams par
         gdImageLine(im,x1, y1,x2 , y2 , params.colorIndex);
         current = next;
     }
+    int i=0;
+    for (DataElement de : *v){
+        gdPoint points[4];
+        int x0 = xOrigin+i*xRatio;
+        int y0 = yOrigin+de.value*yRatio;
+        points[0].x=x0-5;
+        points[0].y=y0;
+        points[1].x=x0;
+        points[1].y=y0-5;
+        points[2].x=x0+5;
+        points[2].y=y0;
+        points[3].x=x0;
+        points[3].y=y0+5;
+        gdImageFilledPolygon(im,points, 4, params.colorIndex+1);
+        i++;
+    }
+    gdImageSetThickness(im,1);
 }
 
 void myGraphics::curveChartSetLegend(CurveChartParams params)
@@ -203,24 +223,20 @@ void myGraphics::pieChart()
 
 void myGraphics::curveChart(json datas, myOptions *options)
 {
-    cout << "1" <<endl;
     vector<DataElement>* ozoneVector = new vector<DataElement>();
     setVector(ozoneVector, datas, "OZONE");
     vector<DataElement>* PM10Vector = new vector<DataElement>();
     setVector(PM10Vector, datas, "PM10");
     vector<DataElement>* PM25Vector = new vector<DataElement>();
     setVector(PM25Vector, datas, "PM25");
-    cout << "2" <<endl;
 
     vector<float> vMax={getDataVectorMaxValue(ozoneVector),getDataVectorMaxValue(PM10Vector),getDataVectorMaxValue(PM25Vector)};
     vector<float> vMin={getDataVectorMinValue(ozoneVector),getDataVectorMinValue(PM10Vector),getDataVectorMinValue(PM25Vector)};
-    cout << "3" <<endl;
     float globalMax = *max_element(vMax.begin(),vMax.end());
     //float globalMin = *min_element(vMin.begin(),vMin.end());
     float globalMin = 0.0;
     int nbMeasures = datas.size();
 
-    cout <<"Max : "<< globalMax << " Min : " << globalMin << endl;
 
     CurveChartParams params;
 
@@ -237,28 +253,30 @@ void myGraphics::curveChart(json datas, myOptions *options)
 
     legendParams lp1, lp2, lp3;
     lp1.title = "Ozone (ppb)";
-    lp1.colorIndex = 7;
+    lp1.colorIndex = 2;
     lp2.title = "Particules fines < 10 um (ug / m3)";
-    lp2.colorIndex = 6;
+    lp2.colorIndex = 4;
     lp3.title = "Particules fines < 25 um (ug / m3)";
-    lp3.colorIndex = 3;
+    lp3.colorIndex = 6;
     params.legend = new vector<legendParams>({lp1,lp2,lp3});
     curveChartSetLegend(params);
 
-    curveChartInit(params,"AIr Quality WAtch");
-    params.colorIndex = 7;
+    curveChartInit(params);
+    params.colorIndex = 2;
     curveChartAddCurve(ozoneVector, params);
-    params.colorIndex =6;
+    params.colorIndex =4;
     curveChartAddCurve(PM10Vector, params);
-    params.colorIndex =3;
+    params.colorIndex =6;
     curveChartAddCurve(PM25Vector, params);
 
     FILE *out = fopen(options->getFullDataCurveChartFileName().c_str(),"wb");
     gdImagePng(im,out);
     fclose(out);
-
-    char commande[300];
-    sprintf(commande, "display %s &",options->getFullDataCurveChartFileName().c_str());
-    system(commande);
+    if(options->isDisplay())
+    {
+        char commande[300];
+        sprintf(commande, "display %s &",options->getFullDataCurveChartFileName().c_str());
+        system(commande);
+    }
 
 }

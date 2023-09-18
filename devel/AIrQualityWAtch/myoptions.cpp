@@ -84,3 +84,8 @@ string myOptions::getFullPieChartFileName()
     return fullName;
 }
 
+bool myOptions::isDisplay()
+{
+    return options["display"];
+}
+

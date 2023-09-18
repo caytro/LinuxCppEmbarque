@@ -74,7 +74,7 @@ class myGraphics
     vector<DataElement>* appendDataVector(string label="", float abscisse=0.0, float value=0.0);
     vector<DataElement>* appendDataVector(vector<DataElement> *v,string label="", float abscisse=0.0, float value=0.0);
     void setVector(vector<DataElement>* v, json datas, string dataSet);
-    void curveChartInit(CurveChartParams params, string title);
+    void curveChartInit(CurveChartParams params);
     void curveChartAddCurve(vector<DataElement> *v, CurveChartParams params);
     void curveChartSetLegend(CurveChartParams params);
 
