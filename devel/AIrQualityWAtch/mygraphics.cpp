@@ -167,8 +167,14 @@ void myGraphics::curveChartInit(CurveChartParams params)
 
     // title
     int xTitle = (imageSize /2) - params.title.length() *5;
-    int yTitle = params.titleHeight *0.5;
+    int yTitle = 20;
     gdImageString(im, fonts[4],xTitle,yTitle,(unsigned char *)params.title.c_str() ,1);
+
+    //description
+    int xDescription = (imageSize /2) - params.description.length() *5;
+    int yDescription = 50;
+    gdImageString(im, fonts[3],xDescription,yDescription,(unsigned char *)params.description.c_str() ,1);
+
 
     // legend title
     int xLegendTitle = (imageSize - params.legendWidth/2) - 60;
@@ -188,11 +194,35 @@ void myGraphics::curveChartAddCurves(CurveChartParams params)
     int chartWidth = imageSize - params.marginLeft - params.legendWidth -10;
     int xRatio = static_cast<int>(chartWidth/params.nbMeasures);
     int yRatio = - static_cast<int>((chartHeight/((params.globalMax-params.globalMin+1))));
-
+    int count = 0;
     for (dataSet ds : *params.dataSets){
         vector<DataElement>* v=ds.dataElements;
         DataElement current = v->data()[0];
 
+        //diamonds
+        int i=0;
+        for (DataElement de : *v){
+            gdPoint points[4];
+            int x0 = xOrigin+i*xRatio;
+            int y0 = yOrigin+de.value*yRatio;
+            if (count % 3 == 0)
+            {
+                points[0].x=x0-5;
+                points[0].y=y0;
+                points[1].x=x0;
+                points[1].y=y0-5;
+                points[2].x=x0+5;
+                points[2].y=y0;
+                points[3].x=x0;
+                points[3].y=y0+5;
+                gdImageFilledPolygon(im,points, 4, ds.colorIndex+1);
+            } else if (count % 3 == 1){
+                gdImageFilledEllipse(im,x0, y0, 7, 7, ds.colorIndex+1);
+            } else if (count % 3 == 2){
+                gdImageFilledRectangle(im, x0-3, y0-3, x0+3, y0+3, ds.colorIndex+1);
+            }
+            i++;
+        }
 
         // curves
         gdImageSetAntiAliased(im, ds.colorIndex);
@@ -207,23 +237,7 @@ void myGraphics::curveChartAddCurves(CurveChartParams params)
             current = next;
         }
 
-        //diamonds
-        int i=0;
-        for (DataElement de : *v){
-            gdPoint points[4];
-            int x0 = xOrigin+i*xRatio;
-            int y0 = yOrigin+de.value*yRatio;
-            points[0].x=x0-5;
-            points[0].y=y0;
-            points[1].x=x0;
-            points[1].y=y0-5;
-            points[2].x=x0+5;
-            points[2].y=y0;
-            points[3].x=x0;
-            points[3].y=y0+5;
-            gdImageFilledPolygon(im,points, 4, ds.colorIndex+1);
-            i++;
-        }
+        count++;
     }
 
     gdImageSetThickness(im,1);
@@ -301,7 +315,10 @@ void myGraphics::curveChart(json datas, myOptions *options)
     params.globalMin = globalMin;
     params.globalMax = globalMax;
     params.title = "AIr Quality WAtch";
-    params.description = "Ozone, particules fines 10 et 25 um";
+    params.description = string("Location : ").append(datas[0]["stations"][0]["city"]);
+    params.description.append(" ").append(datas[0]["stations"][0]["postalCode"]);
+    params.description.append(" ").append(datas[0]["stations"][0]["placeName"]);
+    params.description.append(" (").append(datas[0]["stations"][0]["countryCode"]).append(")");
 
     curveChartInit(params);
 
