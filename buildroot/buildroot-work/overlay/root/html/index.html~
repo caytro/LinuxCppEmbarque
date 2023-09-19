@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bienvue sur qemu:AIrQualityWAtch</title>
+	</head>
+	<body>
+		<h1>AIrQualityWAtch</h1>
+		<p>Projet C++ Linux embarqué</p>
+		<h2>Latest Chart - Hourly updated</h2>
+		<img src="charts/curve.png">
+	</body>
+</html>

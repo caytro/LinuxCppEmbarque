@@ -1,0 +1,6 @@
+#!/bin/sh
+
+echo -n "Démarrage de httpd sur le port 80..."
+httpd -p 80 -h /root/html
+echo "OK"
+
