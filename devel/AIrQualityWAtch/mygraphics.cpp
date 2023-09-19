@@ -1,5 +1,6 @@
 #include "mygraphics.h"
 
+
 myGraphics::myGraphics()
 {
     im = gdImageCreate(imageSize,imageSize);
@@ -129,16 +130,29 @@ void myGraphics::curveChartInit(CurveChartParams params)
     gdImageLine(im, xOrigin , yOrigin -chartHeight, xOrigin -5 , yOrigin -chartHeight +5,1);
     gdImageLine(im, xOrigin , yOrigin -chartHeight, xOrigin +5 , yOrigin -chartHeight +5,1);
 
+    // graduations ordonnées
     int yRatio = - static_cast<int>((chartHeight/((params.globalMax-params.globalMin+1))));
     for (int i=10; i<params.globalMax; i+=10){
         gdImageLine(im, xOrigin-3, yOrigin + i * yRatio, xOrigin+3, yOrigin + i * yRatio ,1);
         gdImageDashedLine(im, xOrigin +3, yOrigin + i * yRatio, xOrigin+chartWidth, yOrigin + i * yRatio , 9);
         gdImageString(im, fonts[1], params.marginLeft - 20, yOrigin + i * yRatio - 20, (unsigned char *)to_string(i).c_str(),1);
     }
+
+    // graduations abscisses
     int xRatio = static_cast<int>(chartWidth/params.nbMeasures);
     for(int i=1; i<params.nbMeasures; i++){
         gdImageLine(im, xOrigin + i * xRatio, yOrigin-3,xOrigin + i * xRatio, yOrigin+3,1);
+        updatedAt date = myRegex::ambeeDataGetDateTime( params.dataSets->data()[0].dataElements->data()[i].label);
+        if (date.hour ==0){
+
+            string s= myRegex::toFormatDDMMYY(params.dataSets->data()[0].dataElements->data()[i].label);
+            gdImageStringUp(im,fonts[1],xOrigin + i * xRatio-5, yOrigin + 60, (unsigned char*)s.c_str(),1);
+        }
+
     }
+    int i=params.nbMeasures-1;
+    string s= myRegex::toFormatHHMM(params.dataSets->data()[0].dataElements->data()[i].label);
+    gdImageStringUp(im,fonts[1],xOrigin + i * xRatio-5, yOrigin + 40, (unsigned char*)s.c_str(),1);
 
     // frame
     gdImageSetThickness(im,2);
@@ -163,7 +177,9 @@ void myGraphics::curveChartInit(CurveChartParams params)
 
 }
 
-void myGraphics::curveChartAddCurve(vector<DataElement> *v, CurveChartParams params)
+
+
+void myGraphics::curveChartAddCurves(CurveChartParams params)
 {
 
     int xOrigin = params.marginLeft;
@@ -172,34 +188,44 @@ void myGraphics::curveChartAddCurve(vector<DataElement> *v, CurveChartParams par
     int chartWidth = imageSize - params.marginLeft - params.legendWidth -10;
     int xRatio = static_cast<int>(chartWidth/params.nbMeasures);
     int yRatio = - static_cast<int>((chartHeight/((params.globalMax-params.globalMin+1))));
-    DataElement current = v->data()[0];
-    gdImageSetAntiAliased(im, params.colorIndex);
-    gdImageSetThickness(im,2);
-    for (int i=1; i<params.nbMeasures; i++){
-        DataElement next = v->data()[i];
-        int x1 = xOrigin+(i-1)*xRatio;
-        int y1 = yOrigin+current.value*yRatio;
-        int x2 = xOrigin+i*xRatio;
-        int y2 = yOrigin+next.value*yRatio;
-        gdImageLine(im,x1, y1,x2 , y2 , params.colorIndex);
-        current = next;
+
+    for (dataSet ds : *params.dataSets){
+        vector<DataElement>* v=ds.dataElements;
+        DataElement current = v->data()[0];
+
+
+        // curves
+        gdImageSetAntiAliased(im, ds.colorIndex);
+        gdImageSetThickness(im,2);
+        for (int i=1; i<params.nbMeasures; i++){
+            DataElement next = v->data()[i];
+            int x1 = xOrigin+(i-1)*xRatio;
+            int y1 = yOrigin+current.value*yRatio;
+            int x2 = xOrigin+i*xRatio;
+            int y2 = yOrigin+next.value*yRatio;
+            gdImageLine(im,x1, y1,x2 , y2 , ds.colorIndex);
+            current = next;
+        }
+
+        //diamonds
+        int i=0;
+        for (DataElement de : *v){
+            gdPoint points[4];
+            int x0 = xOrigin+i*xRatio;
+            int y0 = yOrigin+de.value*yRatio;
+            points[0].x=x0-5;
+            points[0].y=y0;
+            points[1].x=x0;
+            points[1].y=y0-5;
+            points[2].x=x0+5;
+            points[2].y=y0;
+            points[3].x=x0;
+            points[3].y=y0+5;
+            gdImageFilledPolygon(im,points, 4, ds.colorIndex+1);
+            i++;
+        }
     }
-    int i=0;
-    for (DataElement de : *v){
-        gdPoint points[4];
-        int x0 = xOrigin+i*xRatio;
-        int y0 = yOrigin+de.value*yRatio;
-        points[0].x=x0-5;
-        points[0].y=y0;
-        points[1].x=x0;
-        points[1].y=y0-5;
-        points[2].x=x0+5;
-        points[2].y=y0;
-        points[3].x=x0;
-        points[3].y=y0+5;
-        gdImageFilledPolygon(im,points, 4, params.colorIndex+1);
-        i++;
-    }
+
     gdImageSetThickness(im,1);
 }
 
@@ -208,11 +234,18 @@ void myGraphics::curveChartSetLegend(CurveChartParams params)
     int xOrigin = imageSize - params.legendWidth +10;
     int yOrigin = params.titleHeight + 50;
     int ligne = 1;
-    for ( legendParams l : *params.legend){
-        gdImageString(im, fonts[2], xOrigin, yOrigin + ligne*20, (unsigned char*)l.title.c_str(),l.colorIndex);
+    for ( dataSet ds : *params.dataSets){
+
+        gdImageString(im, fonts[2], xOrigin, yOrigin + ligne*20, (unsigned char*)ds.legend.c_str(),ds.colorIndex);
         ligne++;
     }
 }
+
+//void myGraphics::setAbscisses(CurveChartParams* params,int dataSetIndex)
+//{
+//    vector<DataElement> *v = params->dataSets->data()[dataSetIndex].dataElements;
+//    int i=0;
+//}
 
 void myGraphics::pieChart()
 {
@@ -230,15 +263,35 @@ void myGraphics::curveChart(json datas, myOptions *options)
     vector<DataElement>* PM25Vector = new vector<DataElement>();
     setVector(PM25Vector, datas, "PM25");
 
-    vector<float> vMax={getDataVectorMaxValue(ozoneVector),getDataVectorMaxValue(PM10Vector),getDataVectorMaxValue(PM25Vector)};
-    vector<float> vMin={getDataVectorMinValue(ozoneVector),getDataVectorMinValue(PM10Vector),getDataVectorMinValue(PM25Vector)};
-    float globalMax = *max_element(vMax.begin(),vMax.end());
-    //float globalMin = *min_element(vMin.begin(),vMin.end());
-    float globalMin = 0.0;
-    int nbMeasures = datas.size();
-
-
     CurveChartParams params;
+    params.dataSets = new vector<dataSet>();
+
+    dataSet* ozoneDataSet = new dataSet();
+    ozoneDataSet->colorIndex = 2;
+    ozoneDataSet->legend = string("Ozone (ppb)");
+    ozoneDataSet->dataElements = ozoneVector;
+    params.dataSets->push_back(*ozoneDataSet);
+
+    dataSet* PM10DataSet = new dataSet();
+    PM10DataSet->colorIndex = 4;
+    PM10DataSet->legend = string("Particules fines < 10 um (ug / m3)");
+    PM10DataSet->dataElements = PM10Vector;
+    params.dataSets->push_back(*PM10DataSet);
+
+    dataSet* PM25DataSet = new dataSet();
+    PM25DataSet->colorIndex = 6;
+    PM25DataSet->legend = string("Particules fines < 25 um (ug / m3)");
+    PM25DataSet->dataElements = PM25Vector;
+    params.dataSets->push_back(*PM25DataSet);
+
+    float globalMax = 0.0; // Dans ce cas, toutes les valeurs sont >0, sinon, prendre le max du premier dataset
+    for (dataSet ds : *params.dataSets){
+            float max = getDataVectorMaxValue(ds.dataElements);
+            if(max > globalMax) globalMax = max;
+    }
+
+    float globalMin = 0.0;  // Dans ce cas, toutes les valeurs sont >0, sinon, faire une recherche de globalMin
+    int nbMeasures = datas.size();
 
     params.nbMeasures = nbMeasures;
     params.legendWidth = 300;
@@ -250,24 +303,11 @@ void myGraphics::curveChart(json datas, myOptions *options)
     params.title = "AIr Quality WAtch";
     params.description = "Ozone, particules fines 10 et 25 um";
 
+    curveChartInit(params);
 
-    legendParams lp1, lp2, lp3;
-    lp1.title = "Ozone (ppb)";
-    lp1.colorIndex = 2;
-    lp2.title = "Particules fines < 10 um (ug / m3)";
-    lp2.colorIndex = 4;
-    lp3.title = "Particules fines < 25 um (ug / m3)";
-    lp3.colorIndex = 6;
-    params.legend = new vector<legendParams>({lp1,lp2,lp3});
     curveChartSetLegend(params);
 
-    curveChartInit(params);
-    params.colorIndex = 2;
-    curveChartAddCurve(ozoneVector, params);
-    params.colorIndex =4;
-    curveChartAddCurve(PM10Vector, params);
-    params.colorIndex =6;
-    curveChartAddCurve(PM25Vector, params);
+    curveChartAddCurves(params);
 
     FILE *out = fopen(options->getFullDataCurveChartFileName().c_str(),"wb");
     gdImagePng(im,out);

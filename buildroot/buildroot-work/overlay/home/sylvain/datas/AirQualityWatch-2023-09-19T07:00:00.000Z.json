@@ -1,0 +1,28 @@
+{
+    "message": "success",
+    "stations": [
+        {
+            "AQI": 20,
+            "CO": 0.244,
+            "NO2": 11.997,
+            "OZONE": 21.885,
+            "PM10": 17.437,
+            "PM25": 3.8,
+            "SO2": 0.599,
+            "aqiInfo": {
+                "category": "Good",
+                "concentration": 21.885,
+                "pollutant": "O3"
+            },
+            "city": "Toulouse",
+            "countryCode": "FR",
+            "division": "Haute-Garonne",
+            "lat": 43.556374,
+            "lng": 1.403964,
+            "placeName": "Avenue de Larrieu",
+            "postalCode": "31100",
+            "state": "Occitanie",
+            "updatedAt": "2023-09-19T07:00:00.000Z"
+        }
+    ]
+}

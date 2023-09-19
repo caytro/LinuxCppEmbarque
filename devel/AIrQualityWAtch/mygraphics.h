@@ -5,6 +5,7 @@
 #include <string>
 #include <vector>
 #include <algorithm>
+#include <regex>
 
 #include <gd.h>
 #include <gdfontt.h>
@@ -15,6 +16,7 @@
 
 #include "myoptions.h"
 #include "myparsing.h"
+#include "myregex.h"
 
 using namespace std;
 
@@ -30,17 +32,22 @@ typedef struct {
     string label;
     float abscisse;
     float value;
+
 } DataElement;
 
-typedef struct {
-    string title;
+
+
+
+typedef struct{
+    vector<DataElement>* dataElements;
     int colorIndex;
-} legendParams;
+    string legend;
+} dataSet;
 
 typedef struct {
     string title;
     string description;
-    vector<legendParams> *legend;
+    vector<dataSet> *dataSets;
     int nbMeasures;
     int colorIndex;
     int titleHeight;
@@ -75,8 +82,10 @@ class myGraphics
     vector<DataElement>* appendDataVector(vector<DataElement> *v,string label="", float abscisse=0.0, float value=0.0);
     void setVector(vector<DataElement>* v, json datas, string dataSet);
     void curveChartInit(CurveChartParams params);
-    void curveChartAddCurve(vector<DataElement> *v, CurveChartParams params);
+    void curveChartAddCurves(CurveChartParams params);
     void curveChartSetLegend(CurveChartParams params);
+    void setAbscisses(CurveChartParams *params, int dataSetIndex=0);
+
 
 
 public:

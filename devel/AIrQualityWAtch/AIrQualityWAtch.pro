@@ -8,12 +8,14 @@ SOURCES += \
         mycurl.cpp \
         mygraphics.cpp \
         myoptions.cpp \
-        myparsing.cpp
+        myparsing.cpp \
+        myregex.cpp
 
 HEADERS += \
     mycurl.h \
     mygraphics.h \
     myoptions.h \
-    myparsing.h
+    myparsing.h \
+    myregex.h
 
 LIBS += -L/usr/lib/x86_64-linux-gnu/ -lcurl -lgd
