@@ -7,6 +7,9 @@
 #include "myregex.h"
 
 
+
+ // A Compléter !!!
+
 using namespace std;
 
 int downloadDatas(char** data, myOptions* options){
@@ -25,6 +28,8 @@ int downloadDatas(char** data, myOptions* options){
 
 int main()
 {
+    // https://api.ambeedata.com/history/by-lat-lng?lat=12&lng=73&from=2020-07-13 12:16:44&to=2020-07-18 08:16:44
+
     char **data = (char**) malloc(sizeof(char*));
     *data=nullptr;
 
@@ -41,8 +46,6 @@ int main()
     json datas = parser->fromDatasFile(options);
     myGraphics *curveChart = new myGraphics();
     curveChart->curveChart(datas, options);
-    myGraphics *pieChart = new myGraphics();
-    pieChart->pieChart(datas, options);
     free (*data);
     free(data);
 

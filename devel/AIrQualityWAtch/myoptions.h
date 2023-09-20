@@ -21,7 +21,7 @@ public:
     string getFilesOwner();
     string getFullLogFileName();
     string getFullDataFileName();
-    string getFullDataCurveChartFileName();
+    string getFullCurveChartFileName();
     string getFullHistoChartFileName();
     string getFullPieChartFileName();
     bool isDisplay();

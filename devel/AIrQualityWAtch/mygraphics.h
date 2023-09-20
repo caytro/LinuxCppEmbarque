@@ -82,17 +82,19 @@ class myGraphics
     vector<DataElement>* appendDataVector(vector<DataElement> *v,string label="", float abscisse=0.0, float value=0.0);
     void setVector(vector<DataElement>* v, json datas, string dataSet);
     void curveChartInit(CurveChartParams params);
+    void pieChartInit(CurveChartParams params);
+    void pieChartDraw(CurveChartParams params);
+    double calcRatioPourcent(CurveChartParams params);
     void curveChartAddCurves(CurveChartParams params);
     void curveChartSetLegend(CurveChartParams params);
     void setAbscisses(CurveChartParams *params, int dataSetIndex=0);
-
 
 
 public:
     myGraphics();
 
 
-    void pieChart();
+    void pieChart(json datas, myOptions *options);
     void curveChart(json datas, myOptions *options);
 
 };

@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Bienvue sur qemu:AIrQualityWAtch</title>
+	<head> 
+		 <link rel="stylesheet" href="styles.css">
+		<meta charset="UTF-8">
+		<title>Bienvenue sur qemu:AIrQualityWAtch</title>
 	</head>
 	<body>
 		<h1>AIrQualityWAtch</h1>
 		<p>Projet C++ Linux embarqué</p>
-		<h2>Latest Chart - Hourly updated</h2>
-		<img src="charts/curve.png">
+		<p>Data source : <a href="https://docs.ambeedata.com/"> Ambeedata.com</a></p>
+		<h2>Hourly updated concentration of main pollutants</h2>
+		<a href = "charts/curve.png">
+			<img src="charts/curve.png" width="256" height="256">
+		</a>
+		<h2>Latest main pollutants concentration dispatching</h2>
+		<a href = "charts/pie.png">
+			<img src="charts/pie.png" width="256" height="256">
+		</a>
 	</body>
 </html>

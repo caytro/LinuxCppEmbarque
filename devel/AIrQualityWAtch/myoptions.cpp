@@ -56,7 +56,7 @@ string myOptions::getFullDataFileName()
     return fullName;
 }
 
-string myOptions::getFullDataCurveChartFileName()
+string myOptions::getFullCurveChartFileName()
 {
     //cout << "entering " << __func__ << "... " << endl;
     string path = options["chartPath"];
@@ -79,7 +79,7 @@ string myOptions::getFullPieChartFileName()
 {
     //cout << "entering " << __func__ << "... " << endl;
     string path = options["chartPath"];
-    string baseName = options["pie.png"];
+    string baseName = options["pieChartFileName"];
     string fullName = path.append("/").append(baseName);
     return fullName;
 }

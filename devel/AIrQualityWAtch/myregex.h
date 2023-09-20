@@ -24,7 +24,7 @@ public:
     static updatedAt ambeeDataGetDateTime(string updatedAtField);
     static string toFormatDDMMYY(string updatedAtField);
     static string toFormatHHMM(string updatedAtField);
-
+    static string toFormatDDMMYYHHMM(string updatedAtField);
 
 };
 

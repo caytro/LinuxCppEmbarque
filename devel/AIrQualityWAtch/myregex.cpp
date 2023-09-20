@@ -42,3 +42,14 @@ string myRegex::toFormatHHMM(string updatedAtField)
     string response = m.format("$5:$6");
     return response;
 }
+
+string myRegex::toFormatDDMMYYHHMM(string updatedAtField)
+{
+    regex re("([0-9]{2})([0-9]{2})-([0-9]{2})-([0-9]{2})T([0-9]{2}):([0-9]{2}):([0-9]{2}).*+");
+    cmatch m;
+    regex_match(updatedAtField.c_str(),m, re );
+    string response = m.format("$4/$3/$2 $5:$6");
+    return response;
+}
+
+

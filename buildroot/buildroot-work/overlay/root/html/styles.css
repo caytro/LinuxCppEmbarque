@@ -1,0 +1,21 @@
+/* styles.css */
+
+body{
+	padding : 0px;
+	background-color:darkorange;
+
+}
+div#main{
+	background-color: beige;
+	margin:0% 20% ;
+	padding : 3em;
+	border-radius: 10px;
+}
+img{
+	margin-left:3em;
+}
+
+h1{
+	width: 100%;
+	text-align: center;
+}
