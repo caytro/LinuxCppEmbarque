@@ -27,3 +27,7 @@ Exploitation d'une API en CPP sur Linux embarqué
 ## Ebauche de rapport dans Procedure.pdf
 ## exemples de datas json dans /datas
 ## exemples de graphiques dans /charts
+![exemple de graphique généré](charts/curve.png)
+![exemple de graphique généré](charts/pie.png)
+
+

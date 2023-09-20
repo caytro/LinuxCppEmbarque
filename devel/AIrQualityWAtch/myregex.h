@@ -17,13 +17,43 @@ typedef struct {
     int second;
 } updatedAt;
 
+///
+/// \brief The myRegex class
+///
 class myRegex
 {
 public:
+    ///
+    /// \brief myRegex
+    ///
     myRegex();
+
+    ///
+    /// \brief ambeeDataGetDateTime
+    /// \param updatedAtField
+    /// \return
+    ///
     static updatedAt ambeeDataGetDateTime(string updatedAtField);
+
+    ///
+    /// \brief toFormatDDMMYY
+    /// \param updatedAtField
+    /// \return
+    ///
     static string toFormatDDMMYY(string updatedAtField);
+
+    ///
+    /// \brief toFormatHHMM
+    /// \param updatedAtField
+    /// \return
+    ///
     static string toFormatHHMM(string updatedAtField);
+
+    ///
+    /// \brief toFormatDDMMYYHHMM
+    /// \param updatedAtField
+    /// \return
+    ///
     static string toFormatDDMMYYHHMM(string updatedAtField);
 
 };

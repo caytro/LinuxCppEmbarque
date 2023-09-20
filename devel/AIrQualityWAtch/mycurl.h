@@ -14,6 +14,10 @@ struct response {
   size_t size;
 };
 
+///
+/// \brief The myCurl class
+/// \abstract Manage API access
+///
 class myCurl
 {
     CURL *hnd;
@@ -79,11 +83,12 @@ public:
     size_t getResponseSize();
     ///
     /// \brief getData
+    /// \param char** response
     ///
-    void getData(char**);
+    void getData(char** response);
     ///
     /// \brief exec
-    /// \param options
+    /// \param myOption options
     /// \return
     ///
     CURLcode exec(myOptions *options);
