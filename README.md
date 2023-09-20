@@ -2,6 +2,11 @@
 Exploitation d'une API en CPP sur Linux embarqué
 
 ## Projet basé sur buildroot qemu
+
+## Documentation
+
+* Documentation au format html dans documentation/html/index.html 
+
 ## Sources
 
 * Sources C++ dans /devel/AIrQualityWAtch
