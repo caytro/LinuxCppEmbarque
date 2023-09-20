@@ -2,6 +2,7 @@
 Exploitation d'une API en CPP sur Linux embarqué
 
 ## Projet basé sur buildroot qemu
+## Utilisation des données fournies par api.ambeedata.com
 
 ## Documentation
 
