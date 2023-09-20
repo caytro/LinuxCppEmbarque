@@ -5,7 +5,7 @@ Exploitation d'une API en CPP sur Linux embarqué
 
 ## Documentation
 
-* Documentation au format html dans file://documentation/html/index.html 
+* Documentation au format html dans documentation/html/index.html 
 
 ## Sources
 
