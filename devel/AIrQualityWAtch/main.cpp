@@ -29,7 +29,7 @@ int main()
     *data=nullptr;
 
     myOptions* options = new(myOptions);
-    options->readFromFile("/usr/share/AIQWA/AIQWA.conf");
+    options->readFromFile("AIQWA.conf");
 
     time_t now = time(0);
     cout << "*** " << endl << ctime(&now) << endl << "***" << endl;

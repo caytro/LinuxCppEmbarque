@@ -1,0 +1,61 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Class Index}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Class List}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}Class Documentation}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Color Struct Reference}{3}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Curve\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Chart\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Params Struct Reference}{3}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Data\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Element Struct Reference}{4}{section.2.3}%
+\contentsline {section}{\numberline {2.4}data\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Set Struct Reference}{4}{section.2.4}%
+\contentsline {section}{\numberline {2.5}my\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Curl Class Reference}{4}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Detailed Description}{5}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Constructor \& Destructor Documentation}{5}{subsection.2.5.2}%
+\contentsline {subsubsection}{\numberline {2.5.2.1}myCurl()}{5}{subsubsection.2.5.2.1}%
+\contentsline {subsection}{\numberline {2.5.3}Member Function Documentation}{5}{subsection.2.5.3}%
+\contentsline {subsubsection}{\numberline {2.5.3.1}exec()}{5}{subsubsection.2.5.3.1}%
+\contentsline {subsubsection}{\numberline {2.5.3.2}getApi\_key()}{6}{subsubsection.2.5.3.2}%
+\contentsline {subsubsection}{\numberline {2.5.3.3}getData()}{6}{subsubsection.2.5.3.3}%
+\contentsline {subsubsection}{\numberline {2.5.3.4}getLatitude()}{6}{subsubsection.2.5.3.4}%
+\contentsline {subsubsection}{\numberline {2.5.3.5}getLongitude()}{7}{subsubsection.2.5.3.5}%
+\contentsline {subsubsection}{\numberline {2.5.3.6}getResponseSize()}{7}{subsubsection.2.5.3.6}%
+\contentsline {subsubsection}{\numberline {2.5.3.7}getUrl()}{7}{subsubsection.2.5.3.7}%
+\contentsline {subsubsection}{\numberline {2.5.3.8}setApi\_key()}{7}{subsubsection.2.5.3.8}%
+\contentsline {subsubsection}{\numberline {2.5.3.9}setLatitude()}{8}{subsubsection.2.5.3.9}%
+\contentsline {subsubsection}{\numberline {2.5.3.10}setLongitude()}{8}{subsubsection.2.5.3.10}%
+\contentsline {subsubsection}{\numberline {2.5.3.11}setUrl()}{8}{subsubsection.2.5.3.11}%
+\contentsline {section}{\numberline {2.6}my\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Graphics Class Reference}{8}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Member Function Documentation}{9}{subsection.2.6.1}%
+\contentsline {subsubsection}{\numberline {2.6.1.1}curveChart()}{9}{subsubsection.2.6.1.1}%
+\contentsline {subsubsection}{\numberline {2.6.1.2}pieChart()}{9}{subsubsection.2.6.1.2}%
+\contentsline {section}{\numberline {2.7}my\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Options Class Reference}{10}{section.2.7}%
+\contentsline {subsection}{\numberline {2.7.1}Member Function Documentation}{10}{subsection.2.7.1}%
+\contentsline {subsubsection}{\numberline {2.7.1.1}getApiKeyHeader()}{10}{subsubsection.2.7.1.1}%
+\contentsline {subsubsection}{\numberline {2.7.1.2}getFilesOwner()}{11}{subsubsection.2.7.1.2}%
+\contentsline {subsubsection}{\numberline {2.7.1.3}getFullCurveChartFileName()}{11}{subsubsection.2.7.1.3}%
+\contentsline {subsubsection}{\numberline {2.7.1.4}getFullDataFileName()}{11}{subsubsection.2.7.1.4}%
+\contentsline {subsubsection}{\numberline {2.7.1.5}getFullHistoChartFileName()}{11}{subsubsection.2.7.1.5}%
+\contentsline {subsubsection}{\numberline {2.7.1.6}getFullLogFileName()}{12}{subsubsection.2.7.1.6}%
+\contentsline {subsubsection}{\numberline {2.7.1.7}getFullPieChartFileName()}{12}{subsubsection.2.7.1.7}%
+\contentsline {subsubsection}{\numberline {2.7.1.8}getFullUrl()}{12}{subsubsection.2.7.1.8}%
+\contentsline {subsubsection}{\numberline {2.7.1.9}isDisplay()}{12}{subsubsection.2.7.1.9}%
+\contentsline {subsubsection}{\numberline {2.7.1.10}readFromFile()}{12}{subsubsection.2.7.1.10}%
+\contentsline {section}{\numberline {2.8}my\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Parsing Class Reference}{13}{section.2.8}%
+\contentsline {subsection}{\numberline {2.8.1}Member Function Documentation}{13}{subsection.2.8.1}%
+\contentsline {subsubsection}{\numberline {2.8.1.1}appendFileToDatas()}{13}{subsubsection.2.8.1.1}%
+\contentsline {subsubsection}{\numberline {2.8.1.2}appendToDatas()}{14}{subsubsection.2.8.1.2}%
+\contentsline {subsubsection}{\numberline {2.8.1.3}fromChar()}{14}{subsubsection.2.8.1.3}%
+\contentsline {subsubsection}{\numberline {2.8.1.4}fromDatasFile()}{14}{subsubsection.2.8.1.4}%
+\contentsline {subsubsection}{\numberline {2.8.1.5}fromFile()}{15}{subsubsection.2.8.1.5}%
+\contentsline {subsubsection}{\numberline {2.8.1.6}getMyJson()}{15}{subsubsection.2.8.1.6}%
+\contentsline {subsubsection}{\numberline {2.8.1.7}setMyJson()}{15}{subsubsection.2.8.1.7}%
+\contentsline {subsubsection}{\numberline {2.8.1.8}toFile()}{16}{subsubsection.2.8.1.8}%
+\contentsline {subsubsection}{\numberline {2.8.1.9}toString()}{16}{subsubsection.2.8.1.9}%
+\contentsline {section}{\numberline {2.9}my\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Regex Class Reference}{16}{section.2.9}%
+\contentsline {subsection}{\numberline {2.9.1}Detailed Description}{17}{subsection.2.9.1}%
+\contentsline {subsection}{\numberline {2.9.2}Member Function Documentation}{17}{subsection.2.9.2}%
+\contentsline {subsubsection}{\numberline {2.9.2.1}ambeeDataGetDateTime()}{17}{subsubsection.2.9.2.1}%
+\contentsline {subsubsection}{\numberline {2.9.2.2}toFormatDDMMYY()}{17}{subsubsection.2.9.2.2}%
+\contentsline {subsubsection}{\numberline {2.9.2.3}toFormatDDMMYYHHMM()}{18}{subsubsection.2.9.2.3}%
+\contentsline {subsubsection}{\numberline {2.9.2.4}toFormatHHMM()}{18}{subsubsection.2.9.2.4}%
+\contentsline {section}{\numberline {2.10}response Struct Reference}{18}{section.2.10}%
+\contentsline {section}{\numberline {2.11}updated\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}At Struct Reference}{19}{section.2.11}%
+\contentsline {chapter}{Index}{21}{section*.13}%
