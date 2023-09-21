@@ -56,6 +56,11 @@ string myOptions::getFullDataFileName()
     return fullName;
 }
 
+string myOptions::getDataPathName()
+{
+   return options["dataPath"];
+}
+
 string myOptions::getFullCurveChartFileName()
 {
     //cout << "entering " << __func__ << "... " << endl;

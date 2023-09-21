@@ -37,7 +37,9 @@ int main()
 
     myParsing* parser = new myParsing();
     parser->fromChar(*data)->toFile(options);
+
     parser->appendToDatas(options);
+    system("./reformDatas");
     json datas = parser->fromDatasFile(options);
     myGraphics *curveChart = new myGraphics();
     curveChart->curveChart(datas, options);

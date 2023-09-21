@@ -60,6 +60,11 @@ public:
     string getFullDataFileName();
 
     ///
+    /// \brief getDataPathName();
+    /// \return
+    ///
+    string getDataPathName();
+    ///
     /// \brief getFullCurveChartFileName
     /// \return
     ///
