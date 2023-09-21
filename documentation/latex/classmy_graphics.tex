@@ -9,15 +9,71 @@ The \mbox{\hyperlink{classmy_graphics}{my\+Graphics}} class.
 
 {\ttfamily \#include $<$mygraphics.\+h$>$}
 
+
+
+Collaboration diagram for my\+Graphics\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=171pt]{classmy_graphics__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classmy_graphics_a061eafc6c9efa915757fd7e1e6172182}{my\+Graphics}} ()
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classmy_graphics}{my\+Graphics}} \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classmy_graphics_a06acbf9491071e6cd3274fdb7a0acaaf}{pie\+Chart}} (json datas, \mbox{\hyperlink{classmy_options}{my\+Options}} $\ast$options)
+void \mbox{\hyperlink{classmy_graphics_a06acbf9491071e6cd3274fdb7a0acaaf}{pie\+Chart}} (\mbox{\hyperlink{myoptions_8h_ab701e3ac61a85b337ec5c1abaad6742d}{json}} datas, \mbox{\hyperlink{classmy_options}{my\+Options}} $\ast$options)
 \begin{DoxyCompactList}\small\item\em pie\+Chart \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classmy_graphics_a0e491d83e84d2e378d35dfb4358479c3}{curve\+Chart}} (json datas, \mbox{\hyperlink{classmy_options}{my\+Options}} $\ast$options)
+void \mbox{\hyperlink{classmy_graphics_a0e491d83e84d2e378d35dfb4358479c3}{curve\+Chart}} (\mbox{\hyperlink{myoptions_8h_ab701e3ac61a85b337ec5c1abaad6742d}{json}} datas, \mbox{\hyperlink{classmy_options}{my\+Options}} $\ast$options)
 \begin{DoxyCompactList}\small\item\em curve\+Chart \textbackslash{}param json datas \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmy_graphics_a17a044abe92b09715a8535e1d44cc356}{init\+Palette}} ()
+\begin{DoxyCompactList}\small\item\em init\+Palette \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmy_graphics_a7f2a40a1a70d3ad5ac7b81cfdc5a7877}{init\+Fonts}} ()
+\begin{DoxyCompactList}\small\item\em init\+Fonts \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_color}{Color}} $\ast$ \mbox{\hyperlink{classmy_graphics_a80e7765ce15e14eca77356a088c41d1f}{create\+Color}} (string nom, int indice, int red, int green, int blue)
+\begin{DoxyCompactList}\small\item\em create\+Color \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classmy_graphics_a065a0a309b808f2a2bca1eeb4ff8ec91}{get\+Data\+Vector\+Max\+Value}} (vector$<$ \mbox{\hyperlink{struct_data_element}{Data\+Element}} $>$ $\ast$v)
+\begin{DoxyCompactList}\small\item\em get\+Data\+Vector\+Max\+Value \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classmy_graphics_ab67c37a68b32ef893ede59536e6d0a2e}{get\+Data\+Vector\+Min\+Value}} (vector$<$ \mbox{\hyperlink{struct_data_element}{Data\+Element}} $>$ $\ast$v)
+\begin{DoxyCompactList}\small\item\em get\+Data\+Vector\+Min\+Value \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{struct_data_element}{Data\+Element}} $>$ $\ast$ \mbox{\hyperlink{classmy_graphics_a1295f6af7bd684656ed8f61a98b09ac2}{append\+Data\+Vector}} (vector$<$ \mbox{\hyperlink{struct_data_element}{Data\+Element}} $>$ $\ast$v, string label=\char`\"{}\char`\"{}, float abscisse=0.\+0, float value=0.\+0)
+\begin{DoxyCompactList}\small\item\em append\+Data\+Vector \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmy_graphics_ae0d3910fd9a561bc759194411e637175}{set\+Vector}} (vector$<$ \mbox{\hyperlink{struct_data_element}{Data\+Element}} $>$ $\ast$v, \mbox{\hyperlink{myoptions_8h_ab701e3ac61a85b337ec5c1abaad6742d}{json}} datas, string \mbox{\hyperlink{structdata_set}{data\+Set}})
+\begin{DoxyCompactList}\small\item\em set\+Vector \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmy_graphics_a59cca0155974f047b14142eb12daff48}{curve\+Chart\+Init}} (\mbox{\hyperlink{struct_curve_chart_params}{Curve\+Chart\+Params}} params)
+\begin{DoxyCompactList}\small\item\em curve\+Chart\+Init \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmy_graphics_ac15c98d15d90d8291a846fffcdafcc6d}{pie\+Chart\+Init}} (\mbox{\hyperlink{struct_curve_chart_params}{Curve\+Chart\+Params}} params)
+\begin{DoxyCompactList}\small\item\em pie\+Chart\+Init \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmy_graphics_ab1af6f6785c979de084c62fda886e99e}{pie\+Chart\+Draw}} (\mbox{\hyperlink{struct_curve_chart_params}{Curve\+Chart\+Params}} params)
+\begin{DoxyCompactList}\small\item\em pie\+Chart\+Draw \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classmy_graphics_a58c90f4c10337134135d3d6d47035ab8}{calc\+Ratio\+Pourcent}} (\mbox{\hyperlink{struct_curve_chart_params}{Curve\+Chart\+Params}} params)
+\begin{DoxyCompactList}\small\item\em calc\+Ratio\+Pourcent \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmy_graphics_a77205f0e921d5e0a3b035638770549b4}{curve\+Chart\+Add\+Curves}} (\mbox{\hyperlink{struct_curve_chart_params}{Curve\+Chart\+Params}} params)
+\begin{DoxyCompactList}\small\item\em curve\+Chart\+Add\+Curves \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmy_graphics_a0aa996eb117b9711d9e11b5e4d982cf5}{curve\+Chart\+Set\+Legend}} (\mbox{\hyperlink{struct_curve_chart_params}{Curve\+Chart\+Params}} params)
+\begin{DoxyCompactList}\small\item\em curve\+Chart\+Set\+Legend \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classmy_graphics_aabfdb42eb9a2a567c5c0711cb193c8eb}{titre}}
+\item 
+char \mbox{\hyperlink{classmy_graphics_a2b9a0dbbf3b8a3ce47900c7e632ad7a7}{fic\+Out}} \mbox{[}255\mbox{]}
+\item 
+int \mbox{\hyperlink{classmy_graphics_a20f54186e034f1aad614bc342ca98fcc}{image\+Size}} = 1024
+\item 
+\mbox{\hyperlink{struct_color}{Color}} $\ast$ \mbox{\hyperlink{classmy_graphics_a922c06eecb38150f750aa0f759323447}{my\+Palette}} \mbox{[}12\mbox{]}
+\item 
+int \mbox{\hyperlink{classmy_graphics_adb008895fec85367744dad516fba338f}{gd\+Colors}} \mbox{[}12\mbox{]}
+\item 
+gd\+Font\+Ptr \mbox{\hyperlink{classmy_graphics_a627125cf3552cab3b3046074b6dfb7d0}{fonts}} \mbox{[}5\mbox{]}
+\item 
+gd\+Image\+Ptr \mbox{\hyperlink{classmy_graphics_a4bbf2c7a961e6aa1803d9e6a7ce9fcba}{im}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -51,11 +107,81 @@ Constructor
 Initialize image, palette and fonts 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmy_graphics_a1295f6af7bd684656ed8f61a98b09ac2}\label{classmy_graphics_a1295f6af7bd684656ed8f61a98b09ac2}} 
+\index{myGraphics@{myGraphics}!appendDataVector@{appendDataVector}}
+\index{appendDataVector@{appendDataVector}!myGraphics@{myGraphics}}
+\doxysubsubsection{\texorpdfstring{appendDataVector()}{appendDataVector()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{struct_data_element}{Data\+Element}} $>$ $\ast$ my\+Graphics\+::append\+Data\+Vector (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{struct_data_element}{Data\+Element}} $>$ $\ast$}]{v,  }\item[{string}]{label = {\ttfamily \char`\"{}\char`\"{}},  }\item[{float}]{abscisse = {\ttfamily 0.0},  }\item[{float}]{value = {\ttfamily 0.0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+append\+Data\+Vector 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vector$<$\+Data\+Element$>$} & $\ast$v \\
+\hline
+{\em string} & label=\char`\"{}\char`\"{} \\
+\hline
+{\em float} & abscisse=0.\+0 \\
+\hline
+{\em float} & value=0.\+0 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector$<$\+Data\+Element$>$$\ast$
+\end{DoxyReturn}
+Create new \mbox{\hyperlink{struct_data_element}{Data\+Element}} and appends it to v \mbox{\Hypertarget{classmy_graphics_a58c90f4c10337134135d3d6d47035ab8}\label{classmy_graphics_a58c90f4c10337134135d3d6d47035ab8}} 
+\index{myGraphics@{myGraphics}!calcRatioPourcent@{calcRatioPourcent}}
+\index{calcRatioPourcent@{calcRatioPourcent}!myGraphics@{myGraphics}}
+\doxysubsubsection{\texorpdfstring{calcRatioPourcent()}{calcRatioPourcent()}}
+{\footnotesize\ttfamily double my\+Graphics\+::calc\+Ratio\+Pourcent (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_curve_chart_params}{Curve\+Chart\+Params}}}]{params }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+calc\+Ratio\+Pourcent 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{struct_curve_chart_params}{Curve\+Chart\+Params}}} & params \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double
+\end{DoxyReturn}
+Compute S sum of the values \textbackslash{}detail returns 100/S
+
+Required to calculate the angles of the pie chart \mbox{\Hypertarget{classmy_graphics_a80e7765ce15e14eca77356a088c41d1f}\label{classmy_graphics_a80e7765ce15e14eca77356a088c41d1f}} 
+\index{myGraphics@{myGraphics}!createColor@{createColor}}
+\index{createColor@{createColor}!myGraphics@{myGraphics}}
+\doxysubsubsection{\texorpdfstring{createColor()}{createColor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_color}{Color}} $\ast$ my\+Graphics\+::create\+Color (\begin{DoxyParamCaption}\item[{string}]{nom,  }\item[{int}]{indice,  }\item[{int}]{red,  }\item[{int}]{green,  }\item[{int}]{blue }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+create\+Color 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nom} & \\
+\hline
+{\em indice} & \\
+\hline
+{\em red} & \\
+\hline
+{\em green} & \\
+\hline
+{\em blue} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+struct \mbox{\hyperlink{struct_color}{Color}} object. See gd\+Image\+Color\+Allocate documentation. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classmy_graphics_a0e491d83e84d2e378d35dfb4358479c3}\label{classmy_graphics_a0e491d83e84d2e378d35dfb4358479c3}} 
 \index{myGraphics@{myGraphics}!curveChart@{curveChart}}
 \index{curveChart@{curveChart}!myGraphics@{myGraphics}}
 \doxysubsubsection{\texorpdfstring{curveChart()}{curveChart()}}
-{\footnotesize\ttfamily void my\+Graphics\+::curve\+Chart (\begin{DoxyParamCaption}\item[{json}]{datas,  }\item[{\mbox{\hyperlink{classmy_options}{my\+Options}} $\ast$}]{options }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void my\+Graphics\+::curve\+Chart (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{myoptions_8h_ab701e3ac61a85b337ec5c1abaad6742d}{json}}}]{datas,  }\item[{\mbox{\hyperlink{classmy_options}{my\+Options}} $\ast$}]{options }\end{DoxyParamCaption})}
 
 
 
@@ -66,11 +192,122 @@ curve\+Chart \textbackslash{}param json datas
 {\em \mbox{\hyperlink{classmy_options}{my\+Options}}} & $\ast$options\\
 \hline
 \end{DoxyParams}
-generate, displays and save curve chart \mbox{\Hypertarget{classmy_graphics_a06acbf9491071e6cd3274fdb7a0acaaf}\label{classmy_graphics_a06acbf9491071e6cd3274fdb7a0acaaf}} 
+generate, displays and save curve chart \mbox{\Hypertarget{classmy_graphics_a77205f0e921d5e0a3b035638770549b4}\label{classmy_graphics_a77205f0e921d5e0a3b035638770549b4}} 
+\index{myGraphics@{myGraphics}!curveChartAddCurves@{curveChartAddCurves}}
+\index{curveChartAddCurves@{curveChartAddCurves}!myGraphics@{myGraphics}}
+\doxysubsubsection{\texorpdfstring{curveChartAddCurves()}{curveChartAddCurves()}}
+{\footnotesize\ttfamily void my\+Graphics\+::curve\+Chart\+Add\+Curves (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_curve_chart_params}{Curve\+Chart\+Params}}}]{params }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+curve\+Chart\+Add\+Curves 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{struct_curve_chart_params}{Curve\+Chart\+Params}}} & params\\
+\hline
+\end{DoxyParams}
+Draw lines \mbox{\Hypertarget{classmy_graphics_a59cca0155974f047b14142eb12daff48}\label{classmy_graphics_a59cca0155974f047b14142eb12daff48}} 
+\index{myGraphics@{myGraphics}!curveChartInit@{curveChartInit}}
+\index{curveChartInit@{curveChartInit}!myGraphics@{myGraphics}}
+\doxysubsubsection{\texorpdfstring{curveChartInit()}{curveChartInit()}}
+{\footnotesize\ttfamily void my\+Graphics\+::curve\+Chart\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_curve_chart_params}{Curve\+Chart\+Params}}}]{params }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+curve\+Chart\+Init 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{struct_curve_chart_params}{Curve\+Chart\+Params}}} & params\\
+\hline
+\end{DoxyParams}
+Draws Frame, axes, title and description \mbox{\Hypertarget{classmy_graphics_a0aa996eb117b9711d9e11b5e4d982cf5}\label{classmy_graphics_a0aa996eb117b9711d9e11b5e4d982cf5}} 
+\index{myGraphics@{myGraphics}!curveChartSetLegend@{curveChartSetLegend}}
+\index{curveChartSetLegend@{curveChartSetLegend}!myGraphics@{myGraphics}}
+\doxysubsubsection{\texorpdfstring{curveChartSetLegend()}{curveChartSetLegend()}}
+{\footnotesize\ttfamily void my\+Graphics\+::curve\+Chart\+Set\+Legend (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_curve_chart_params}{Curve\+Chart\+Params}}}]{params }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+curve\+Chart\+Set\+Legend 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{struct_curve_chart_params}{Curve\+Chart\+Params}}} & params\\
+\hline
+\end{DoxyParams}
+Displays colored labels in legend area \mbox{\Hypertarget{classmy_graphics_a065a0a309b808f2a2bca1eeb4ff8ec91}\label{classmy_graphics_a065a0a309b808f2a2bca1eeb4ff8ec91}} 
+\index{myGraphics@{myGraphics}!getDataVectorMaxValue@{getDataVectorMaxValue}}
+\index{getDataVectorMaxValue@{getDataVectorMaxValue}!myGraphics@{myGraphics}}
+\doxysubsubsection{\texorpdfstring{getDataVectorMaxValue()}{getDataVectorMaxValue()}}
+{\footnotesize\ttfamily float my\+Graphics\+::get\+Data\+Vector\+Max\+Value (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{struct_data_element}{Data\+Element}} $>$ $\ast$}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+get\+Data\+Vector\+Max\+Value 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vector$<$\+Data\+Element$>$} & $\ast$v \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float
+\end{DoxyReturn}
+required to set curve chart ordinate scale \mbox{\Hypertarget{classmy_graphics_ab67c37a68b32ef893ede59536e6d0a2e}\label{classmy_graphics_ab67c37a68b32ef893ede59536e6d0a2e}} 
+\index{myGraphics@{myGraphics}!getDataVectorMinValue@{getDataVectorMinValue}}
+\index{getDataVectorMinValue@{getDataVectorMinValue}!myGraphics@{myGraphics}}
+\doxysubsubsection{\texorpdfstring{getDataVectorMinValue()}{getDataVectorMinValue()}}
+{\footnotesize\ttfamily float my\+Graphics\+::get\+Data\+Vector\+Min\+Value (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{struct_data_element}{Data\+Element}} $>$ $\ast$}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+get\+Data\+Vector\+Min\+Value 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vector$<$\+Data\+Element$>$} & $\ast$v \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float
+\end{DoxyReturn}
+required to set curve chart ordinate scale \mbox{\Hypertarget{classmy_graphics_a7f2a40a1a70d3ad5ac7b81cfdc5a7877}\label{classmy_graphics_a7f2a40a1a70d3ad5ac7b81cfdc5a7877}} 
+\index{myGraphics@{myGraphics}!initFonts@{initFonts}}
+\index{initFonts@{initFonts}!myGraphics@{myGraphics}}
+\doxysubsubsection{\texorpdfstring{initFonts()}{initFonts()}}
+{\footnotesize\ttfamily void my\+Graphics\+::init\+Fonts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+init\+Fonts 
+
+Initialize fonts
+
+based on \+\_\+$<$gdfontt.\+h$>$ $<$gdfonts.\+h$>$ $<$gdfontmb.\+h$>$ $<$gdfontl.\+h$>$ $<$gdfontg.\+h$>$ \mbox{\Hypertarget{classmy_graphics_a17a044abe92b09715a8535e1d44cc356}\label{classmy_graphics_a17a044abe92b09715a8535e1d44cc356}} 
+\index{myGraphics@{myGraphics}!initPalette@{initPalette}}
+\index{initPalette@{initPalette}!myGraphics@{myGraphics}}
+\doxysubsubsection{\texorpdfstring{initPalette()}{initPalette()}}
+{\footnotesize\ttfamily void my\+Graphics\+::init\+Palette (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+init\+Palette 
+
+creates 12 colors palette
+
+Each color works in pair
+
+eg\+: 2 -\/$>$ green and 3 -\/$>$ darkgreen
+
+0 -\/$>$ black
+
+1 -\/$>$ white \mbox{\Hypertarget{classmy_graphics_a06acbf9491071e6cd3274fdb7a0acaaf}\label{classmy_graphics_a06acbf9491071e6cd3274fdb7a0acaaf}} 
 \index{myGraphics@{myGraphics}!pieChart@{pieChart}}
 \index{pieChart@{pieChart}!myGraphics@{myGraphics}}
 \doxysubsubsection{\texorpdfstring{pieChart()}{pieChart()}}
-{\footnotesize\ttfamily void my\+Graphics\+::pie\+Chart (\begin{DoxyParamCaption}\item[{json}]{datas,  }\item[{\mbox{\hyperlink{classmy_options}{my\+Options}} $\ast$}]{options }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void my\+Graphics\+::pie\+Chart (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{myoptions_8h_ab701e3ac61a85b337ec5c1abaad6742d}{json}}}]{datas,  }\item[{\mbox{\hyperlink{classmy_options}{my\+Options}} $\ast$}]{options }\end{DoxyParamCaption})}
 
 
 
@@ -83,9 +320,105 @@ pie\+Chart
 {\em \mbox{\hyperlink{classmy_options}{my\+Options}}} & $\ast$options\\
 \hline
 \end{DoxyParams}
-generate, displays and save pie chart 
+generate, displays and save pie chart \mbox{\Hypertarget{classmy_graphics_ab1af6f6785c979de084c62fda886e99e}\label{classmy_graphics_ab1af6f6785c979de084c62fda886e99e}} 
+\index{myGraphics@{myGraphics}!pieChartDraw@{pieChartDraw}}
+\index{pieChartDraw@{pieChartDraw}!myGraphics@{myGraphics}}
+\doxysubsubsection{\texorpdfstring{pieChartDraw()}{pieChartDraw()}}
+{\footnotesize\ttfamily void my\+Graphics\+::pie\+Chart\+Draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_curve_chart_params}{Curve\+Chart\+Params}}}]{params }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+pie\+Chart\+Draw 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{struct_curve_chart_params}{Curve\+Chart\+Params}}} & params\\
+\hline
+\end{DoxyParams}
+Draws pie chart \mbox{\Hypertarget{classmy_graphics_ac15c98d15d90d8291a846fffcdafcc6d}\label{classmy_graphics_ac15c98d15d90d8291a846fffcdafcc6d}} 
+\index{myGraphics@{myGraphics}!pieChartInit@{pieChartInit}}
+\index{pieChartInit@{pieChartInit}!myGraphics@{myGraphics}}
+\doxysubsubsection{\texorpdfstring{pieChartInit()}{pieChartInit()}}
+{\footnotesize\ttfamily void my\+Graphics\+::pie\+Chart\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_curve_chart_params}{Curve\+Chart\+Params}}}]{params }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+pie\+Chart\+Init 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{struct_curve_chart_params}{Curve\+Chart\+Params}}} & params\\
+\hline
+\end{DoxyParams}
+Draws Frame, axes, title and description \mbox{\Hypertarget{classmy_graphics_ae0d3910fd9a561bc759194411e637175}\label{classmy_graphics_ae0d3910fd9a561bc759194411e637175}} 
+\index{myGraphics@{myGraphics}!setVector@{setVector}}
+\index{setVector@{setVector}!myGraphics@{myGraphics}}
+\doxysubsubsection{\texorpdfstring{setVector()}{setVector()}}
+{\footnotesize\ttfamily void my\+Graphics\+::set\+Vector (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{struct_data_element}{Data\+Element}} $>$ $\ast$}]{v,  }\item[{\mbox{\hyperlink{myoptions_8h_ab701e3ac61a85b337ec5c1abaad6742d}{json}}}]{datas,  }\item[{string}]{data\+Set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+set\+Vector 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vector$<$\+Data\+Element$>$$\ast$} & v \\
+\hline
+{\em json} & datas \\
+\hline
+{\em string} & \mbox{\hyperlink{structdata_set}{data\+Set}}\\
+\hline
+\end{DoxyParams}
+Creates a \mbox{\hyperlink{struct_data_element}{Data\+Element}} for each measure stored in json datas
+
+parsing datas using dataset \+: datas\mbox{[}i\mbox{]}\mbox{[}\char`\"{}stations\char`\"{}\mbox{]}\mbox{[}0\mbox{]}\mbox{[}\mbox{\hyperlink{structdata_set}{data\+Set}}\mbox{]}; 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classmy_graphics_a2b9a0dbbf3b8a3ce47900c7e632ad7a7}\label{classmy_graphics_a2b9a0dbbf3b8a3ce47900c7e632ad7a7}} 
+\index{myGraphics@{myGraphics}!ficOut@{ficOut}}
+\index{ficOut@{ficOut}!myGraphics@{myGraphics}}
+\doxysubsubsection{\texorpdfstring{ficOut}{ficOut}}
+{\footnotesize\ttfamily char my\+Graphics\+::fic\+Out\mbox{[}255\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmy_graphics_a627125cf3552cab3b3046074b6dfb7d0}\label{classmy_graphics_a627125cf3552cab3b3046074b6dfb7d0}} 
+\index{myGraphics@{myGraphics}!fonts@{fonts}}
+\index{fonts@{fonts}!myGraphics@{myGraphics}}
+\doxysubsubsection{\texorpdfstring{fonts}{fonts}}
+{\footnotesize\ttfamily gd\+Font\+Ptr my\+Graphics\+::fonts\mbox{[}5\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmy_graphics_adb008895fec85367744dad516fba338f}\label{classmy_graphics_adb008895fec85367744dad516fba338f}} 
+\index{myGraphics@{myGraphics}!gdColors@{gdColors}}
+\index{gdColors@{gdColors}!myGraphics@{myGraphics}}
+\doxysubsubsection{\texorpdfstring{gdColors}{gdColors}}
+{\footnotesize\ttfamily int my\+Graphics\+::gd\+Colors\mbox{[}12\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmy_graphics_a4bbf2c7a961e6aa1803d9e6a7ce9fcba}\label{classmy_graphics_a4bbf2c7a961e6aa1803d9e6a7ce9fcba}} 
+\index{myGraphics@{myGraphics}!im@{im}}
+\index{im@{im}!myGraphics@{myGraphics}}
+\doxysubsubsection{\texorpdfstring{im}{im}}
+{\footnotesize\ttfamily gd\+Image\+Ptr my\+Graphics\+::im\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmy_graphics_a20f54186e034f1aad614bc342ca98fcc}\label{classmy_graphics_a20f54186e034f1aad614bc342ca98fcc}} 
+\index{myGraphics@{myGraphics}!imageSize@{imageSize}}
+\index{imageSize@{imageSize}!myGraphics@{myGraphics}}
+\doxysubsubsection{\texorpdfstring{imageSize}{imageSize}}
+{\footnotesize\ttfamily int my\+Graphics\+::image\+Size = 1024\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmy_graphics_a922c06eecb38150f750aa0f759323447}\label{classmy_graphics_a922c06eecb38150f750aa0f759323447}} 
+\index{myGraphics@{myGraphics}!myPalette@{myPalette}}
+\index{myPalette@{myPalette}!myGraphics@{myGraphics}}
+\doxysubsubsection{\texorpdfstring{myPalette}{myPalette}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_color}{Color}}$\ast$ my\+Graphics\+::my\+Palette\mbox{[}12\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmy_graphics_aabfdb42eb9a2a567c5c0711cb193c8eb}\label{classmy_graphics_aabfdb42eb9a2a567c5c0711cb193c8eb}} 
+\index{myGraphics@{myGraphics}!titre@{titre}}
+\index{titre@{titre}!myGraphics@{myGraphics}}
+\doxysubsubsection{\texorpdfstring{titre}{titre}}
+{\footnotesize\ttfamily string my\+Graphics\+::titre\hspace{0.3cm}{\ttfamily [private]}}
+
+
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/sylvain/\+Documents/\+Travail/ajc-\/akkodis/formation/\+Linux\+Embarque/\+Projet/devel/\+AIr\+Quality\+WAtch/mygraphics.\+h\item 
-/home/sylvain/\+Documents/\+Travail/ajc-\/akkodis/formation/\+Linux\+Embarque/\+Projet/devel/\+AIr\+Quality\+WAtch/mygraphics.\+cpp\end{DoxyCompactItemize}
+/home/sylvain/\+Documents/\+Travail/ajc-\/akkodis/formation/\+Linux\+Embarque/\+Projet/devel/\+AIr\+Quality\+WAtch/\mbox{\hyperlink{mygraphics_8h}{mygraphics.\+h}}\item 
+/home/sylvain/\+Documents/\+Travail/ajc-\/akkodis/formation/\+Linux\+Embarque/\+Projet/devel/\+AIr\+Quality\+WAtch/\mbox{\hyperlink{mygraphics_8cpp}{mygraphics.\+cpp}}\end{DoxyCompactItemize}

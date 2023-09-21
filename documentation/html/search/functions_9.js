@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['setmyjson_75',['setMyJson',['../classmy_parsing.html#a3c44bc291f4e2bbebdc10b11e25c2827',1,'myParsing']]]
+  ['readfromfile_171',['readFromFile',['../classmy_options.html#a757be1653f62c255b5aef415a84cdad2',1,'myOptions']]]
 ];

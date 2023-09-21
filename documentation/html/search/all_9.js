@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['readfromfile_29',['readFromFile',['../classmy_options.html#a757be1653f62c255b5aef415a84cdad2',1,'myOptions']]],
-  ['response_30',['response',['../structresponse.html',1,'']]]
+  ['json_54',['json',['../myoptions_8h.html#ab701e3ac61a85b337ec5c1abaad6742d',1,'json():&#160;myoptions.h'],['../myparsing_8h.html#ab701e3ac61a85b337ec5c1abaad6742d',1,'json():&#160;myparsing.h']]]
 ];

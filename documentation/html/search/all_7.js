@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['mycurl_23',['myCurl',['../classmy_curl.html',1,'myCurl'],['../classmy_curl.html#a6138f437e18194f4b5c4cae50682d90d',1,'myCurl::myCurl()']]],
-  ['mygraphics_24',['myGraphics',['../classmy_graphics.html',1,'myGraphics'],['../classmy_graphics.html#a061eafc6c9efa915757fd7e1e6172182',1,'myGraphics::myGraphics()']]],
-  ['myoptions_25',['myOptions',['../classmy_options.html',1,'myOptions'],['../classmy_options.html#a54d540e04ed8d81c6de241305361a12f',1,'myOptions::myOptions()']]],
-  ['myparsing_26',['myParsing',['../classmy_parsing.html',1,'myParsing'],['../classmy_parsing.html#a6b5f94beb2d02670847a2c2a7e5c8500',1,'myParsing::myParsing()']]],
-  ['myregex_27',['myRegex',['../classmy_regex.html',1,'myRegex'],['../classmy_regex.html#a9e0e33492205c19d34a39867d44bd881',1,'myRegex::myRegex()']]]
+  ['headers_45',['headers',['../classmy_curl.html#aaab76a51fca4003d16a372144bda500d',1,'myCurl']]],
+  ['hnd_46',['hnd',['../classmy_curl.html#aae58d4a13c2c10fc5a254b0b6aa1765d',1,'myCurl']]],
+  ['hour_47',['hour',['../structupdated_at.html#a967ff702173fd1b7b4b602e1ee9f178e',1,'updatedAt']]]
 ];

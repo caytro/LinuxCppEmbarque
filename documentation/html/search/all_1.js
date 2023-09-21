@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['color_3',['Color',['../struct_color.html',1,'']]],
-  ['curvechart_4',['curveChart',['../classmy_graphics.html#a0e491d83e84d2e378d35dfb4358479c3',1,'myGraphics']]],
-  ['curvechartparams_5',['CurveChartParams',['../struct_curve_chart_params.html',1,'']]]
+  ['blue_5',['blue',['../struct_color.html#a51f2c5eb0ffc788331255fa1c7812880',1,'Color']]]
 ];

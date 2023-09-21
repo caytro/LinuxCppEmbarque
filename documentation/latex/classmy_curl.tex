@@ -9,6 +9,16 @@
 
 {\ttfamily \#include $<$mycurl.\+h$>$}
 
+
+
+Collaboration diagram for my\+Curl\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{classmy_curl__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -18,6 +28,20 @@ void \mbox{\hyperlink{classmy_curl_a5d9d737edc2db4d0e723b49e5ab88603}{get\+Data}
 \begin{DoxyCompactList}\small\item\em get\+Data \end{DoxyCompactList}\item 
 CURLcode \mbox{\hyperlink{classmy_curl_aa1903e257624c5f29061c9d1fd6fde36}{exec}} (\mbox{\hyperlink{classmy_options}{my\+Options}} $\ast$options)
 \begin{DoxyCompactList}\small\item\em exec \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t \mbox{\hyperlink{classmy_curl_a5cbeaef16766c1d4e608d17828e19b7a}{mem\+\_\+cb}} (void $\ast$contents, size\+\_\+t size, size\+\_\+t nmemb, void $\ast$userp)
+\begin{DoxyCompactList}\small\item\em mem\+\_\+cb \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+CURL $\ast$ \mbox{\hyperlink{classmy_curl_aae58d4a13c2c10fc5a254b0b6aa1765d}{hnd}}
+\item 
+struct \mbox{\hyperlink{structresponse}{response}} \mbox{\hyperlink{classmy_curl_aecaca298ab0c7475cd965d80499a01b6}{chunk}}
+\item 
+struct curl\+\_\+slist $\ast$ \mbox{\hyperlink{classmy_curl_aaab76a51fca4003d16a372144bda500d}{headers}} = nullptr
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -27,7 +51,7 @@ Manage {\bfseries{API access}}
 
 includes {\itshape curl/curl.\+h} library
 
-includes {\itshape \mbox{\hyperlink{myoptions_8h_source}{myoptions.\+h}}} library
+includes {\itshape \mbox{\hyperlink{myoptions_8h}{myoptions.\+h}}} library
 
 Requires {\itshape -\/lcurl} flag 
 
@@ -80,9 +104,54 @@ Allows to recover downloaded data
 {\em char$\ast$$\ast$} & response \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{classmy_curl_a5cbeaef16766c1d4e608d17828e19b7a}\label{classmy_curl_a5cbeaef16766c1d4e608d17828e19b7a}} 
+\index{myCurl@{myCurl}!mem\_cb@{mem\_cb}}
+\index{mem\_cb@{mem\_cb}!myCurl@{myCurl}}
+\doxysubsubsection{\texorpdfstring{mem\_cb()}{mem\_cb()}}
+{\footnotesize\ttfamily size\+\_\+t my\+Curl\+::mem\+\_\+cb (\begin{DoxyParamCaption}\item[{void $\ast$}]{contents,  }\item[{size\+\_\+t}]{size,  }\item[{size\+\_\+t}]{nmemb,  }\item[{void $\ast$}]{userp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+mem\+\_\+cb 
+
+Call back method required by {\itshape curl\+\_\+easy\+\_\+perform()} method to store read datas in buffer 
+\begin{DoxyParams}{Parameters}
+{\em void$\ast$} & contents \\
+\hline
+{\em size\+\_\+t} & size \\
+\hline
+{\em size\+\_\+t} & nmemb \\
+\hline
+{\em void$\ast$} & userp \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+static size\+\_\+t 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classmy_curl_aecaca298ab0c7475cd965d80499a01b6}\label{classmy_curl_aecaca298ab0c7475cd965d80499a01b6}} 
+\index{myCurl@{myCurl}!chunk@{chunk}}
+\index{chunk@{chunk}!myCurl@{myCurl}}
+\doxysubsubsection{\texorpdfstring{chunk}{chunk}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structresponse}{response}} my\+Curl\+::chunk\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmy_curl_aaab76a51fca4003d16a372144bda500d}\label{classmy_curl_aaab76a51fca4003d16a372144bda500d}} 
+\index{myCurl@{myCurl}!headers@{headers}}
+\index{headers@{headers}!myCurl@{myCurl}}
+\doxysubsubsection{\texorpdfstring{headers}{headers}}
+{\footnotesize\ttfamily struct curl\+\_\+slist$\ast$ my\+Curl\+::headers = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmy_curl_aae58d4a13c2c10fc5a254b0b6aa1765d}\label{classmy_curl_aae58d4a13c2c10fc5a254b0b6aa1765d}} 
+\index{myCurl@{myCurl}!hnd@{hnd}}
+\index{hnd@{hnd}!myCurl@{myCurl}}
+\doxysubsubsection{\texorpdfstring{hnd}{hnd}}
+{\footnotesize\ttfamily CURL$\ast$ my\+Curl\+::hnd\hspace{0.3cm}{\ttfamily [private]}}
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/sylvain/\+Documents/\+Travail/ajc-\/akkodis/formation/\+Linux\+Embarque/\+Projet/devel/\+AIr\+Quality\+WAtch/mycurl.\+h\item 
-/home/sylvain/\+Documents/\+Travail/ajc-\/akkodis/formation/\+Linux\+Embarque/\+Projet/devel/\+AIr\+Quality\+WAtch/mycurl.\+cpp\end{DoxyCompactItemize}
+/home/sylvain/\+Documents/\+Travail/ajc-\/akkodis/formation/\+Linux\+Embarque/\+Projet/devel/\+AIr\+Quality\+WAtch/\mbox{\hyperlink{mycurl_8h}{mycurl.\+h}}\item 
+/home/sylvain/\+Documents/\+Travail/ajc-\/akkodis/formation/\+Linux\+Embarque/\+Projet/devel/\+AIr\+Quality\+WAtch/\mbox{\hyperlink{mycurl_8cpp}{mycurl.\+cpp}}\end{DoxyCompactItemize}

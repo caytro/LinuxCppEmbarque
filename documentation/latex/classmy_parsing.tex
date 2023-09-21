@@ -1,14 +1,17 @@
 \hypertarget{classmy_parsing}{}\doxysection{my\+Parsing Class Reference}
 \label{classmy_parsing}\index{myParsing@{myParsing}}
+
+
+{\ttfamily \#include $<$myparsing.\+h$>$}
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classmy_parsing_a6b5f94beb2d02670847a2c2a7e5c8500}\label{classmy_parsing_a6b5f94beb2d02670847a2c2a7e5c8500}} 
 \mbox{\hyperlink{classmy_parsing_a6b5f94beb2d02670847a2c2a7e5c8500}{my\+Parsing}} ()
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classmy_parsing}{my\+Parsing}} \end{DoxyCompactList}\item 
-const json \& \mbox{\hyperlink{classmy_parsing_a91315e3b81c99b3780e81701fbe528ce}{get\+My\+Json}} () const
+const \mbox{\hyperlink{myoptions_8h_ab701e3ac61a85b337ec5c1abaad6742d}{json}} \& \mbox{\hyperlink{classmy_parsing_a91315e3b81c99b3780e81701fbe528ce}{get\+My\+Json}} () const
 \begin{DoxyCompactList}\small\item\em get\+My\+Json \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classmy_parsing_a3c44bc291f4e2bbebdc10b11e25c2827}{set\+My\+Json}} (const json \&new\+My\+Json)
+void \mbox{\hyperlink{classmy_parsing_a3c44bc291f4e2bbebdc10b11e25c2827}{set\+My\+Json}} (const \mbox{\hyperlink{myoptions_8h_ab701e3ac61a85b337ec5c1abaad6742d}{json}} \&new\+My\+Json)
 \begin{DoxyCompactList}\small\item\em set\+My\+Json \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classmy_parsing}{my\+Parsing}} $\ast$ \mbox{\hyperlink{classmy_parsing_a9e160e5990b04bfbcad93b4e191c330f}{from\+Char}} (char $\ast$str)
 \begin{DoxyCompactList}\small\item\em from\+Char \end{DoxyCompactList}\item 
@@ -22,8 +25,26 @@ void \mbox{\hyperlink{classmy_parsing_af03238a31541f7376cf84a335470ec19}{append\
 \begin{DoxyCompactList}\small\item\em append\+To\+Datas \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classmy_parsing_ab599048e42b031e284a736002fee7f56}{append\+File\+To\+Datas}} (string file\+Name)
 \begin{DoxyCompactList}\small\item\em append\+File\+To\+Datas \end{DoxyCompactList}\item 
-const json \mbox{\hyperlink{classmy_parsing_a8792a4a8ad331d277b8424906607103c}{from\+Datas\+File}} (\mbox{\hyperlink{classmy_options}{my\+Options}} $\ast$options)
+const \mbox{\hyperlink{myoptions_8h_ab701e3ac61a85b337ec5c1abaad6742d}{json}} \mbox{\hyperlink{classmy_parsing_a8792a4a8ad331d277b8424906607103c}{from\+Datas\+File}} (\mbox{\hyperlink{classmy_options}{my\+Options}} $\ast$options)
 \begin{DoxyCompactList}\small\item\em from\+Datas\+File \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{myoptions_8h_ab701e3ac61a85b337ec5c1abaad6742d}{json}} \mbox{\hyperlink{classmy_parsing_a522eb7e1f59924ff28b16b7a8b30c1d9}{my\+Json}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmy_parsing_a6b5f94beb2d02670847a2c2a7e5c8500}\label{classmy_parsing_a6b5f94beb2d02670847a2c2a7e5c8500}} 
+\index{myParsing@{myParsing}!myParsing@{myParsing}}
+\index{myParsing@{myParsing}!myParsing@{myParsing}}
+\doxysubsubsection{\texorpdfstring{myParsing()}{myParsing()}}
+{\footnotesize\ttfamily my\+Parsing\+::my\+Parsing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classmy_parsing}{my\+Parsing}} 
+
 
 
 \doxysubsection{Member Function Documentation}
@@ -79,7 +100,7 @@ from\+Char
 \index{myParsing@{myParsing}!fromDatasFile@{fromDatasFile}}
 \index{fromDatasFile@{fromDatasFile}!myParsing@{myParsing}}
 \doxysubsubsection{\texorpdfstring{fromDatasFile()}{fromDatasFile()}}
-{\footnotesize\ttfamily const json my\+Parsing\+::from\+Datas\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmy_options}{my\+Options}} $\ast$}]{options }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily const \mbox{\hyperlink{myoptions_8h_ab701e3ac61a85b337ec5c1abaad6742d}{json}} my\+Parsing\+::from\+Datas\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmy_options}{my\+Options}} $\ast$}]{options }\end{DoxyParamCaption})}
 
 
 
@@ -115,7 +136,7 @@ from\+File
 \index{myParsing@{myParsing}!getMyJson@{getMyJson}}
 \index{getMyJson@{getMyJson}!myParsing@{myParsing}}
 \doxysubsubsection{\texorpdfstring{getMyJson()}{getMyJson()}}
-{\footnotesize\ttfamily const json \& my\+Parsing\+::get\+My\+Json (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily const \mbox{\hyperlink{myoptions_8h_ab701e3ac61a85b337ec5c1abaad6742d}{json}} \& my\+Parsing\+::get\+My\+Json (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
@@ -128,7 +149,7 @@ get\+My\+Json
 \index{myParsing@{myParsing}!setMyJson@{setMyJson}}
 \index{setMyJson@{setMyJson}!myParsing@{myParsing}}
 \doxysubsubsection{\texorpdfstring{setMyJson()}{setMyJson()}}
-{\footnotesize\ttfamily void my\+Parsing\+::set\+My\+Json (\begin{DoxyParamCaption}\item[{const json \&}]{new\+My\+Json }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void my\+Parsing\+::set\+My\+Json (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{myoptions_8h_ab701e3ac61a85b337ec5c1abaad6742d}{json}} \&}]{new\+My\+Json }\end{DoxyParamCaption})}
 
 
 
@@ -172,7 +193,16 @@ to\+String
 \end{DoxyReturn}
 
 
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classmy_parsing_a522eb7e1f59924ff28b16b7a8b30c1d9}\label{classmy_parsing_a522eb7e1f59924ff28b16b7a8b30c1d9}} 
+\index{myParsing@{myParsing}!myJson@{myJson}}
+\index{myJson@{myJson}!myParsing@{myParsing}}
+\doxysubsubsection{\texorpdfstring{myJson}{myJson}}
+{\footnotesize\ttfamily \mbox{\hyperlink{myoptions_8h_ab701e3ac61a85b337ec5c1abaad6742d}{json}} my\+Parsing\+::my\+Json\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/sylvain/\+Documents/\+Travail/ajc-\/akkodis/formation/\+Linux\+Embarque/\+Projet/devel/\+AIr\+Quality\+WAtch/myparsing.\+h\item 
-/home/sylvain/\+Documents/\+Travail/ajc-\/akkodis/formation/\+Linux\+Embarque/\+Projet/devel/\+AIr\+Quality\+WAtch/myparsing.\+cpp\end{DoxyCompactItemize}
+/home/sylvain/\+Documents/\+Travail/ajc-\/akkodis/formation/\+Linux\+Embarque/\+Projet/devel/\+AIr\+Quality\+WAtch/\mbox{\hyperlink{myparsing_8h}{myparsing.\+h}}\item 
+/home/sylvain/\+Documents/\+Travail/ajc-\/akkodis/formation/\+Linux\+Embarque/\+Projet/devel/\+AIr\+Quality\+WAtch/\mbox{\hyperlink{myparsing_8cpp}{myparsing.\+cpp}}\end{DoxyCompactItemize}
