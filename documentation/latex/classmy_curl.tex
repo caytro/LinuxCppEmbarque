@@ -1,0 +1,88 @@
+\hypertarget{classmy_curl}{}\doxysection{my\+Curl Class Reference}
+\label{classmy_curl}\index{myCurl@{myCurl}}
+
+
+\# The \mbox{\hyperlink{classmy_curl}{my\+Curl}} class  
+
+
+
+
+{\ttfamily \#include $<$mycurl.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmy_curl_a6138f437e18194f4b5c4cae50682d90d}{my\+Curl}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classmy_curl}{my\+Curl}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmy_curl_a5d9d737edc2db4d0e723b49e5ab88603}{get\+Data}} (char $\ast$$\ast$\mbox{\hyperlink{structresponse}{response}})
+\begin{DoxyCompactList}\small\item\em get\+Data \end{DoxyCompactList}\item 
+CURLcode \mbox{\hyperlink{classmy_curl_aa1903e257624c5f29061c9d1fd6fde36}{exec}} (\mbox{\hyperlink{classmy_options}{my\+Options}} $\ast$options)
+\begin{DoxyCompactList}\small\item\em exec \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\# The \mbox{\hyperlink{classmy_curl}{my\+Curl}} class 
+
+Manage {\bfseries{API access}}
+
+includes {\itshape curl/curl.\+h} library
+
+includes {\itshape \mbox{\hyperlink{myoptions_8h_source}{myoptions.\+h}}} library
+
+Requires {\itshape -\/lcurl} flag 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmy_curl_a6138f437e18194f4b5c4cae50682d90d}\label{classmy_curl_a6138f437e18194f4b5c4cae50682d90d}} 
+\index{myCurl@{myCurl}!myCurl@{myCurl}}
+\index{myCurl@{myCurl}!myCurl@{myCurl}}
+\doxysubsubsection{\texorpdfstring{myCurl()}{myCurl()}}
+{\footnotesize\ttfamily my\+Curl\+::my\+Curl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classmy_curl}{my\+Curl}} 
+
+constructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmy_curl_aa1903e257624c5f29061c9d1fd6fde36}\label{classmy_curl_aa1903e257624c5f29061c9d1fd6fde36}} 
+\index{myCurl@{myCurl}!exec@{exec}}
+\index{exec@{exec}!myCurl@{myCurl}}
+\doxysubsubsection{\texorpdfstring{exec()}{exec()}}
+{\footnotesize\ttfamily CURLcode my\+Curl\+::exec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmy_options}{my\+Options}} $\ast$}]{options }\end{DoxyParamCaption})}
+
+
+
+exec 
+
+
+\begin{DoxyParams}{Parameters}
+{\em my\+Option$\ast$} & options \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+CURLcode
+\end{DoxyReturn}
+Prepare and execute curl request using parameters in options
+
+Downloaded data can be retrieved by a call to the method \mbox{\hyperlink{classmy_curl_a5d9d737edc2db4d0e723b49e5ab88603}{get\+Data()}} \mbox{\Hypertarget{classmy_curl_a5d9d737edc2db4d0e723b49e5ab88603}\label{classmy_curl_a5d9d737edc2db4d0e723b49e5ab88603}} 
+\index{myCurl@{myCurl}!getData@{getData}}
+\index{getData@{getData}!myCurl@{myCurl}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily void my\+Curl\+::get\+Data (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{response }\end{DoxyParamCaption})}
+
+
+
+get\+Data 
+
+Allows to recover downloaded data 
+\begin{DoxyParams}{Parameters}
+{\em char$\ast$$\ast$} & response \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/sylvain/\+Documents/\+Travail/ajc-\/akkodis/formation/\+Linux\+Embarque/\+Projet/devel/\+AIr\+Quality\+WAtch/mycurl.\+h\item 
+/home/sylvain/\+Documents/\+Travail/ajc-\/akkodis/formation/\+Linux\+Embarque/\+Projet/devel/\+AIr\+Quality\+WAtch/mycurl.\+cpp\end{DoxyCompactItemize}

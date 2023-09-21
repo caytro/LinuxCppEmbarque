@@ -1,56 +1,8 @@
 #include "mycurl.h"
 
 
-myCurl::myCurl()
-{
-    longitude=1;
-    latitude=45;
-}
+myCurl::myCurl(){}
 
-const string &myCurl::getApi_key() const
-{
-    return api_key;
-}
-
-void myCurl::setApi_key(const string &newApi_key)
-{
-    api_key = newApi_key;
-}
-
-const string &myCurl::getLongitude() const
-{
-    return longitude;
-}
-
-void myCurl::setLongitude(const string &newLongitude)
-{
-    longitude = newLongitude;
-}
-
-const string &myCurl::getLatitude() const
-{
-    return latitude;
-}
-
-void myCurl::setLatitude(const string &newLatitude)
-{
-    latitude = newLatitude;
-}
-
-const string &myCurl::getUrl() const
-{
-    return url;
-}
-
-void myCurl::setUrl(const string &newUrl)
-{
-    url = newUrl;
-}
-
-size_t myCurl::getResponseSize()
-{
-    return chunk.size;
-}
 
 void myCurl::getData(char **data)
 {

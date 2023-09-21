@@ -6,7 +6,7 @@ myGraphics::myGraphics()
     im = gdImageCreate(imageSize,imageSize);
     initPalette();
     initFonts();
-    dataVector = new vector<DataElement>();
+
 }
 
 
@@ -19,10 +19,10 @@ void myGraphics::initPalette()
     myPalette[4] = createColor("bleu",2,120,120,255);
     myPalette[5] = createColor("bleu2",2,60,60,200);
     myPalette[6] = createColor("violet",2,255,80,255);
-    myPalette[7] = createColor("violet2",2,180,40,180);
+    myPalette[7] = createColor("violet2",2,140,60,140);
     myPalette[8] = createColor("vert",2,100,255,100);
-    myPalette[9] = createColor("vert2",2,60,200,60);
-    myPalette[10] = createColor("darkGray",2,30,30,30);
+    myPalette[9] = createColor("vert2",2,80,140,80);
+    myPalette[10] = createColor("lightGray",2,100,100,100);
     myPalette[11] = createColor("black",2,0,0,0);
 
     for (int colorIndex = 0; colorIndex<12; colorIndex++)
@@ -53,14 +53,6 @@ Color *myGraphics::createColor(string nom, int indice, int red, int green, int b
     return newColor;
 }
 
-float myGraphics::getDataVectorMinValue()
-{
-    float min = dataVector->begin()->value;
-    for ( DataElement de : *dataVector){
-        if (de.value < min) min = de.value;
-    }
-    return min;
-}
 
 float myGraphics::getDataVectorMaxValue(vector<DataElement> *v)
 {
@@ -80,20 +72,6 @@ float myGraphics::getDataVectorMinValue(vector<DataElement> *v)
     return min;
 }
 
-float myGraphics::getDataVectorMaxValue()
-{
-    float max = dataVector->begin()->value;
-    for ( DataElement de : *dataVector){
-        if (de.value > max) max = de.value;
-    }
-    return max;
-}
-vector<DataElement>* myGraphics::appendDataVector(string label, float abscisse, float value)
-{
-    DataElement newElement={label, abscisse, value};
-    dataVector->push_back(newElement);
-    return dataVector;
-}
 
 vector<DataElement> *myGraphics::appendDataVector(vector<DataElement> *v, string label, float abscisse, float value)
 {
@@ -134,7 +112,7 @@ void myGraphics::curveChartInit(CurveChartParams params)
     int yRatio = - static_cast<int>((chartHeight/((params.globalMax-params.globalMin+1))));
     for (int i=10; i<params.globalMax; i+=10){
         gdImageLine(im, xOrigin-3, yOrigin + i * yRatio, xOrigin+3, yOrigin + i * yRatio ,1);
-        gdImageDashedLine(im, xOrigin +3, yOrigin + i * yRatio, xOrigin+chartWidth, yOrigin + i * yRatio , 9);
+        gdImageDashedLine(im, xOrigin +3, yOrigin + i * yRatio, xOrigin+chartWidth, yOrigin + i * yRatio , 10);
         gdImageString(im, fonts[1], params.marginLeft - 20, yOrigin + i * yRatio - 20, (unsigned char *)to_string(i).c_str(),1);
     }
 
@@ -244,17 +222,17 @@ void myGraphics::pieChartDraw(CurveChartParams params)
             colorIndex=params.dataSets->data()[i].colorIndex;
             float curAngle2 = curAngle  + curPieData.value * ratioAngle * 360.0 /100.0;
             gdImageFilledArc(im,xc ,yc + 40 - 0.4*offset,w,h,static_cast<int>(curAngle+1.2),static_cast<int>(curAngle2-1.2),colorIndex,0);
-            int x = round(xc + (w/2) * cos((curAngle2 -1) * M_PI /180.0));
-            int y = round(yc + 40 - (0.4 * offset) +(h/2) * sin ((curAngle2 -1) * M_PI /180.0));
-            gdImageLine(im,x,y,x,y,0);
-            x = round(xc + (w/2) * cos((curAngle +1) * M_PI /180.0));
-            y = round(yc + 40 - (0.4 * offset) +(h/2) * sin ((curAngle +1) * M_PI /180.0));
-            gdImageLine(im,x,y,x,y+1,1);
+            int x = static_cast<int>(xc + (w/2) * cos((curAngle2 -1) * M_PI /180.0));
+            int y = static_cast<int>(yc + 40 - (0.4 * offset) +(h/2) * sin ((curAngle2 -1) * M_PI /180.0));
+            gdImageLine(im,x,y,x,y,colorIndex+1);
+            x = static_cast<int>(xc + (w/2) * cos((curAngle +1) * M_PI /180.0));
+            y = static_cast<int>(yc + 40 - (0.4 * offset) +(h/2) * sin ((curAngle +1) * M_PI /180.0));
+            gdImageLine(im,x,y,x,y+1,colorIndex+1);
             if(offset ==0)
             {
-                gdImageArc(im,xc ,yc +40,w+2,h+2,round(curAngle + 1),round(curAngle2 - 1),1);
-                gdImageLine(im,xc,yc +40,xc +round((w/2) * cos ((curAngle+1)*M_PI /180)),yc + 40 +round((h/2) * sin ((curAngle+1)*M_PI /180)),1);
-                gdImageLine(im,xc,yc +40,xc + round((w/2) * cos ((curAngle2-1)*M_PI /180)),yc + 40 + round((h/2) * sin ((curAngle2-1)*M_PI /180)),1);
+                gdImageArc(im,xc ,yc +40,w+2,h+2,static_cast<int>(curAngle + 1),static_cast<int>(curAngle2 - 1),colorIndex+1);
+                gdImageLine(im,xc,yc +40,xc +static_cast<int>((w/2) * cos ((curAngle+1)*M_PI /180)),yc + 40 +static_cast<int>((h/2) * sin ((curAngle+1)*M_PI /180)),colorIndex+1);
+                gdImageLine(im,xc,yc +40,xc + static_cast<int>((w/2) * cos ((curAngle2-1)*M_PI /180)),yc + 40 + static_cast<int>((h/2) * sin ((curAngle2-1)*M_PI /180)),colorIndex+1);
 
             }
             curAngle = curAngle2;
@@ -268,9 +246,9 @@ void myGraphics::pieChartDraw(CurveChartParams params)
             colorIndex=params.dataSets->data()[i].colorIndex;
             double curAngle2 =curAngle  + curPieData.value * ratioAngle * 360.0 /100.0;
 
-            gdImageArc(im,xc ,yc,w,h,round(curAngle+1.1),round(curAngle2-1.1),1);
-            gdImageLine(im,xc,yc,xc +round((w/2) * cos ((curAngle+1)*M_PI /180)),yc +round((h/2) * sin ((curAngle+1)*M_PI /180)),1);
-            gdImageLine(im,xc,yc,xc +round((w/2) * cos ((curAngle2-1)*M_PI /180)),yc + round((h/2) * sin ((curAngle2-1)*M_PI /180)),1);
+            gdImageArc(im,xc ,yc,w,h,round(curAngle+1.1),static_cast<int>(curAngle2-1.1),colorIndex+1);
+            gdImageLine(im,xc,yc,xc +round((w/2) * cos ((curAngle+1)*M_PI /180)),yc +round((h/2) * sin ((curAngle+1)*M_PI /180)),colorIndex+1);
+            gdImageLine(im,xc,yc,xc +round((w/2) * cos ((curAngle2-1)*M_PI /180)),yc + round((h/2) * sin ((curAngle2-1)*M_PI /180)),colorIndex+1);
 
             // label
             int xText = (int) (xc + textRadius * cos ( (curAngle + curAngle2)/2 * M_PI/180 ));
@@ -328,22 +306,7 @@ void myGraphics::curveChartAddCurves(CurveChartParams params)
 //            gdPoint points[4];
             int x0 = xOrigin+i*xRatio;
             int y0 = yOrigin+de.value*yRatio;
-//            if (count % 3 == 0)
-//            {
-//                points[0].x=x0-5;
-//                points[0].y=y0;
-//                points[1].x=x0;
-//                points[1].y=y0-5;
-//                points[2].x=x0+5;
-//                points[2].y=y0;
-//                points[3].x=x0;
-//                points[3].y=y0+5;
-//                gdImageFilledPolygon(im,points, 4, ds.colorIndex+1);
-//            } else if (count % 3 == 1){
-//                gdImageFilledEllipse(im,x0, y0, 7, 7, ds.colorIndex+1);
-//            } else if (count % 3 == 2){
-                gdImageFilledRectangle(im, x0-3, y0-3, x0+3, y0+3, ds.colorIndex+1);
-//            }
+            gdImageFilledRectangle(im, x0-3, y0-3, x0+3, y0+3, ds.colorIndex+1);
             i++;
         }
 

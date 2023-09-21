@@ -15,18 +15,30 @@ struct response {
 };
 
 ///
-/// \brief The myCurl class
-/// \abstract Manage API access
+/// \brief # The myCurl class
+/// \brief Manage __API access__
+/// \details includes _curl/curl.h_ library
+/// \details includes _myoptions.h_ library
+/// \details Requires _-lcurl_ flag
+///
 ///
 class myCurl
 {
+
     CURL *hnd;
     struct response chunk ;
-    string api_key;
-    string longitude, latitude;
-    string url;
     struct curl_slist *headers = nullptr;
 
+    ///
+    /// \brief mem_cb
+    /// \details Call back method required by _curl_easy_perform()_ method to store read datas in buffer
+    /// \param void* contents
+    /// \param size_t size
+    /// \param size_t nmemb
+    /// \param void* userp
+    /// \return static size_t
+    ///
+    ///
     static size_t mem_cb(void *contents, size_t size, size_t nmemb, void *userp);
 
 
@@ -34,62 +46,24 @@ class myCurl
 public:
     ///
     /// \brief myCurl
+    /// \details constructor
     ///
     myCurl();
-    ///
-    /// \brief getApi_key
-    /// \return
-    ///
-    const string &getApi_key() const;
-    ///
-    /// \brief setApi_key
-    /// \param newApi_key
-    ///
-    void setApi_key(const string &newApi_key);
-    ///
-    /// \brief getLongitude
-    /// \return
-    ///
-    const string &getLongitude() const;
-    ///
-    /// \brief setLongitude
-    /// \param newLongitude
-    ///
-    void setLongitude(const string &newLongitude);
-    ///
-    /// \brief getLatitude
-    /// \return
-    ///
-    const string &getLatitude() const;
-    ///
-    /// \brief setLatitude
-    /// \param newLatitude
-    ///
-    void setLatitude(const string &newLatitude);
-    ///
-    /// \brief getUrl
-    /// \return
-    ///
-    const string &getUrl() const;
-    ///
-    /// \brief setUrl
-    /// \param newUrl
-    ///
-    void setUrl(const string &newUrl);
-    ///
-    /// \brief getResponseSize
-    /// \return
-    ///
-    size_t getResponseSize();
+
+
     ///
     /// \brief getData
+    /// \details Allows to recover downloaded data
     /// \param char** response
     ///
     void getData(char** response);
+
     ///
     /// \brief exec
-    /// \param myOption options
-    /// \return
+    /// \param myOption* options
+    /// \return CURLcode
+    /// \details Prepare and execute curl request using parameters in options
+    /// \details Downloaded data can be retrieved by a call to the method getData()
     ///
     CURLcode exec(myOptions *options);
 };

@@ -1,0 +1,160 @@
+\begin{theindex}
+
+  \item {ambeeDataGetDateTime}
+    \subitem {myRegex}, \hyperpage{17}
+  \item {appendFileToDatas}
+    \subitem {myParsing}, \hyperpage{13}
+  \item {appendToDatas}
+    \subitem {myParsing}, \hyperpage{14}
+
+  \indexspace
+
+  \item {Color}, \hyperpage{3}
+  \item {curveChart}
+    \subitem {myGraphics}, \hyperpage{9}
+  \item {CurveChartParams}, \hyperpage{3}
+
+  \indexspace
+
+  \item {DataElement}, \hyperpage{4}
+  \item {dataSet}, \hyperpage{4}
+
+  \indexspace
+
+  \item {exec}
+    \subitem {myCurl}, \hyperpage{5}
+
+  \indexspace
+
+  \item {fromChar}
+    \subitem {myParsing}, \hyperpage{14}
+  \item {fromDatasFile}
+    \subitem {myParsing}, \hyperpage{14}
+  \item {fromFile}
+    \subitem {myParsing}, \hyperpage{15}
+
+  \indexspace
+
+  \item {getApi\_key}
+    \subitem {myCurl}, \hyperpage{6}
+  \item {getApiKeyHeader}
+    \subitem {myOptions}, \hyperpage{10}
+  \item {getData}
+    \subitem {myCurl}, \hyperpage{6}
+  \item {getFilesOwner}
+    \subitem {myOptions}, \hyperpage{10}
+  \item {getFullCurveChartFileName}
+    \subitem {myOptions}, \hyperpage{11}
+  \item {getFullDataFileName}
+    \subitem {myOptions}, \hyperpage{11}
+  \item {getFullHistoChartFileName}
+    \subitem {myOptions}, \hyperpage{11}
+  \item {getFullLogFileName}
+    \subitem {myOptions}, \hyperpage{11}
+  \item {getFullPieChartFileName}
+    \subitem {myOptions}, \hyperpage{12}
+  \item {getFullUrl}
+    \subitem {myOptions}, \hyperpage{12}
+  \item {getLatitude}
+    \subitem {myCurl}, \hyperpage{6}
+  \item {getLongitude}
+    \subitem {myCurl}, \hyperpage{6}
+  \item {getMyJson}
+    \subitem {myParsing}, \hyperpage{15}
+  \item {getResponseSize}
+    \subitem {myCurl}, \hyperpage{7}
+  \item {getUrl}
+    \subitem {myCurl}, \hyperpage{7}
+
+  \indexspace
+
+  \item {isDisplay}
+    \subitem {myOptions}, \hyperpage{12}
+
+  \indexspace
+
+  \item {myCurl}, \hyperpage{4}
+    \subitem {exec}, \hyperpage{5}
+    \subitem {getApi\_key}, \hyperpage{6}
+    \subitem {getData}, \hyperpage{6}
+    \subitem {getLatitude}, \hyperpage{6}
+    \subitem {getLongitude}, \hyperpage{6}
+    \subitem {getResponseSize}, \hyperpage{7}
+    \subitem {getUrl}, \hyperpage{7}
+    \subitem {myCurl}, \hyperpage{5}
+    \subitem {setApi\_key}, \hyperpage{7}
+    \subitem {setLatitude}, \hyperpage{7}
+    \subitem {setLongitude}, \hyperpage{8}
+    \subitem {setUrl}, \hyperpage{8}
+  \item {myGraphics}, \hyperpage{8}
+    \subitem {curveChart}, \hyperpage{9}
+    \subitem {pieChart}, \hyperpage{9}
+  \item {myOptions}, \hyperpage{10}
+    \subitem {getApiKeyHeader}, \hyperpage{10}
+    \subitem {getFilesOwner}, \hyperpage{10}
+    \subitem {getFullCurveChartFileName}, \hyperpage{11}
+    \subitem {getFullDataFileName}, \hyperpage{11}
+    \subitem {getFullHistoChartFileName}, \hyperpage{11}
+    \subitem {getFullLogFileName}, \hyperpage{11}
+    \subitem {getFullPieChartFileName}, \hyperpage{12}
+    \subitem {getFullUrl}, \hyperpage{12}
+    \subitem {isDisplay}, \hyperpage{12}
+    \subitem {readFromFile}, \hyperpage{12}
+  \item {myParsing}, \hyperpage{13}
+    \subitem {appendFileToDatas}, \hyperpage{13}
+    \subitem {appendToDatas}, \hyperpage{14}
+    \subitem {fromChar}, \hyperpage{14}
+    \subitem {fromDatasFile}, \hyperpage{14}
+    \subitem {fromFile}, \hyperpage{15}
+    \subitem {getMyJson}, \hyperpage{15}
+    \subitem {setMyJson}, \hyperpage{15}
+    \subitem {toFile}, \hyperpage{15}
+    \subitem {toString}, \hyperpage{16}
+  \item {myRegex}, \hyperpage{16}
+    \subitem {ambeeDataGetDateTime}, \hyperpage{17}
+    \subitem {toFormatDDMMYY}, \hyperpage{17}
+    \subitem {toFormatDDMMYYHHMM}, \hyperpage{18}
+    \subitem {toFormatHHMM}, \hyperpage{18}
+
+  \indexspace
+
+  \item {pieChart}
+    \subitem {myGraphics}, \hyperpage{9}
+
+  \indexspace
+
+  \item {readFromFile}
+    \subitem {myOptions}, \hyperpage{12}
+  \item {response}, \hyperpage{18}
+
+  \indexspace
+
+  \item {setApi\_key}
+    \subitem {myCurl}, \hyperpage{7}
+  \item {setLatitude}
+    \subitem {myCurl}, \hyperpage{7}
+  \item {setLongitude}
+    \subitem {myCurl}, \hyperpage{8}
+  \item {setMyJson}
+    \subitem {myParsing}, \hyperpage{15}
+  \item {setUrl}
+    \subitem {myCurl}, \hyperpage{8}
+
+  \indexspace
+
+  \item {toFile}
+    \subitem {myParsing}, \hyperpage{15}
+  \item {toFormatDDMMYY}
+    \subitem {myRegex}, \hyperpage{17}
+  \item {toFormatDDMMYYHHMM}
+    \subitem {myRegex}, \hyperpage{18}
+  \item {toFormatHHMM}
+    \subitem {myRegex}, \hyperpage{18}
+  \item {toString}
+    \subitem {myParsing}, \hyperpage{16}
+
+  \indexspace
+
+  \item {updatedAt}, \hyperpage{19}
+
+\end{theindex}

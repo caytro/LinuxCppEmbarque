@@ -8,7 +8,9 @@
 using namespace std;
 using json = nlohmann::json;
 
-
+///
+/// \brief The myOptions class
+///
 class myOptions
 {
     ///

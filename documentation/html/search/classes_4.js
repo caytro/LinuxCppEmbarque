@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['updatedat_57',['updatedAt',['../structupdated_at.html',1,'']]]
+  ['updatedat_48',['updatedAt',['../structupdated_at.html',1,'']]]
 ];

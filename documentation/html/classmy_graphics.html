@@ -70,20 +70,54 @@ $(function() {
 <div class="title">myGraphics Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>The <a class="el" href="classmy_graphics.html" title="The myGraphics class.">myGraphics</a> class.  
+ <a href="classmy_graphics.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="mygraphics_8h_source.html">mygraphics.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a061eafc6c9efa915757fd7e1e6172182"><td class="memItemLeft" align="right" valign="top"><a id="a061eafc6c9efa915757fd7e1e6172182"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy_graphics.html#a061eafc6c9efa915757fd7e1e6172182">myGraphics</a> ()</td></tr>
-<tr class="memdesc:a061eafc6c9efa915757fd7e1e6172182"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classmy_graphics.html">myGraphics</a> <br /></td></tr>
+<tr class="memitem:a061eafc6c9efa915757fd7e1e6172182"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy_graphics.html#a061eafc6c9efa915757fd7e1e6172182">myGraphics</a> ()</td></tr>
+<tr class="memdesc:a061eafc6c9efa915757fd7e1e6172182"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classmy_graphics.html" title="The myGraphics class.">myGraphics</a>  <a href="classmy_graphics.html#a061eafc6c9efa915757fd7e1e6172182">More...</a><br /></td></tr>
 <tr class="separator:a061eafc6c9efa915757fd7e1e6172182"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06acbf9491071e6cd3274fdb7a0acaaf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy_graphics.html#a06acbf9491071e6cd3274fdb7a0acaaf">pieChart</a> (json datas, <a class="el" href="classmy_options.html">myOptions</a> *options)</td></tr>
 <tr class="memdesc:a06acbf9491071e6cd3274fdb7a0acaaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">pieChart  <a href="classmy_graphics.html#a06acbf9491071e6cd3274fdb7a0acaaf">More...</a><br /></td></tr>
 <tr class="separator:a06acbf9491071e6cd3274fdb7a0acaaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e491d83e84d2e378d35dfb4358479c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy_graphics.html#a0e491d83e84d2e378d35dfb4358479c3">curveChart</a> (json datas, <a class="el" href="classmy_options.html">myOptions</a> *options)</td></tr>
-<tr class="memdesc:a0e491d83e84d2e378d35dfb4358479c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">curveChart  <a href="classmy_graphics.html#a0e491d83e84d2e378d35dfb4358479c3">More...</a><br /></td></tr>
+<tr class="memdesc:a0e491d83e84d2e378d35dfb4358479c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">curveChart \param json datas  <a href="classmy_graphics.html#a0e491d83e84d2e378d35dfb4358479c3">More...</a><br /></td></tr>
 <tr class="separator:a0e491d83e84d2e378d35dfb4358479c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The <a class="el" href="classmy_graphics.html" title="The myGraphics class.">myGraphics</a> class. </p>
+<p>#include "myoptions.h"</p>
+<p>#include "myparsing.h"</p>
+<p>#include "myregex.h"</p>
+<p>#include "gd.h"</p>
+<p>requires -lgd flag</p>
+<p>Provides methods for generating, displaying and saving pie charts and curve charts </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a061eafc6c9efa915757fd7e1e6172182"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a061eafc6c9efa915757fd7e1e6172182">&#9670;&nbsp;</a></span>myGraphics()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">myGraphics::myGraphics </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classmy_graphics.html" title="The myGraphics class.">myGraphics</a> </p>
+<p>Constructor</p>
+<p>Initialize image, palette and fonts </p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a0e491d83e84d2e378d35dfb4358479c3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0e491d83e84d2e378d35dfb4358479c3">&#9670;&nbsp;</a></span>curveChart()</h2>
@@ -111,14 +145,14 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>curveChart </p>
+<p>curveChart \param json datas </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">datas</td><td></td></tr>
-    <tr><td class="paramname">options</td><td></td></tr>
+    <tr><td class="paramname"><a class="el" href="classmy_options.html" title="The myOptions class.">myOptions</a></td><td>*options</td></tr>
   </table>
   </dd>
 </dl>
+<p>generate, displays and save curve chart </p>
 
 </div>
 </div>
@@ -151,11 +185,12 @@ Public Member Functions</h2></td></tr>
 <p>pieChart </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">datas</td><td></td></tr>
-    <tr><td class="paramname">options</td><td></td></tr>
+    <tr><td class="paramname">json</td><td>datas </td></tr>
+    <tr><td class="paramname"><a class="el" href="classmy_options.html" title="The myOptions class.">myOptions</a></td><td>*options</td></tr>
   </table>
   </dd>
 </dl>
+<p>generate, displays and save pie chart </p>
 
 </div>
 </div>
