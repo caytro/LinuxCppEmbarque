@@ -172,7 +172,7 @@ class myGraphics
     /// \param CurveChartParams params
     /// \return double
     /// \details Compute S sum of the values
-    /// \detail returns 100/S
+    /// \details returns 100/(S+1)
     /// \details Required to calculate the angles of the pie chart
     ///
     double calcRatioPourcent(CurveChartParams params);

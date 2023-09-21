@@ -15,7 +15,7 @@ struct response {
 };
 
 ///
-/// \brief # The myCurl class
+/// \brief The myCurl class
 /// \brief Manage __API access__
 /// \details includes _curl/curl.h_ library
 /// \details includes _myoptions.h_ library

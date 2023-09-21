@@ -26,6 +26,8 @@ string \mbox{\hyperlink{classmy_options_aa75a7617e000b82d2ce17507398796b3}{get\+
 \begin{DoxyCompactList}\small\item\em get\+Full\+Log\+File\+Name \end{DoxyCompactList}\item 
 string \mbox{\hyperlink{classmy_options_a25d23439e1c690cacd8a2bb1e48c52a4}{get\+Full\+Data\+File\+Name}} ()
 \begin{DoxyCompactList}\small\item\em get\+Full\+Data\+File\+Name \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classmy_options_acfdd3a79ce2424ddb23e510fac18a242}{get\+Data\+Path\+Name}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classmy_options_acfdd3a79ce2424ddb23e510fac18a242}{get\+Data\+Path\+Name()}}; \end{DoxyCompactList}\item 
 string \mbox{\hyperlink{classmy_options_ac18bc0caecfad2a94d2ef3229b9dc87c}{get\+Full\+Curve\+Chart\+File\+Name}} ()
 \begin{DoxyCompactList}\small\item\em get\+Full\+Curve\+Chart\+File\+Name \end{DoxyCompactList}\item 
 string \mbox{\hyperlink{classmy_options_a6edf6dbe101e80aefbd3b3b88235c948}{get\+Full\+Histo\+Chart\+File\+Name}} ()
@@ -44,6 +46,56 @@ bool \mbox{\hyperlink{classmy_options_ae3babeb9e632b9fb390feadc527c3330}{is\+Dis
 \doxysubsection{Detailed Description}
 The \mbox{\hyperlink{classmy_options}{my\+Options}} class. 
 
+Manage acces to AIQWA.\+conf file
+
+Allows to modify API parameters and local files names and paths
+
+without the need to recompile
+
+File Format \+:
+
+\{
+
+\char`\"{}curlopts\char`\"{}\+: \{
+
+\char`\"{}url\char`\"{}\+: \char`\"{}https\+://api.\+ambeedata.\+com/latest/by-\/lat-\/lng\char`\"{},
+
+\char`\"{}url\+Params\char`\"{}\+: \{
+
+\char`\"{}lat\char`\"{}\+: \char`\"{}43.\+560537\char`\"{},
+
+\char`\"{}lng\char`\"{}\+: \char`\"{}1.\+404690\char`\"{}
+
+\},
+
+\char`\"{}api-\/key\char`\"{}\+: "{}x-\/api-\/
+
+key\+:b83fcfd7137ff81d96b92a34d3488506b7d3976bda58077cab133e94efd0a240"{}
+
+\},
+
+\char`\"{}display\char`\"{}\+:true,
+
+\char`\"{}files\+Owner\char`\"{}\+: \char`\"{}owner\char`\"{},
+
+\char`\"{}log\+Path\char`\"{}\+: \char`\"{}logs\char`\"{},
+
+\char`\"{}log\+File\+Name\char`\"{}\+: \char`\"{}\+AIQWA.\+log\char`\"{},
+
+\char`\"{}data\+Path\char`\"{}\+: \char`\"{}datas\char`\"{},
+
+\char`\"{}data\+File\+Name\char`\"{}\+: \char`\"{}\+Air\+Quality\+Watch\char`\"{},
+
+\char`\"{}chart\+Path\char`\"{}\+: \char`\"{}charts\char`\"{},
+
+\char`\"{}curve\+Chart\+File\+Name\char`\"{}\+: \char`\"{}curve.\+png\char`\"{},
+
+\char`\"{}histo\+Chart\+File\+Name\char`\"{}\+: \char`\"{}histo.\+png\char`\"{},
+
+\char`\"{}pie\+Chart\+File\+Name\char`\"{}\+: \char`\"{}pie.\+png\char`\"{}
+
+\} 
+
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classmy_options_a54d540e04ed8d81c6de241305361a12f}\label{classmy_options_a54d540e04ed8d81c6de241305361a12f}} 
 \index{myOptions@{myOptions}!myOptions@{myOptions}}
@@ -55,7 +107,7 @@ The \mbox{\hyperlink{classmy_options}{my\+Options}} class.
 
 \mbox{\hyperlink{classmy_options}{my\+Options}} 
 
-
+Constructor 
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classmy_options_a2e3fcdc1f824617fce73c7b98556bbd3}\label{classmy_options_a2e3fcdc1f824617fce73c7b98556bbd3}} 
@@ -69,9 +121,22 @@ The \mbox{\hyperlink{classmy_options}{my\+Options}} class.
 get\+Api\+Key\+Header 
 
 \begin{DoxyReturn}{Returns}
-
+string 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classmy_options_a727e90da3b4ea169b2a82eb9b18bacab}\label{classmy_options_a727e90da3b4ea169b2a82eb9b18bacab}} 
+\mbox{\Hypertarget{classmy_options_acfdd3a79ce2424ddb23e510fac18a242}\label{classmy_options_acfdd3a79ce2424ddb23e510fac18a242}} 
+\index{myOptions@{myOptions}!getDataPathName@{getDataPathName}}
+\index{getDataPathName@{getDataPathName}!myOptions@{myOptions}}
+\doxysubsubsection{\texorpdfstring{getDataPathName()}{getDataPathName()}}
+{\footnotesize\ttfamily string my\+Options\+::get\+Data\+Path\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classmy_options_acfdd3a79ce2424ddb23e510fac18a242}{get\+Data\+Path\+Name()}}; 
+
+\begin{DoxyReturn}{Returns}
+string
+\end{DoxyReturn}
+return datas path \mbox{\Hypertarget{classmy_options_a727e90da3b4ea169b2a82eb9b18bacab}\label{classmy_options_a727e90da3b4ea169b2a82eb9b18bacab}} 
 \index{myOptions@{myOptions}!getFilesOwner@{getFilesOwner}}
 \index{getFilesOwner@{getFilesOwner}!myOptions@{myOptions}}
 \doxysubsubsection{\texorpdfstring{getFilesOwner()}{getFilesOwner()}}
@@ -82,7 +147,7 @@ get\+Api\+Key\+Header
 get\+Files\+Owner 
 
 \begin{DoxyReturn}{Returns}
-
+string 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classmy_options_ac18bc0caecfad2a94d2ef3229b9dc87c}\label{classmy_options_ac18bc0caecfad2a94d2ef3229b9dc87c}} 
 \index{myOptions@{myOptions}!getFullCurveChartFileName@{getFullCurveChartFileName}}
@@ -95,9 +160,9 @@ get\+Files\+Owner
 get\+Full\+Curve\+Chart\+File\+Name 
 
 \begin{DoxyReturn}{Returns}
-
+string
 \end{DoxyReturn}
-\mbox{\Hypertarget{classmy_options_a25d23439e1c690cacd8a2bb1e48c52a4}\label{classmy_options_a25d23439e1c690cacd8a2bb1e48c52a4}} 
+return path/file\+Name \mbox{\Hypertarget{classmy_options_a25d23439e1c690cacd8a2bb1e48c52a4}\label{classmy_options_a25d23439e1c690cacd8a2bb1e48c52a4}} 
 \index{myOptions@{myOptions}!getFullDataFileName@{getFullDataFileName}}
 \index{getFullDataFileName@{getFullDataFileName}!myOptions@{myOptions}}
 \doxysubsubsection{\texorpdfstring{getFullDataFileName()}{getFullDataFileName()}}
@@ -108,9 +173,9 @@ get\+Full\+Curve\+Chart\+File\+Name
 get\+Full\+Data\+File\+Name 
 
 \begin{DoxyReturn}{Returns}
-
+string
 \end{DoxyReturn}
-\mbox{\Hypertarget{classmy_options_a6edf6dbe101e80aefbd3b3b88235c948}\label{classmy_options_a6edf6dbe101e80aefbd3b3b88235c948}} 
+return datas path/file\+Name \mbox{\Hypertarget{classmy_options_a6edf6dbe101e80aefbd3b3b88235c948}\label{classmy_options_a6edf6dbe101e80aefbd3b3b88235c948}} 
 \index{myOptions@{myOptions}!getFullHistoChartFileName@{getFullHistoChartFileName}}
 \index{getFullHistoChartFileName@{getFullHistoChartFileName}!myOptions@{myOptions}}
 \doxysubsubsection{\texorpdfstring{getFullHistoChartFileName()}{getFullHistoChartFileName()}}
@@ -121,9 +186,9 @@ get\+Full\+Data\+File\+Name
 get\+Full\+Histo\+Chart\+File\+Name 
 
 \begin{DoxyReturn}{Returns}
-
+string
 \end{DoxyReturn}
-\mbox{\Hypertarget{classmy_options_aa75a7617e000b82d2ce17507398796b3}\label{classmy_options_aa75a7617e000b82d2ce17507398796b3}} 
+return path/file\+Name \mbox{\Hypertarget{classmy_options_aa75a7617e000b82d2ce17507398796b3}\label{classmy_options_aa75a7617e000b82d2ce17507398796b3}} 
 \index{myOptions@{myOptions}!getFullLogFileName@{getFullLogFileName}}
 \index{getFullLogFileName@{getFullLogFileName}!myOptions@{myOptions}}
 \doxysubsubsection{\texorpdfstring{getFullLogFileName()}{getFullLogFileName()}}
@@ -134,7 +199,7 @@ get\+Full\+Histo\+Chart\+File\+Name
 get\+Full\+Log\+File\+Name 
 
 \begin{DoxyReturn}{Returns}
-
+string 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classmy_options_afd949ef1e8c02e4f106e0cee0ec9c8ca}\label{classmy_options_afd949ef1e8c02e4f106e0cee0ec9c8ca}} 
 \index{myOptions@{myOptions}!getFullPieChartFileName@{getFullPieChartFileName}}
@@ -147,9 +212,9 @@ get\+Full\+Log\+File\+Name
 get\+Full\+Pie\+Chart\+File\+Name 
 
 \begin{DoxyReturn}{Returns}
-
+string
 \end{DoxyReturn}
-\mbox{\Hypertarget{classmy_options_a551a6ebf3ea19667144bc222c9ffec0b}\label{classmy_options_a551a6ebf3ea19667144bc222c9ffec0b}} 
+return path/file\+Name \mbox{\Hypertarget{classmy_options_a551a6ebf3ea19667144bc222c9ffec0b}\label{classmy_options_a551a6ebf3ea19667144bc222c9ffec0b}} 
 \index{myOptions@{myOptions}!getFullUrl@{getFullUrl}}
 \index{getFullUrl@{getFullUrl}!myOptions@{myOptions}}
 \doxysubsubsection{\texorpdfstring{getFullUrl()}{getFullUrl()}}
@@ -160,9 +225,9 @@ get\+Full\+Pie\+Chart\+File\+Name
 get\+Full\+Url 
 
 \begin{DoxyReturn}{Returns}
-
+string
 \end{DoxyReturn}
-\mbox{\Hypertarget{classmy_options_ae3babeb9e632b9fb390feadc527c3330}\label{classmy_options_ae3babeb9e632b9fb390feadc527c3330}} 
+Returns full API Url, including GET params \mbox{\Hypertarget{classmy_options_ae3babeb9e632b9fb390feadc527c3330}\label{classmy_options_ae3babeb9e632b9fb390feadc527c3330}} 
 \index{myOptions@{myOptions}!isDisplay@{isDisplay}}
 \index{isDisplay@{isDisplay}!myOptions@{myOptions}}
 \doxysubsubsection{\texorpdfstring{isDisplay()}{isDisplay()}}
@@ -173,9 +238,11 @@ get\+Full\+Url
 is\+Display 
 
 \begin{DoxyReturn}{Returns}
-
+bool
 \end{DoxyReturn}
-\mbox{\Hypertarget{classmy_options_a757be1653f62c255b5aef415a84cdad2}\label{classmy_options_a757be1653f62c255b5aef415a84cdad2}} 
+Set false on embedded system
+
+Set true on local system to allow system call to {\itshape display} \mbox{\Hypertarget{classmy_options_a757be1653f62c255b5aef415a84cdad2}\label{classmy_options_a757be1653f62c255b5aef415a84cdad2}} 
 \index{myOptions@{myOptions}!readFromFile@{readFromFile}}
 \index{readFromFile@{readFromFile}!myOptions@{myOptions}}
 \doxysubsubsection{\texorpdfstring{readFromFile()}{readFromFile()}}
@@ -187,10 +254,10 @@ read\+From\+File
 
 
 \begin{DoxyParams}{Parameters}
-{\em file\+Name} & \\
+{\em string} & file\+Name\\
 \hline
 \end{DoxyParams}
-
+Read options from file in json format 
 
 \doxysubsection{Member Data Documentation}
 \mbox{\Hypertarget{classmy_options_a8da22654627371cedfd4dc3f61233e72}\label{classmy_options_a8da22654627371cedfd4dc3f61233e72}} 
@@ -203,7 +270,7 @@ read\+From\+File
 
 options 
 
-
+Stores json options 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

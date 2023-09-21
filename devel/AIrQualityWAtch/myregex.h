@@ -19,6 +19,7 @@ typedef struct {
 
 ///
 /// \brief The myRegex class
+/// \details Regex  helpers to display dates and times
 ///
 class myRegex
 {

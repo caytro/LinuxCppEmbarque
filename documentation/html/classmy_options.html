@@ -100,6 +100,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a25d23439e1c690cacd8a2bb1e48c52a4"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy_options.html#a25d23439e1c690cacd8a2bb1e48c52a4">getFullDataFileName</a> ()</td></tr>
 <tr class="memdesc:a25d23439e1c690cacd8a2bb1e48c52a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">getFullDataFileName  <a href="classmy_options.html#a25d23439e1c690cacd8a2bb1e48c52a4">More...</a><br /></td></tr>
 <tr class="separator:a25d23439e1c690cacd8a2bb1e48c52a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfdd3a79ce2424ddb23e510fac18a242"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy_options.html#acfdd3a79ce2424ddb23e510fac18a242">getDataPathName</a> ()</td></tr>
+<tr class="memdesc:acfdd3a79ce2424ddb23e510fac18a242"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classmy_options.html#acfdd3a79ce2424ddb23e510fac18a242" title="getDataPathName();">getDataPathName()</a>;  <a href="classmy_options.html#acfdd3a79ce2424ddb23e510fac18a242">More...</a><br /></td></tr>
+<tr class="separator:acfdd3a79ce2424ddb23e510fac18a242"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac18bc0caecfad2a94d2ef3229b9dc87c"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy_options.html#ac18bc0caecfad2a94d2ef3229b9dc87c">getFullCurveChartFileName</a> ()</td></tr>
 <tr class="memdesc:ac18bc0caecfad2a94d2ef3229b9dc87c"><td class="mdescLeft">&#160;</td><td class="mdescRight">getFullCurveChartFileName  <a href="classmy_options.html#ac18bc0caecfad2a94d2ef3229b9dc87c">More...</a><br /></td></tr>
 <tr class="separator:ac18bc0caecfad2a94d2ef3229b9dc87c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -121,6 +124,31 @@ Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The <a class="el" href="classmy_options.html" title="The myOptions class.">myOptions</a> class. </p>
+<p>Manage acces to AIQWA.conf file</p>
+<p>Allows to modify API parameters and local files names and paths</p>
+<p>without the need to recompile</p>
+<p>File Format :</p>
+<p>{</p>
+<p>"curlopts": {</p>
+<p>"url": "https://api.ambeedata.com/latest/by-lat-lng",</p>
+<p>"urlParams": {</p>
+<p>"lat": "43.560537",</p>
+<p>"lng": "1.404690"</p>
+<p>},</p>
+<p>"api-key": "x-api-</p>
+<p>key:b83fcfd7137ff81d96b92a34d3488506b7d3976bda58077cab133e94efd0a240"</p>
+<p>},</p>
+<p>"display":true,</p>
+<p>"filesOwner": "owner",</p>
+<p>"logPath": "logs",</p>
+<p>"logFileName": "AIQWA.log",</p>
+<p>"dataPath": "datas",</p>
+<p>"dataFileName": "AirQualityWatch",</p>
+<p>"chartPath": "charts",</p>
+<p>"curveChartFileName": "curve.png",</p>
+<p>"histoChartFileName": "histo.png",</p>
+<p>"pieChartFileName": "pie.png"</p>
+<p>} </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a54d540e04ed8d81c6de241305361a12f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a54d540e04ed8d81c6de241305361a12f">&#9670;&nbsp;</a></span>myOptions()</h2>
@@ -138,6 +166,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p><a class="el" href="classmy_options.html" title="The myOptions class.">myOptions</a> </p>
+<p>Constructor </p>
 
 </div>
 </div>
@@ -158,7 +187,28 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>getApiKeyHeader </p>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>string </dd></dl>
+
+</div>
+</div>
+<a id="acfdd3a79ce2424ddb23e510fac18a242"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfdd3a79ce2424ddb23e510fac18a242">&#9670;&nbsp;</a></span>getDataPathName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string myOptions::getDataPathName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classmy_options.html#acfdd3a79ce2424ddb23e510fac18a242" title="getDataPathName();">getDataPathName()</a>; </p>
+<dl class="section return"><dt>Returns</dt><dd>string</dd></dl>
+<p>return datas path </p>
 
 </div>
 </div>
@@ -178,7 +228,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>getFilesOwner </p>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>string </dd></dl>
 
 </div>
 </div>
@@ -198,7 +248,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>getFullCurveChartFileName </p>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>string</dd></dl>
+<p>return path/fileName </p>
 
 </div>
 </div>
@@ -218,7 +269,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>getFullDataFileName </p>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>string</dd></dl>
+<p>return datas path/fileName </p>
 
 </div>
 </div>
@@ -238,7 +290,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>getFullHistoChartFileName </p>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>string</dd></dl>
+<p>return path/fileName </p>
 
 </div>
 </div>
@@ -258,7 +311,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>getFullLogFileName </p>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>string </dd></dl>
 
 </div>
 </div>
@@ -278,7 +331,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>getFullPieChartFileName </p>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>string</dd></dl>
+<p>return path/fileName </p>
 
 </div>
 </div>
@@ -298,7 +352,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>getFullUrl </p>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>string</dd></dl>
+<p>Returns full API Url, including GET params </p>
 
 </div>
 </div>
@@ -318,7 +373,9 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>isDisplay </p>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>bool</dd></dl>
+<p>Set false on embedded system</p>
+<p>Set true on local system to allow system call to <em>display</em> </p>
 
 </div>
 </div>
@@ -341,10 +398,11 @@ Private Attributes</h2></td></tr>
 <p>readFromFile </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">fileName</td><td></td></tr>
+    <tr><td class="paramname">string</td><td>fileName</td></tr>
   </table>
   </dd>
 </dl>
+<p>Read options from file in json format </p>
 
 </div>
 </div>
@@ -370,6 +428,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>options </p>
+<p>Stores json options </p>
 
 </div>
 </div>

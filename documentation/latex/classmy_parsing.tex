@@ -2,6 +2,11 @@
 \label{classmy_parsing}\index{myParsing@{myParsing}}
 
 
+The \mbox{\hyperlink{classmy_parsing}{my\+Parsing}} class.  
+
+
+
+
 {\ttfamily \#include $<$myparsing.\+h$>$}
 
 \doxysubsection*{Public Member Functions}
@@ -34,6 +39,11 @@ const \mbox{\hyperlink{myoptions_8h_ab701e3ac61a85b337ec5c1abaad6742d}{json}} \m
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classmy_parsing}{my\+Parsing}} class. 
+
+shortcut methods based on $<$nlohmann/json.\+hpp$>$ library 
+
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classmy_parsing_a6b5f94beb2d02670847a2c2a7e5c8500}\label{classmy_parsing_a6b5f94beb2d02670847a2c2a7e5c8500}} 
 \index{myParsing@{myParsing}!myParsing@{myParsing}}
@@ -45,7 +55,7 @@ const \mbox{\hyperlink{myoptions_8h_ab701e3ac61a85b337ec5c1abaad6742d}{json}} \m
 
 \mbox{\hyperlink{classmy_parsing}{my\+Parsing}} 
 
-
+Constructor 
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classmy_parsing_ab599048e42b031e284a736002fee7f56}\label{classmy_parsing_ab599048e42b031e284a736002fee7f56}} 
@@ -60,10 +70,10 @@ append\+File\+To\+Datas
 
 
 \begin{DoxyParams}{Parameters}
-{\em file\+Name} & \\
+{\em string} & file\+Name\\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classmy_parsing_af03238a31541f7376cf84a335470ec19}\label{classmy_parsing_af03238a31541f7376cf84a335470ec19}} 
+Append current latest downloaded data to file {\itshape file\+Name} \mbox{\Hypertarget{classmy_parsing_af03238a31541f7376cf84a335470ec19}\label{classmy_parsing_af03238a31541f7376cf84a335470ec19}} 
 \index{myParsing@{myParsing}!appendToDatas@{appendToDatas}}
 \index{appendToDatas@{appendToDatas}!myParsing@{myParsing}}
 \doxysubsubsection{\texorpdfstring{appendToDatas()}{appendToDatas()}}
@@ -75,10 +85,10 @@ append\+To\+Datas
 
 
 \begin{DoxyParams}{Parameters}
-{\em options} & \\
+{\em my\+Options$\ast$} & options\\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classmy_parsing_a9e160e5990b04bfbcad93b4e191c330f}\label{classmy_parsing_a9e160e5990b04bfbcad93b4e191c330f}} 
+Append current latest downloaded data to file {\itshape options-\/$>$get\+Full\+Data\+File\+Name().json} \mbox{\Hypertarget{classmy_parsing_a9e160e5990b04bfbcad93b4e191c330f}\label{classmy_parsing_a9e160e5990b04bfbcad93b4e191c330f}} 
 \index{myParsing@{myParsing}!fromChar@{fromChar}}
 \index{fromChar@{fromChar}!myParsing@{myParsing}}
 \doxysubsubsection{\texorpdfstring{fromChar()}{fromChar()}}
@@ -90,13 +100,13 @@ from\+Char
 
 
 \begin{DoxyParams}{Parameters}
-{\em str} & \\
+{\em char$\ast$} & str \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-
+my\+Parsing$\ast$
 \end{DoxyReturn}
-\mbox{\Hypertarget{classmy_parsing_a8792a4a8ad331d277b8424906607103c}\label{classmy_parsing_a8792a4a8ad331d277b8424906607103c}} 
+Generate json from char $\ast$data read from API returned by curl \mbox{\Hypertarget{classmy_parsing_a8792a4a8ad331d277b8424906607103c}\label{classmy_parsing_a8792a4a8ad331d277b8424906607103c}} 
 \index{myParsing@{myParsing}!fromDatasFile@{fromDatasFile}}
 \index{fromDatasFile@{fromDatasFile}!myParsing@{myParsing}}
 \doxysubsubsection{\texorpdfstring{fromDatasFile()}{fromDatasFile()}}
@@ -108,13 +118,15 @@ from\+Datas\+File
 
 
 \begin{DoxyParams}{Parameters}
-{\em options} & \\
+{\em \mbox{\hyperlink{classmy_options}{my\+Options}}} & $\ast$options \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-
+const json
 \end{DoxyReturn}
-\mbox{\Hypertarget{classmy_parsing_ac8f1970ab4a6a476543a8e1feaa8465e}\label{classmy_parsing_ac8f1970ab4a6a476543a8e1feaa8465e}} 
+returns json content of \+\_\+options-\/$>$get\+Full\+Data\+File\+Name().json"{}
+
+the file is json array containing previously stored datasets \mbox{\Hypertarget{classmy_parsing_ac8f1970ab4a6a476543a8e1feaa8465e}\label{classmy_parsing_ac8f1970ab4a6a476543a8e1feaa8465e}} 
 \index{myParsing@{myParsing}!fromFile@{fromFile}}
 \index{fromFile@{fromFile}!myParsing@{myParsing}}
 \doxysubsubsection{\texorpdfstring{fromFile()}{fromFile()}}
@@ -126,13 +138,13 @@ from\+File
 
 
 \begin{DoxyParams}{Parameters}
-{\em file\+Name} & \\
+{\em string} & file\+Name \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-
+my\+Parsing$\ast$
 \end{DoxyReturn}
-\mbox{\Hypertarget{classmy_parsing_a91315e3b81c99b3780e81701fbe528ce}\label{classmy_parsing_a91315e3b81c99b3780e81701fbe528ce}} 
+Read file in json format, parse it and strores data in my\+Json \mbox{\Hypertarget{classmy_parsing_a91315e3b81c99b3780e81701fbe528ce}\label{classmy_parsing_a91315e3b81c99b3780e81701fbe528ce}} 
 \index{myParsing@{myParsing}!getMyJson@{getMyJson}}
 \index{getMyJson@{getMyJson}!myParsing@{myParsing}}
 \doxysubsubsection{\texorpdfstring{getMyJson()}{getMyJson()}}
@@ -143,7 +155,7 @@ from\+File
 get\+My\+Json 
 
 \begin{DoxyReturn}{Returns}
-
+const json \& 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classmy_parsing_a3c44bc291f4e2bbebdc10b11e25c2827}\label{classmy_parsing_a3c44bc291f4e2bbebdc10b11e25c2827}} 
 \index{myParsing@{myParsing}!setMyJson@{setMyJson}}
@@ -157,7 +169,7 @@ set\+My\+Json
 
 
 \begin{DoxyParams}{Parameters}
-{\em new\+My\+Json} & \\
+{\em const} & json \&new\+My\+Json \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classmy_parsing_a9e0f08244af45f69dbcb092cd258757c}\label{classmy_parsing_a9e0f08244af45f69dbcb092cd258757c}} 
@@ -172,13 +184,15 @@ to\+File
 
 
 \begin{DoxyParams}{Parameters}
-{\em options} & \\
+{\em my\+Options$\ast$} & options \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-
+int
 \end{DoxyReturn}
-\mbox{\Hypertarget{classmy_parsing_a3bf8364dc5d5243f8b88b61324e28bd3}\label{classmy_parsing_a3bf8364dc5d5243f8b88b61324e28bd3}} 
+stores my\+Json to file\+Name returned by options-\/$>$get\+Full\+Data\+File\+Name
+
+an \mbox{\hyperlink{structupdated_at}{updated\+At}} tag is appended to file\+Name \mbox{\Hypertarget{classmy_parsing_a3bf8364dc5d5243f8b88b61324e28bd3}\label{classmy_parsing_a3bf8364dc5d5243f8b88b61324e28bd3}} 
 \index{myParsing@{myParsing}!toString@{toString}}
 \index{toString@{toString}!myParsing@{myParsing}}
 \doxysubsubsection{\texorpdfstring{toString()}{toString()}}
@@ -189,9 +203,9 @@ to\+File
 to\+String 
 
 \begin{DoxyReturn}{Returns}
-
+string
 \end{DoxyReturn}
-
+return json dump, for debug purpose 
 
 \doxysubsection{Member Data Documentation}
 \mbox{\Hypertarget{classmy_parsing_a522eb7e1f59924ff28b16b7a8b30c1d9}\label{classmy_parsing_a522eb7e1f59924ff28b16b7a8b30c1d9}} 
