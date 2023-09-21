@@ -1,0 +1,33 @@
+#!/bin/sh
+
+# Initalise le fichier "AirQualityWAtch.json" à partir des données téléchargées dans les fichiers "AirQualityWAtch-YYYY-MM-DDTHH:MM:MM:SS.XXXZ.json" présents dans le répertoire courant
+
+# "AirQualityWAtch.json" sera utilisé pour générer le curveChart
+
+
+fileName="AirQualityWatch"
+
+echo "$fileName"
+
+if [ -f "$fileName.json" ] ; then
+	mv "$fileName.json" "$fileName.bak.json" 
+fi
+
+echo "[" > "$fileName.json"
+
+premier=1
+
+for i in $fileName-*.json ; do
+	echo "Processing $i"
+	if [ $premier -eq 1 ] ; then
+		premier=0
+	else
+		echo "," >> "$fileName.json"
+	fi
+	cat "$i" >> "$fileName.json"
+	
+done
+
+echo "]" >> $fileName.json
+	
+	
