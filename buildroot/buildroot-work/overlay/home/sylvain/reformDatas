@@ -4,30 +4,29 @@
 
 # "AirQualityWAtch.json" sera utilisé pour générer le curveChart
 
-
+dirName="datas"
 fileName="AirQualityWatch"
 
-echo "$fileName"
 
-if [ -f "$fileName.json" ] ; then
-	mv "$fileName.json" "$fileName.bak.json" 
+if [ -f "$dirName/$fileName.json" ] ; then
+	mv "$dirName/$fileName.json" "$dirName/$fileName.bak.json" 
 fi
 
-echo "[" > "$fileName.json"
+echo "[" > "$dirName/$fileName.json"
 
 premier=1
 
-for i in $fileName-*.json ; do
+for i in $dirName/$fileName-*.json ; do
 	echo "Processing $i"
 	if [ $premier -eq 1 ] ; then
 		premier=0
 	else
-		echo "," >> "$fileName.json"
+		echo "," >> "$dirName/$fileName.json"
 	fi
-	cat "$i" >> "$fileName.json"
+	cat "$i" >> "$dirName/$fileName.json"
 	
 done
 
-echo "]" >> $fileName.json
+echo "]" >> $dirName/$fileName.json
 	
 	

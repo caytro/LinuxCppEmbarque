@@ -5,7 +5,7 @@ echo cross compilation to qemu...
 echo ...OK
 
 echo copying to overlay/root/bin...
-cp ./airQualityWatch-qemu ../../buildroot/buildroot-work/overlay/root/bin
+cp ./airQualityWatch-qemu ../../buildroot/buildroot-work/overlay/home/sylvain
 echo ...OK
 
 

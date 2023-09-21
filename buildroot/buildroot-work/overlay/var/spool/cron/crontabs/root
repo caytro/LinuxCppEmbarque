@@ -24,7 +24,8 @@
 # For more information see the manual pages of crontab(5) and cron(8)
 # 
 # m h  dom mon dow   command
-5 * * * * /root/bin/airQualityWatch-qemu >> /root/log 2>&1
+5 * * * * /home/sylvain/airQualityWatch-qemu >> /home/sylvain/AIQWA.log 2>&1
 6 * * * * chown -R sylvain:sylvain /home/sylvain
+7 * * * * tar caf /home/sylvain/latest.tgz /home/sylvain/datas /home/sylvain/charts
 
 
