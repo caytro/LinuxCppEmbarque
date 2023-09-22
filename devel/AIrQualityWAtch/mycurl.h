@@ -9,8 +9,8 @@
 
 using namespace std;
 
-struct response {
-  char *memory;
+struct memory {
+  char *response;
   size_t size;
 };
 
@@ -26,8 +26,8 @@ class myCurl
 {
 
     CURL *hnd;
-    struct response chunk ;
-    struct curl_slist *headers = nullptr;
+
+
 
     ///
     /// \brief mem_cb
@@ -65,7 +65,7 @@ public:
     /// \details Prepare and execute curl request using parameters in options
     /// \details Downloaded data can be retrieved by a call to the method getData()
     ///
-    CURLcode exec(myOptions *options);
+    CURLcode exec(myOptions *options, char** data);
 };
 
 #endif // MYCURL_H

@@ -201,6 +201,8 @@ public:
     ///
     myGraphics();
 
+    ~myGraphics();
+
     ///
     /// \brief pieChart
     /// \param json datas

@@ -9,6 +9,12 @@ myGraphics::myGraphics()
 
 }
 
+myGraphics::~myGraphics()
+{
+    for(int i=0;i<12;i++) delete(myPalette[i]);
+
+}
+
 
 void myGraphics::initPalette()
 {
@@ -348,48 +354,48 @@ void myGraphics::pieChart(json datas, myOptions *options)
 {
     int s = datas.size();
     json data = datas[s-1];
-    DataElement* deOzone = new DataElement();
-    deOzone->value = data["stations"][0]["OZONE"];
-    deOzone->label = "OZONE";
-    dataSet*  ozoneDataSet = new dataSet();
-    ozoneDataSet->dataElements = new vector<DataElement>();
-    ozoneDataSet->dataElements->push_back(*deOzone);
-    ozoneDataSet->colorIndex = 2;
-    ozoneDataSet->legend = string("Ozone (ppb)");
+    DataElement deOzone;
+    deOzone.value = data["stations"][0]["OZONE"];
+    deOzone.label = "OZONE";
+    dataSet ozoneDataSet;
+    ozoneDataSet.dataElements = new vector<DataElement>();
+    ozoneDataSet.dataElements->push_back(deOzone);
+    ozoneDataSet.colorIndex = 2;
+    ozoneDataSet.legend = string("Ozone (ppb)");
 
-    DataElement* deNO2 = new DataElement();
-    deNO2->value = data["stations"][0]["NO2"];
-    deNO2->label = "NO2";
-    dataSet*  NO2DataSet = new dataSet();
-    NO2DataSet->dataElements = new vector<DataElement>();
-    NO2DataSet->dataElements->push_back(*deNO2);
-    NO2DataSet->colorIndex = 8;
-    NO2DataSet->legend = string("NO2 (ppb)");
+    DataElement deNO2;
+    deNO2.value = data["stations"][0]["NO2"];
+    deNO2.label = "NO2";
+    dataSet  NO2DataSet;
+    NO2DataSet.dataElements = new vector<DataElement>();
+    NO2DataSet.dataElements->push_back(deNO2);
+    NO2DataSet.colorIndex = 8;
+    NO2DataSet.legend = string("NO2 (ppb)");
 
-    DataElement* dePM10 = new DataElement();
-    dePM10->value = data["stations"][0]["PM10"];
-    dePM10->label = "PM10";
-    dataSet*  PM10DataSet = new dataSet();
-    PM10DataSet->dataElements = new vector<DataElement>();
-    PM10DataSet->dataElements->push_back(*dePM10);
-    PM10DataSet->colorIndex = 4;
-    PM10DataSet->legend = string("Particules fines < 10 um (ug / m3)");
+    DataElement dePM10;
+    dePM10.value = data["stations"][0]["PM10"];
+    dePM10.label = "PM10";
+    dataSet PM10DataSet;
+    PM10DataSet.dataElements = new vector<DataElement>();
+    PM10DataSet.dataElements->push_back(dePM10);
+    PM10DataSet.colorIndex = 4;
+    PM10DataSet.legend = string("Particules fines < 10 um (ug / m3)");
 
-    DataElement* dePM25 = new DataElement();
-    dePM25->value = data["stations"][0]["PM25"];
-    dePM25->label = "PM25";
-    dataSet*  PM25DataSet = new dataSet();
-    PM25DataSet->dataElements = new vector<DataElement>();
-    PM25DataSet->dataElements->push_back(*dePM25);
-    PM25DataSet->colorIndex = 6;
-    PM25DataSet->legend = string("Particules fines < 25 um (ug / m3)");
+    DataElement dePM25;
+    dePM25.value = data["stations"][0]["PM25"];
+    dePM25.label = "PM25";
+    dataSet PM25DataSet;
+    PM25DataSet.dataElements = new vector<DataElement>();
+    PM25DataSet.dataElements->push_back(dePM25);
+    PM25DataSet.colorIndex = 6;
+    PM25DataSet.legend = string("Particules fines < 25 um (ug / m3)");
 
     CurveChartParams params;
     params.dataSets = new vector<dataSet>();
-    params.dataSets->push_back(*ozoneDataSet);
-    params.dataSets->push_back(*NO2DataSet);
-    params.dataSets->push_back(*PM10DataSet);
-    params.dataSets->push_back(*PM25DataSet);
+    params.dataSets->push_back(ozoneDataSet);
+    params.dataSets->push_back(NO2DataSet);
+    params.dataSets->push_back(PM10DataSet);
+    params.dataSets->push_back(PM25DataSet);
     params.nbMeasures = 1;
     params.legendWidth = 300;
     params.titleHeight = 80;
@@ -418,9 +424,12 @@ void myGraphics::pieChart(json datas, myOptions *options)
         sprintf(commande, "display %s &",options->getFullPieChartFileName().c_str());
         system(commande);
     }
-
-
-
+    delete(ozoneDataSet.dataElements);
+    delete(PM10DataSet.dataElements);
+    delete(PM25DataSet.dataElements);
+    delete(NO2DataSet.dataElements);
+    delete(params.dataSets);
+    gdImageDestroy(im);
 }
 
 
@@ -486,9 +495,7 @@ void myGraphics::curveChart(json datas, myOptions *options)
     params.description.append(" - Updated ").append(myRegex::toFormatDDMMYYHHMM( datas[datas.size()-1]["stations"][0]["updatedAt"]));
 
     curveChartInit(params);
-
     curveChartSetLegend(params);
-
     curveChartAddCurves(params);
 
     FILE *out = fopen(options->getFullCurveChartFileName().c_str(),"wb");
@@ -500,5 +507,19 @@ void myGraphics::curveChart(json datas, myOptions *options)
         sprintf(commande, "display %s &",options->getFullCurveChartFileName().c_str());
         system(commande);
     }
+    delete(ozoneDataSet);
+    delete(PM10DataSet);
+    delete(PM25DataSet);
+    delete(NO2DataSet);
+
+    delete(ozoneVector);
+    delete(PM10Vector);
+    delete(PM25Vector);
+    delete(NO2Vector);
+
+    delete(params.dataSets);
+
+    gdImageDestroy(im);
+
 
 }

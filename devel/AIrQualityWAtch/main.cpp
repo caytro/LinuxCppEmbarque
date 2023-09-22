@@ -10,14 +10,13 @@
 using namespace std;
 
 int downloadDatas(char** data, myOptions* options){
-    myCurl *mc = new myCurl();
+    myCurl mc;
+    CURLcode ret=mc.exec(options, data);
+//    if (ret!=0) {
+//        cout << "Code erreur : " << ret << endl;
+//        return ret;
+//    }
 
-    CURLcode ret=mc->exec(options);
-    if (ret!=0) {
-        cout << "Code erreur : " << ret << endl;
-        return ret;
-    }
-    mc->getData(data);
     return ret;
 }
 
@@ -26,18 +25,15 @@ int downloadDatas(char** data, myOptions* options){
 int main()
 {
     char **data = (char**) malloc(sizeof(char*));
-    *data=nullptr;
+    *data=(char *)nullptr;
 
     myOptions* options = new(myOptions);
     options->readFromFile("AIQWA.conf");
-
-    time_t now = time(0);
-    cout << "*** " << endl << ctime(&now) << endl << "***" << endl;
     downloadDatas(data, options);
 
     myParsing* parser = new myParsing();
-    parser->fromChar(*data)->toFile(options);
-
+    parser->fromChar(*data);
+    parser->toFile(options);
     parser->appendToDatas(options);
     system("./reformDatas");
     json datas = parser->fromDatasFile(options);
@@ -47,6 +43,9 @@ int main()
     pieChart->pieChart(datas, options);
     free (*data);
     free(data);
-
+    delete(options);
+    delete(parser);
+    delete(curveChart);
+    delete(pieChart);
     return 0;
 }

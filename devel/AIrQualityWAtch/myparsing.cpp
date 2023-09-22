@@ -13,7 +13,7 @@ void myParsing::setMyJson(const json &newMyJson)
 
 myParsing* myParsing::fromChar(char *str)
 {
-    myJson = json::parse(str);
+    myJson = json::parse<char *>(str, str + string(str).length());
     return this;
 }
 
@@ -76,5 +76,5 @@ const json myParsing::fromDatasFile(myOptions* options)
 
 myParsing::myParsing()
 {
-
+    myJson = json::parse("{}");
 }
