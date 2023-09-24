@@ -82,17 +82,17 @@ $(function() {
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">using namespace </span>std;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="structresponse.html">   12</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structresponse.html">response</a> {</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="structresponse.html#a992083e67fe347ff66445061070d408d">   13</a></span>&#160;  <span class="keywordtype">char</span> *<a class="code" href="structresponse.html#a992083e67fe347ff66445061070d408d">memory</a>;</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="structresponse.html#af2640d48c71866b9029b04083a77d36c">   14</a></span>&#160;  <span class="keywordtype">size_t</span> <a class="code" href="structresponse.html#af2640d48c71866b9029b04083a77d36c">size</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="structmemory.html">   12</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structmemory.html">memory</a> {</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="structmemory.html#a15055c3c47f997a93f88b7e68380a33c">   13</a></span>&#160;  <span class="keywordtype">char</span> *<a class="code" href="structmemory.html#a15055c3c47f997a93f88b7e68380a33c">response</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="structmemory.html#ab3b0aead6f9baa002a8ab0dbc255e3cf">   14</a></span>&#160;  <span class="keywordtype">size_t</span> <a class="code" href="structmemory.html#ab3b0aead6f9baa002a8ab0dbc255e3cf">size</a>;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;};</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
 <div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classmy_curl.html">   25</a></span>&#160;<span class="keyword">class </span><a class="code" href="classmy_curl.html">myCurl</a></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classmy_curl.html#aecaca298ab0c7475cd965d80499a01b6">   28</a></span>&#160;    CURL *hnd;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">struct </span><a class="code" href="structresponse.html">response</a> chunk ;</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classmy_curl.html#aaab76a51fca4003d16a372144bda500d">   30</a></span>&#160;    <span class="keyword">struct </span>curl_slist *headers = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classmy_curl.html#aae58d4a13c2c10fc5a254b0b6aa1765d">   28</a></span>&#160;    CURL *<a class="code" href="classmy_curl.html#aae58d4a13c2c10fc5a254b0b6aa1765d">hnd</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">size_t</span> mem_cb(<span class="keywordtype">void</span> *contents, <span class="keywordtype">size_t</span> size, <span class="keywordtype">size_t</span> nmemb, <span class="keywordtype">void</span> *userp);</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
@@ -102,18 +102,20 @@ $(function() {
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="classmy_curl.html">myCurl</a>();</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span> getData(<span class="keywordtype">char</span>** <a class="code" href="structresponse.html">response</a>);</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classmy_curl.html#a5d9d737edc2db4d0e723b49e5ab88603">   59</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classmy_curl.html#a5d9d737edc2db4d0e723b49e5ab88603">getData</a>(<span class="keywordtype">char</span>** response);</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    CURLcode exec(<a class="code" href="classmy_options.html">myOptions</a> *options);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    CURLcode exec(<a class="code" href="classmy_options.html">myOptions</a> *options, <span class="keywordtype">char</span>** data);</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;};</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// MYCURL_H</span></div>
-<div class="ttc" id="aclassmy_curl_html"><div class="ttname"><a href="classmy_curl.html">myCurl</a></div><div class="ttdoc"># The myCurl class</div><div class="ttdef"><b>Definition:</b> mycurl.h:26</div></div>
+<div class="ttc" id="aclassmy_curl_html"><div class="ttname"><a href="classmy_curl.html">myCurl</a></div><div class="ttdoc">The myCurl class.</div><div class="ttdef"><b>Definition:</b> mycurl.h:26</div></div>
+<div class="ttc" id="aclassmy_curl_html_a5d9d737edc2db4d0e723b49e5ab88603"><div class="ttname"><a href="classmy_curl.html#a5d9d737edc2db4d0e723b49e5ab88603">myCurl::getData</a></div><div class="ttdeci">void getData(char **response)</div><div class="ttdoc">getData</div></div>
+<div class="ttc" id="aclassmy_curl_html_aae58d4a13c2c10fc5a254b0b6aa1765d"><div class="ttname"><a href="classmy_curl.html#aae58d4a13c2c10fc5a254b0b6aa1765d">myCurl::hnd</a></div><div class="ttdeci">CURL * hnd</div><div class="ttdef"><b>Definition:</b> mycurl.h:28</div></div>
 <div class="ttc" id="aclassmy_options_html"><div class="ttname"><a href="classmy_options.html">myOptions</a></div><div class="ttdoc">The myOptions class.</div><div class="ttdef"><b>Definition:</b> myoptions.h:41</div></div>
 <div class="ttc" id="amyoptions_8h_html"><div class="ttname"><a href="myoptions_8h.html">myoptions.h</a></div></div>
-<div class="ttc" id="astructresponse_html"><div class="ttname"><a href="structresponse.html">response</a></div><div class="ttdef"><b>Definition:</b> mycurl.h:12</div></div>
-<div class="ttc" id="astructresponse_html_a992083e67fe347ff66445061070d408d"><div class="ttname"><a href="structresponse.html#a992083e67fe347ff66445061070d408d">response::memory</a></div><div class="ttdeci">char * memory</div><div class="ttdef"><b>Definition:</b> mycurl.h:13</div></div>
-<div class="ttc" id="astructresponse_html_af2640d48c71866b9029b04083a77d36c"><div class="ttname"><a href="structresponse.html#af2640d48c71866b9029b04083a77d36c">response::size</a></div><div class="ttdeci">size_t size</div><div class="ttdef"><b>Definition:</b> mycurl.h:14</div></div>
+<div class="ttc" id="astructmemory_html"><div class="ttname"><a href="structmemory.html">memory</a></div><div class="ttdef"><b>Definition:</b> mycurl.h:12</div></div>
+<div class="ttc" id="astructmemory_html_a15055c3c47f997a93f88b7e68380a33c"><div class="ttname"><a href="structmemory.html#a15055c3c47f997a93f88b7e68380a33c">memory::response</a></div><div class="ttdeci">char * response</div><div class="ttdef"><b>Definition:</b> mycurl.h:13</div></div>
+<div class="ttc" id="astructmemory_html_ab3b0aead6f9baa002a8ab0dbc255e3cf"><div class="ttname"><a href="structmemory.html#ab3b0aead6f9baa002a8ab0dbc255e3cf">memory::size</a></div><div class="ttdeci">size_t size</div><div class="ttdef"><b>Definition:</b> mycurl.h:14</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

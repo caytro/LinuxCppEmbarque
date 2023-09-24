@@ -45,7 +45,7 @@ public:
     /// \return myParsing*
     /// \details Generate json from char *data read from API returned by curl
     ///
-    myParsing* fromChar(char* str);
+    myParsing* fromChar(string str);
 
     ///
     /// \brief toString

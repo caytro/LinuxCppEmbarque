@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.9.20)  21 SEP 2023 14:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.9.20)  24 SEP 2023 10:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -930,12 +930,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 169--169
 ormation/[]Linux[]Embarque/[]Projet/devel/[]AIr[]Quality[] 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 169--169
- [][] [][]\T1/phv/m/n/10 4.12 /home/sylvain/[]Documents/[]Travail/ajc-akkodis/f
-ormation/[]Linux[]Embarque/[]Projet/devel/[]AIr[]Quality[] 
- []
-
 [4]
 Package hyperref Info: Option `pageanchor' set `true' on input line 171.
 
@@ -974,7 +968,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--3
  []
 
 
-Overfull \hbox (76.71565pt too wide) in paragraph at lines 4--4
+Overfull \hbox (28.99878pt too wide) in paragraph at lines 4--4
  [][] \T1/phv/m/n/10 /home/sylvain/[]Documents/[]Travail/ajc-akkodis/formation/
 []Linux[]Embarque/[]Projet/devel/[]AIr[]Quality[]WAtch/[] 
  []
@@ -985,7 +979,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--4
  []
 
 
-Overfull \hbox (28.99878pt too wide) in paragraph at lines 5--5
+Overfull \hbox (19.4949pt too wide) in paragraph at lines 5--5
  [][] \T1/phv/m/n/10 /home/sylvain/[]Documents/[]Travail/ajc-akkodis/formation/
 []Linux[]Embarque/[]Projet/devel/[]AIr[]Quality[]WAtch/[] 
  []
@@ -996,7 +990,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--5
  []
 
 
-Overfull \hbox (19.4949pt too wide) in paragraph at lines 6--6
+Overfull \hbox (48.06065pt too wide) in paragraph at lines 6--6
  [][] \T1/phv/m/n/10 /home/sylvain/[]Documents/[]Travail/ajc-akkodis/formation/
 []Linux[]Embarque/[]Projet/devel/[]AIr[]Quality[]WAtch/[] 
  []
@@ -1007,7 +1001,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--6
  []
 
 
-Overfull \hbox (48.06065pt too wide) in paragraph at lines 7--7
+Overfull \hbox (38.55678pt too wide) in paragraph at lines 7--7
  [][] \T1/phv/m/n/10 /home/sylvain/[]Documents/[]Travail/ajc-akkodis/formation/
 []Linux[]Embarque/[]Projet/devel/[]AIr[]Quality[]WAtch/[] 
  []
@@ -1018,7 +1012,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--7
  []
 
 
-Overfull \hbox (38.55678pt too wide) in paragraph at lines 8--8
+Overfull \hbox (43.06567pt too wide) in paragraph at lines 8--8
  [][] \T1/phv/m/n/10 /home/sylvain/[]Documents/[]Travail/ajc-akkodis/formation/
 []Linux[]Embarque/[]Projet/devel/[]AIr[]Quality[]WAtch/[] 
  []
@@ -1029,7 +1023,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--8
  []
 
 
-Overfull \hbox (43.06567pt too wide) in paragraph at lines 9--9
+Overfull \hbox (33.5618pt too wide) in paragraph at lines 9--9
  [][] \T1/phv/m/n/10 /home/sylvain/[]Documents/[]Travail/ajc-akkodis/formation/
 []Linux[]Embarque/[]Projet/devel/[]AIr[]Quality[]WAtch/[] 
  []
@@ -1040,7 +1034,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--9
  []
 
 
-Overfull \hbox (33.5618pt too wide) in paragraph at lines 10--10
+Overfull \hbox (43.8756pt too wide) in paragraph at lines 10--10
  [][] \T1/phv/m/n/10 /home/sylvain/[]Documents/[]Travail/ajc-akkodis/formation/
 []Linux[]Embarque/[]Projet/devel/[]AIr[]Quality[]WAtch/[] 
  []
@@ -1051,7 +1045,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--10
  []
 
 
-Overfull \hbox (43.8756pt too wide) in paragraph at lines 11--11
+Overfull \hbox (34.37172pt too wide) in paragraph at lines 11--11
  [][] \T1/phv/m/n/10 /home/sylvain/[]Documents/[]Travail/ajc-akkodis/formation/
 []Linux[]Embarque/[]Projet/devel/[]AIr[]Quality[]WAtch/[] 
  []
@@ -1062,7 +1056,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--11
  []
 
 
-Overfull \hbox (34.37172pt too wide) in paragraph at lines 12--12
+Overfull \hbox (36.60379pt too wide) in paragraph at lines 12--12
  [][] \T1/phv/m/n/10 /home/sylvain/[]Documents/[]Travail/ajc-akkodis/formation/
 []Linux[]Embarque/[]Projet/devel/[]AIr[]Quality[]WAtch/[] 
  []
@@ -1073,24 +1067,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--12
  []
 
 
-Overfull \hbox (36.60379pt too wide) in paragraph at lines 13--13
+Overfull \hbox (27.09991pt too wide) in paragraph at lines 13--13
  [][] \T1/phv/m/n/10 /home/sylvain/[]Documents/[]Travail/ajc-akkodis/formation/
 []Linux[]Embarque/[]Projet/devel/[]AIr[]Quality[]WAtch/[] 
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 13--13
- []  
- []
-
-
-Overfull \hbox (27.09991pt too wide) in paragraph at lines 14--14
- [][] \T1/phv/m/n/10 /home/sylvain/[]Documents/[]Travail/ajc-akkodis/formation/
-[]Linux[]Embarque/[]Projet/devel/[]AIr[]Quality[]WAtch/[] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 14--14
  []  
  []
 
@@ -1140,39 +1123,30 @@ Overfull \hbox (26.38058pt too wide) in paragraph at lines 41--41
 nux[]Embarque/[]Projet/devel/[]AIr[]Quality[]WAtch/[] 
  []
 
-) (./classmy_curl.tex <./classmy_curl__coll__graph.pdf
-
-pdfTeX warning: pdflatex (file ./classmy_curl__coll__graph.pdf): PDF inclusion:
- multiple pdfs with page group included in a single page
->
-<classmy_curl__coll__graph.pdf, id=983, 144.54pt x 167.62625pt>
-File: classmy_curl__coll__graph.pdf Graphic file (type pdf)
-<use classmy_curl__coll__graph.pdf>
-Package pdftex.def Info: classmy_curl__coll__graph.pdf  used on input line 18.
-(pdftex.def)             Requested size: 144.0pt x 167.0094pt.
+) (./structmemory.tex [9]) (./classmy_curl.tex
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.09995pt on input line 25.
- [9]
+(Font)              scaled to size 8.09995pt on input line 16.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 25.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 16.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 8.09995pt on input line 25.
+(Font)              scaled to size 8.09995pt on input line 16.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 25.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 16.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 6.29996pt on input line 25.
+(Font)              scaled to size 6.29996pt on input line 16.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 51.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 38.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 8.99994pt on input line 51.
-LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 75.
+(Font)              scaled to size 8.99994pt on input line 38.
  [10]
-Underfull \hbox (badness 10000) detected at line 86
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 62.
+
+Underfull \hbox (badness 10000) detected at line 73
 [][][]
  []
 
-
+[11]
 Overfull \hbox (1.47571pt too wide) in paragraph at lines 3--3
 []\T1/phv/m/sl/10 size[] 
  []
@@ -1182,83 +1156,79 @@ Overfull \hbox (1.47571pt too wide) in paragraph at lines 5--5
 []\T1/phv/m/sl/10 size[] 
  []
 
-[11]
-Underfull \hbox (badness 10000) detected at line 127
+
+Underfull \hbox (badness 10000) detected at line 114
 [][][]
  []
 
 
-Overfull \hbox (16.82259pt too wide) in paragraph at lines 156--156
+Overfull \hbox (16.82259pt too wide) in paragraph at lines 131--131
 []\T1/phv/m/n/10 /home/sylvain/[]Documents/[]Travail/ajc-akkodis/formation/[]Li
 nux[]Embarque/[]Projet/devel/[]AIr[]Quality[]WAtch/[] 
  []
 
-) (./classmy_graphics.tex <./classmy_graphics__coll__graph.pdf
+) (./classmy_graphics.tex [12] <./classmy_graphics__coll__graph.pdf
 
 pdfTeX warning: pdflatex (file ./classmy_graphics__coll__graph.pdf): PDF inclus
 ion: multiple pdfs with page group included in a single page
 >
-<classmy_graphics__coll__graph.pdf, id=1045, 171.64125pt x 167.62625pt>
+<classmy_graphics__coll__graph.pdf, id=1009, 171.64125pt x 167.62625pt>
 File: classmy_graphics__coll__graph.pdf Graphic file (type pdf)
 <use classmy_graphics__coll__graph.pdf>
 Package pdftex.def Info: classmy_graphics__coll__graph.pdf  used on input line 
 18.
 (pdftex.def)             Requested size: 171.0pt x 166.99916pt.
- [12] [13]
+ [13] [14]
 Overfull \hbox (3.9776pt too wide) in paragraph at lines 5--6
 []\T1/phv/m/n/10 abscisse=0.[] 
  []
 
 
-Overfull \vbox (27.00662pt too high) has occurred while \output is active []
-
-
-[14]
-Underfull \hbox (badness 10000) detected at line 130
+Underfull \hbox (badness 10000) detected at line 138
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 148
+Underfull \hbox (badness 10000) detected at line 156
 [][][]
  []
 
-
-Underfull \hbox (badness 10000) detected at line 178
+[15]
+Underfull \hbox (badness 10000) detected at line 186
 [][][]
  []
 
-[15] [16]
-Underfull \hbox (badness 10000) detected at line 256
+[16]
+Underfull \hbox (badness 10000) detected at line 264
 [][][]
  []
 
-
-Underfull \hbox (badness 10000) detected at line 274
+[17]
+Underfull \hbox (badness 10000) detected at line 282
 [][][]
  []
 
-[17] [18]
+[18]
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <7> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 358.
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 366.
  [19]
-Overfull \hbox (26.38058pt too wide) in paragraph at lines 424--425
+Overfull \hbox (26.38058pt too wide) in paragraph at lines 432--433
 []\T1/phv/m/n/10 /home/sylvain/[]Documents/[]Travail/ajc-akkodis/formation/[]Li
 nux[]Embarque/[]Projet/devel/[]AIr[]Quality[]WAtch/[] 
  []
 
 
-Overfull \hbox (35.88446pt too wide) in paragraph at lines 425--425
+Overfull \hbox (35.88446pt too wide) in paragraph at lines 433--433
 []\T1/phv/m/n/10 /home/sylvain/[]Documents/[]Travail/ajc-akkodis/formation/[]Li
 nux[]Embarque/[]Projet/devel/[]AIr[]Quality[]WAtch/[] 
  []
 
-) (./classmy_options.tex [20] [21]
+) (./classmy_options.tex [20] [21] [22]
 Underfull \hbox (badness 10000) detected at line 123
 [][][]
  []
 
-[22]
+
 Underfull \hbox (badness 10000) detected at line 136
 [][][]
  []
@@ -1273,12 +1243,12 @@ Underfull \hbox (badness 10000) detected at line 162
 [][][]
  []
 
-
+[23]
 Underfull \hbox (badness 10000) detected at line 175
 [][][]
  []
 
-[23]
+
 Underfull \hbox (badness 10000) detected at line 188
 [][][]
  []
@@ -1293,23 +1263,23 @@ Underfull \hbox (badness 10000) detected at line 214
 [][][]
  []
 
-
+[24]
 Underfull \hbox (badness 10000) detected at line 227
 [][][]
  []
 
-[24]
+
 Underfull \hbox (badness 10000) detected at line 240
 [][][]
  []
 
-
+[25]
 Overfull \hbox (21.3856pt too wide) in paragraph at lines 277--278
 []\T1/phv/m/n/10 /home/sylvain/[]Documents/[]Travail/ajc-akkodis/formation/[]Li
 nux[]Embarque/[]Projet/devel/[]AIr[]Quality[]WAtch/[] 
  []
 
-[25]
+
 Overfull \hbox (30.88948pt too wide) in paragraph at lines 278--278
 []\T1/phv/m/n/10 /home/sylvain/[]Documents/[]Travail/ajc-akkodis/formation/[]Li
 nux[]Embarque/[]Projet/devel/[]AIr[]Quality[]WAtch/[] 
@@ -1325,22 +1295,22 @@ Underfull \hbox (badness 10000) detected at line 124
 [][][]
  []
 
-
+[28]
 Underfull \hbox (badness 10000) detected at line 144
 [][][]
  []
 
-[28]
+
 Underfull \hbox (badness 10000) detected at line 157
 [][][]
  []
 
-
+[29]
 Underfull \hbox (badness 10000) detected at line 190
 [][][]
  []
 
-[29]
+
 Underfull \hbox (badness 10000) detected at line 205
 [][][]
  []
@@ -1362,12 +1332,12 @@ Underfull \hbox (badness 10000) detected at line 64
 [][][]
  []
 
-
+[31]
 Underfull \hbox (badness 10000) detected at line 82
 [][][]
  []
 
-[31]
+
 Underfull \hbox (badness 10000) detected at line 100
 [][][]
  []
@@ -1377,187 +1347,162 @@ Underfull \hbox (badness 10000) detected at line 118
 [][][]
  []
 
-
+[32]
 Overfull \hbox (24.4276pt too wide) in paragraph at lines 126--126
 []\T1/phv/m/n/10 /home/sylvain/[]Documents/[]Travail/ajc-akkodis/formation/[]Li
 nux[]Embarque/[]Projet/devel/[]AIr[]Quality[]WAtch/[] 
  []
 
-) (./structresponse.tex [32]) (./structupdated_at.tex [33]) [34]
+) (./structupdated_at.tex [33]) [34]
 Chapter 4.
 (./main_8cpp.tex <./main_8cpp__incl.pdf
 
 pdfTeX warning: pdflatex (file ./main_8cpp__incl.pdf): PDF inclusion: multiple 
 pdfs with page group included in a single page
 >
-<main_8cpp__incl.pdf, id=1433, 1365.1pt x 358.33875pt>
+<main_8cpp__incl.pdf, id=1389, 1365.1pt x 358.33875pt>
 File: main_8cpp__incl.pdf Graphic file (type pdf)
 <use main_8cpp__incl.pdf>
 Package pdftex.def Info: main_8cpp__incl.pdf  used on input line 14.
 (pdftex.def)             Requested size: 350.0pt x 91.87pt.
-) (./main_update_period_8cpp.tex [35
+) (./mycurl_8cpp.tex [35
 
-] <./main_update_period_8cpp__incl.pdf>
-<main_update_period_8cpp__incl.pdf, id=1454, 1365.1pt x 358.33875pt>
-File: main_update_period_8cpp__incl.pdf Graphic file (type pdf)
-<use main_update_period_8cpp__incl.pdf>
-Package pdftex.def Info: main_update_period_8cpp__incl.pdf  used on input line 
-14.
-(pdftex.def)             Requested size: 350.0pt x 91.87pt.
-)
-(./mycurl_8cpp.tex <./mycurl_8cpp__incl.pdf
-
-pdfTeX warning: pdflatex (file ./mycurl_8cpp__incl.pdf): PDF inclusion: multipl
-e pdfs with page group included in a single page
->
-<mycurl_8cpp__incl.pdf, id=1466, 445.665pt x 302.12875pt>
+] <./mycurl_8cpp__incl.pdf>
+<mycurl_8cpp__incl.pdf, id=1410, 445.665pt x 302.12875pt>
 File: mycurl_8cpp__incl.pdf Graphic file (type pdf)
 <use mycurl_8cpp__incl.pdf>
 Package pdftex.def Info: mycurl_8cpp__incl.pdf  used on input line 8.
 (pdftex.def)             Requested size: 350.0pt x 237.27762pt.
-) (./mycurl_8h.tex [36] <./mycurl_8h__incl.pdf>
-<mycurl_8h__incl.pdf, id=1483, 445.665pt x 245.91875pt>
+) (./mycurl_8h.tex <./mycurl_8h__incl.pdf
+
+pdfTeX warning: pdflatex (file ./mycurl_8h__incl.pdf): PDF inclusion: multiple 
+pdfs with page group included in a single page
+>
+<mycurl_8h__incl.pdf, id=1418, 445.665pt x 245.91875pt>
 File: mycurl_8h__incl.pdf Graphic file (type pdf)
 <use mycurl_8h__incl.pdf>
 Package pdftex.def Info: mycurl_8h__incl.pdf  used on input line 12.
 (pdftex.def)             Requested size: 350.0pt x 193.13293pt.
- <./mycurl_8h__dep__incl.pdf
-
-pdfTeX warning: pdflatex (file ./mycurl_8h__dep__incl.pdf): PDF inclusion: mult
-iple pdfs with page group included in a single page
->
-<mycurl_8h__dep__incl.pdf, id=1491, 653.44125pt x 222.8325pt>
+ [36] <./mycurl_8h__dep__incl.pdf>
+<mycurl_8h__dep__incl.pdf, id=1432, 421.575pt x 222.8325pt>
 File: mycurl_8h__dep__incl.pdf Graphic file (type pdf)
 <use mycurl_8h__dep__incl.pdf>
 Package pdftex.def Info: mycurl_8h__dep__incl.pdf  used on input line 19.
-(pdftex.def)             Requested size: 350.0pt x 119.35191pt.
+(pdftex.def)             Requested size: 350.0pt x 185.00192pt.
+) (./mygraphics_8cpp.tex <./mygraphics_8cpp__incl.pdf
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 22.16548pt, for example:
-(fancyhdr)                \setlength{\headheight}{22.16548pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
-
-[37]) (./mygraphics_8cpp.tex <./mygraphics_8cpp__incl.pdf>
-<mygraphics_8cpp__incl.pdf, id=1511, 1120.185pt x 358.33875pt>
+pdfTeX warning: pdflatex (file ./mygraphics_8cpp__incl.pdf): PDF inclusion: mul
+tiple pdfs with page group included in a single page
+>
+<mygraphics_8cpp__incl.pdf, id=1443, 1120.185pt x 358.33875pt>
 File: mygraphics_8cpp__incl.pdf Graphic file (type pdf)
 <use mygraphics_8cpp__incl.pdf>
 Package pdftex.def Info: mygraphics_8cpp__incl.pdf  used on input line 8.
 (pdftex.def)             Requested size: 350.0pt x 111.96417pt.
-)
-(./mygraphics_8h.tex <./mygraphics_8h__incl.pdf
+) (./mygraphics_8h.tex
 
-pdfTeX warning: pdflatex (file ./mygraphics_8h__incl.pdf): PDF inclusion: multi
-ple pdfs with page group included in a single page
->
-<mygraphics_8h__incl.pdf, id=1519, 1119.18124pt x 302.12875pt>
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 22.16548pt, for example:
+(fancyhdr)                \setlength{\headheight}{22.16548pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
+
+[37] <./mygraphics_8h__incl.pdf>
+<mygraphics_8h__incl.pdf, id=1460, 1119.18124pt x 302.12875pt>
 File: mygraphics_8h__incl.pdf Graphic file (type pdf)
 <use mygraphics_8h__incl.pdf>
 Package pdftex.def Info: mygraphics_8h__incl.pdf  used on input line 21.
 (pdftex.def)             Requested size: 350.0pt x 94.48415pt.
- [38] <./mygraphics_8h__dep__incl.pdf>
-<mygraphics_8h__dep__incl.pdf, id=1535, 671.50874pt x 222.8325pt>
+ <./mygraphics_8h__dep__incl.pdf
+
+pdfTeX warning: pdflatex (file ./mygraphics_8h__dep__incl.pdf): PDF inclusion: 
+multiple pdfs with page group included in a single page
+>
+<mygraphics_8h__dep__incl.pdf, id=1468, 439.6425pt x 222.8325pt>
 File: mygraphics_8h__dep__incl.pdf Graphic file (type pdf)
 <use mygraphics_8h__dep__incl.pdf>
 Package pdftex.def Info: mygraphics_8h__dep__incl.pdf  used on input line 28.
-(pdftex.def)             Requested size: 350.0pt x 116.14217pt.
-) (./myoptions_8cpp.tex <./myoptions_8cpp__incl.pdf
-
-pdfTeX warning: pdflatex (file ./myoptions_8cpp__incl.pdf): PDF inclusion: mult
-iple pdfs with page group included in a single page
->
-<myoptions_8cpp__incl.pdf, id=1549, 405.515pt x 245.91875pt>
+(pdftex.def)             Requested size: 350.0pt x 177.4026pt.
+ [38]) (./myoptions_8cpp.tex <./myoptions_8cpp__incl.pdf>
+<myoptions_8cpp__incl.pdf, id=1489, 405.515pt x 245.91875pt>
 File: myoptions_8cpp__incl.pdf Graphic file (type pdf)
 <use myoptions_8cpp__incl.pdf>
 Package pdftex.def Info: myoptions_8cpp__incl.pdf  used on input line 8.
 (pdftex.def)             Requested size: 350.0pt x 212.25899pt.
-) (./myoptions_8h.tex
+) (./myoptions_8h.tex <./myoptions_8h__incl.pdf
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 22.16548pt, for example:
-(fancyhdr)                \setlength{\headheight}{22.16548pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
-
-[39] <./myoptions_8h__incl.pdf>
-<myoptions_8h__incl.pdf, id=1565, 405.515pt x 189.70876pt>
+pdfTeX warning: pdflatex (file ./myoptions_8h__incl.pdf): PDF inclusion: multip
+le pdfs with page group included in a single page
+>
+<myoptions_8h__incl.pdf, id=1497, 405.515pt x 189.70876pt>
 File: myoptions_8h__incl.pdf Graphic file (type pdf)
 <use myoptions_8h__incl.pdf>
 Package pdftex.def Info: myoptions_8h__incl.pdf  used on input line 11.
 (pdftex.def)             Requested size: 350.0pt x 163.74265pt.
- <./myoptions_8h__dep__incl.pdf
 
-pdfTeX warning: pdflatex (file ./myoptions_8h__dep__incl.pdf): PDF inclusion: m
-ultiple pdfs with page group included in a single page
->
-<myoptions_8h__dep__incl.pdf, id=1573, 1000.73875pt x 401.5pt>
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 22.16548pt, for example:
+(fancyhdr)                \setlength{\headheight}{22.16548pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
+
+[39] <./myoptions_8h__dep__incl.pdf>
+<myoptions_8h__dep__incl.pdf, id=1514, 722.7pt x 401.5pt>
 File: myoptions_8h__dep__incl.pdf Graphic file (type pdf)
 <use myoptions_8h__dep__incl.pdf>
 Package pdftex.def Info: myoptions_8h__dep__incl.pdf  used on input line 18.
-(pdftex.def)             Requested size: 350.0pt x 140.42294pt.
- [40]) (./myparsing_8cpp.tex <./myparsing_8cpp__incl.pdf>
-<myparsing_8cpp__incl.pdf, id=1592, 405.515pt x 302.12875pt>
+(pdftex.def)             Requested size: 350.0pt x 194.44545pt.
+) (./myparsing_8cpp.tex [40] <./myparsing_8cpp__incl.pdf>
+<myparsing_8cpp__incl.pdf, id=1535, 405.515pt x 302.12875pt>
 File: myparsing_8cpp__incl.pdf Graphic file (type pdf)
 <use myparsing_8cpp__incl.pdf>
 Package pdftex.def Info: myparsing_8cpp__incl.pdf  used on input line 8.
 (pdftex.def)             Requested size: 350.0pt x 260.77533pt.
-) (./myparsing_8h.tex
+) (./myparsing_8h.tex <./myparsing_8h__incl.pdf
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 22.16548pt, for example:
-(fancyhdr)                \setlength{\headheight}{22.16548pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
-
-[41] <./myparsing_8h__incl.pdf>
-<myparsing_8h__incl.pdf, id=1608, 405.515pt x 245.91875pt>
+pdfTeX warning: pdflatex (file ./myparsing_8h__incl.pdf): PDF inclusion: multip
+le pdfs with page group included in a single page
+>
+<myparsing_8h__incl.pdf, id=1543, 405.515pt x 245.91875pt>
 File: myparsing_8h__incl.pdf Graphic file (type pdf)
 <use myparsing_8h__incl.pdf>
 Package pdftex.def Info: myparsing_8h__incl.pdf  used on input line 12.
 (pdftex.def)             Requested size: 350.0pt x 212.25899pt.
- [42] <./myparsing_8h__dep__incl.pdf>
-<myparsing_8h__dep__incl.pdf, id=1623, 671.50874pt x 312.16624pt>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 22.16548pt, for example:
+(fancyhdr)                \setlength{\headheight}{22.16548pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
+
+[41] <./myparsing_8h__dep__incl.pdf>
+<myparsing_8h__dep__incl.pdf, id=1557, 551.05875pt x 312.16624pt>
 File: myparsing_8h__dep__incl.pdf Graphic file (type pdf)
 <use myparsing_8h__dep__incl.pdf>
 Package pdftex.def Info: myparsing_8h__dep__incl.pdf  used on input line 19.
-(pdftex.def)             Requested size: 350.0pt x 162.70367pt.
-)
-(./myregex_8cpp.tex <./myregex_8cpp__incl.pdf
-
-pdfTeX warning: pdflatex (file ./myregex_8cpp__incl.pdf): PDF inclusion: multip
-le pdfs with page group included in a single page
->
-<myregex_8cpp__incl.pdf, id=1635, 337.26pt x 245.91875pt>
+(pdftex.def)             Requested size: 350.0pt x 198.27576pt.
+) (./myregex_8cpp.tex [42] <./myregex_8cpp__incl.pdf>
+<myregex_8cpp__incl.pdf, id=1579, 337.26pt x 245.91875pt>
 File: myregex_8cpp__incl.pdf Graphic file (type pdf)
 <use myregex_8cpp__incl.pdf>
 Package pdftex.def Info: myregex_8cpp__incl.pdf  used on input line 8.
 (pdftex.def)             Requested size: 336.0pt x 245.00629pt.
-) (./myregex_8h.tex
+) (./myregex_8h.tex <./myregex_8h__incl.pdf
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 22.16548pt, for example:
-(fancyhdr)                \setlength{\headheight}{22.16548pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
-
-[43] <./myregex_8h__incl.pdf>
-<myregex_8h__incl.pdf, id=1654, 337.26pt x 189.70876pt>
+pdfTeX warning: pdflatex (file ./myregex_8h__incl.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+>
+<myregex_8h__incl.pdf, id=1587, 337.26pt x 189.70876pt>
 File: myregex_8h__incl.pdf Graphic file (type pdf)
 <use myregex_8h__incl.pdf>
 Package pdftex.def Info: myregex_8h__incl.pdf  used on input line 11.
 (pdftex.def)             Requested size: 336.0pt x 189.00485pt.
- [44] <./myregex_8h__dep__incl.pdf>
-<myregex_8h__dep__incl.pdf, id=1668, 671.50874pt x 312.16624pt>
-File: myregex_8h__dep__incl.pdf Graphic file (type pdf)
-<use myregex_8h__dep__incl.pdf>
-Package pdftex.def Info: myregex_8h__dep__incl.pdf  used on input line 18.
-(pdftex.def)             Requested size: 350.0pt x 162.70367pt.
-)
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 22.16548pt, for example:
@@ -1566,95 +1511,94 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
 
-[45] [46
-
-] (./refman.ind
+[43] <./myregex_8h__dep__incl.pdf>
+<myregex_8h__dep__incl.pdf, id=1602, 543.02875pt x 312.16624pt>
+File: myregex_8h__dep__incl.pdf Graphic file (type pdf)
+<use myregex_8h__dep__incl.pdf>
+Package pdftex.def Info: myregex_8h__dep__incl.pdf  used on input line 18.
+(pdftex.def)             Requested size: 350.0pt x 201.20993pt.
+) [44] (./refman.ind
 Overfull \hbox (219.95355pt too wide) in paragraph at lines 3--5
 []\T1/phv/m/n/10 /home/sylvain/Documents/Travail/ajc-akkodis/formation/LinuxEmb
 arque/Projet/devel/AIrQualityWAtch/main.cpp,
  []
 
 
-Overfull \hbox (274.66338pt too wide) in paragraph at lines 5--7
-[]\T1/phv/m/n/10 /home/sylvain/Documents/Travail/ajc-akkodis/formation/LinuxEmb
-arque/Projet/devel/AIrQualityWAtch/mainUpdatePeriod.cpp,
- []
-
-
-Overfull \hbox (226.9465pt too wide) in paragraph at lines 7--9
+Overfull \hbox (226.9465pt too wide) in paragraph at lines 5--7
 []\T1/phv/m/n/10 /home/sylvain/Documents/Travail/ajc-akkodis/formation/LinuxEmb
 arque/Projet/devel/AIrQualityWAtch/mycurl.cpp,
  []
 
 
-Overfull \hbox (217.44263pt too wide) in paragraph at lines 9--11
+Overfull \hbox (217.44263pt too wide) in paragraph at lines 7--9
 []\T1/phv/m/n/10 /home/sylvain/Documents/Travail/ajc-akkodis/formation/LinuxEmb
 arque/Projet/devel/AIrQualityWAtch/mycurl.h,
  []
 
 
-Overfull \hbox (246.00838pt too wide) in paragraph at lines 11--13
+Overfull \hbox (246.00838pt too wide) in paragraph at lines 9--11
 []\T1/phv/m/n/10 /home/sylvain/Documents/Travail/ajc-akkodis/formation/LinuxEmb
 arque/Projet/devel/AIrQualityWAtch/mygraphics.cpp,
  []
 
 
-Overfull \hbox (236.5045pt too wide) in paragraph at lines 13--15
+Overfull \hbox (236.5045pt too wide) in paragraph at lines 11--13
 []\T1/phv/m/n/10 /home/sylvain/Documents/Travail/ajc-akkodis/formation/LinuxEmb
 arque/Projet/devel/AIrQualityWAtch/mygraphics.h,
  []
 
 
-Overfull \hbox (241.0134pt too wide) in paragraph at lines 15--17
+Overfull \hbox (241.0134pt too wide) in paragraph at lines 13--15
 []\T1/phv/m/n/10 /home/sylvain/Documents/Travail/ajc-akkodis/formation/LinuxEmb
 arque/Projet/devel/AIrQualityWAtch/myoptions.cpp,
  []
 
 
-Overfull \hbox (231.50952pt too wide) in paragraph at lines 17--19
+Overfull \hbox (231.50952pt too wide) in paragraph at lines 15--17
 []\T1/phv/m/n/10 /home/sylvain/Documents/Travail/ajc-akkodis/formation/LinuxEmb
 arque/Projet/devel/AIrQualityWAtch/myoptions.h,
  []
 
 
-Overfull \hbox (241.82332pt too wide) in paragraph at lines 19--21
+Overfull \hbox (241.82332pt too wide) in paragraph at lines 17--19
 []\T1/phv/m/n/10 /home/sylvain/Documents/Travail/ajc-akkodis/formation/LinuxEmb
 arque/Projet/devel/AIrQualityWAtch/myparsing.cpp,
  []
 
 
-Overfull \hbox (232.31944pt too wide) in paragraph at lines 21--23
+Overfull \hbox (232.31944pt too wide) in paragraph at lines 19--21
 []\T1/phv/m/n/10 /home/sylvain/Documents/Travail/ajc-akkodis/formation/LinuxEmb
 arque/Projet/devel/AIrQualityWAtch/myparsing.h,
  []
 
 
-Overfull \hbox (234.55151pt too wide) in paragraph at lines 23--25
+Overfull \hbox (234.55151pt too wide) in paragraph at lines 21--23
 []\T1/phv/m/n/10 /home/sylvain/Documents/Travail/ajc-akkodis/formation/LinuxEmb
 arque/Projet/devel/AIrQualityWAtch/myregex.cpp,
  []
 
 
-Overfull \hbox (225.04764pt too wide) in paragraph at lines 25--27
+Overfull \hbox (225.04764pt too wide) in paragraph at lines 23--25
 []\T1/phv/m/n/10 /home/sylvain/Documents/Travail/ajc-akkodis/formation/LinuxEmb
 arque/Projet/devel/AIrQualityWAtch/myregex.h,
  []
 
-[47
+[45
 
 
-] [48] [49]) (./refman.aux)
+
+] [46] [47]) (./refman.aux)
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: 3E1D8DEAA375E56A6B7E303C3989CB5E;35011.
+(rerunfilecheck)             Checksum: 2CCDF2E2190DF195C5E7E1C7A40CDE8F;33621.
  ) 
 Here is how much of TeX's memory you used:
- 18181 strings out of 480145
- 299861 string characters out of 5893300
- 629002 words of memory out of 5000000
- 35376 multiletter control sequences out of 15000+600000
+ 18137 strings out of 480145
+ 298449 string characters out of 5893300
+ 622983 words of memory out of 5000000
+ 35348 multiletter control sequences out of 15000+600000
  526572 words of font info for 96 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 99i,16n,117p,876b,633s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 99i,16n,117p,754b,633s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/
@@ -1667,10 +1611,10 @@ r/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (55 pages, 399691 bytes).
+Output written on refman.pdf (53 pages, 376535 bytes).
 PDF statistics:
- 2055 PDF objects out of 2073 (max. 8388607)
- 1875 compressed objects within 19 object streams
- 397 named destinations out of 1000 (max. 500000)
- 1328 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1974 PDF objects out of 2073 (max. 8388607)
+ 1803 compressed objects within 19 object streams
+ 383 named destinations out of 1000 (max. 500000)
+ 1278 words of extra memory for PDF output out of 10000 (max. 10000000)
 

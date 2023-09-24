@@ -1,0 +1,11 @@
+#!/bin/sh
+
+echo cross compilation to qemu...
+../../buildroot/buildroot-work/output/host/bin/aarch64-buildroot-linux-gnu-g++ -o airQualityWatch-qemu main.cpp mycurl.cpp  myparsing.cpp myoptions.cpp mygraphics.cpp myregex.cpp -lcurl -lgd
+echo ...OK
+
+echo copying to overlay/home/sylvain...
+cp ./airQualityWatch-qemu ../../buildroot/buildroot-work/overlay/home/sylvain
+echo ...OK
+
+

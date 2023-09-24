@@ -4,11 +4,6 @@
 myCurl::myCurl(){}
 
 
-//void myCurl::getData(char **data)
-//{
-//    *data = (char*)malloc((chunk.size+1)*sizeof(char));
-//    strncpy(*data, chunk.memory, chunk.size+1);
-//}
 
 CURLcode myCurl::exec(myOptions* options, char** data)
 {
@@ -37,7 +32,8 @@ CURLcode myCurl::exec(myOptions* options, char** data)
     CURLcode ret = curl_easy_perform(hnd);
     curl_slist_free_all(headers);
     *data = (char*)malloc(((chunk.size)+1)*sizeof(char));
-    strncpy(*data, chunk.response, chunk.size);
+    **data=0;
+    memcpy(*data, chunk.response, chunk.size);
     curl_easy_cleanup(hnd);
     curl_global_cleanup();
     free(chunk.response);

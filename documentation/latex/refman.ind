@@ -2,14 +2,12 @@
 
   \item {/home/sylvain/Documents/Travail/ajc-\/akkodis/formation/LinuxEmbarque/Projet/devel/AIrQualityWAtch/main.cpp}, 
 		\hyperpage{35}
-  \item {/home/sylvain/Documents/Travail/ajc-\/akkodis/formation/LinuxEmbarque/Projet/devel/AIrQualityWAtch/mainUpdatePeriod.cpp}, 
-		\hyperpage{36}
   \item {/home/sylvain/Documents/Travail/ajc-\/akkodis/formation/LinuxEmbarque/Projet/devel/AIrQualityWAtch/mycurl.cpp}, 
-		\hyperpage{37}
+		\hyperpage{36}
   \item {/home/sylvain/Documents/Travail/ajc-\/akkodis/formation/LinuxEmbarque/Projet/devel/AIrQualityWAtch/mycurl.h}, 
-		\hyperpage{37}
+		\hyperpage{36}
   \item {/home/sylvain/Documents/Travail/ajc-\/akkodis/formation/LinuxEmbarque/Projet/devel/AIrQualityWAtch/mygraphics.cpp}, 
-		\hyperpage{38}
+		\hyperpage{37}
   \item {/home/sylvain/Documents/Travail/ajc-\/akkodis/formation/LinuxEmbarque/Projet/devel/AIrQualityWAtch/mygraphics.h}, 
 		\hyperpage{38}
   \item {/home/sylvain/Documents/Travail/ajc-\/akkodis/formation/LinuxEmbarque/Projet/devel/AIrQualityWAtch/myoptions.cpp}, 
@@ -17,13 +15,15 @@
   \item {/home/sylvain/Documents/Travail/ajc-\/akkodis/formation/LinuxEmbarque/Projet/devel/AIrQualityWAtch/myoptions.h}, 
 		\hyperpage{40}
   \item {/home/sylvain/Documents/Travail/ajc-\/akkodis/formation/LinuxEmbarque/Projet/devel/AIrQualityWAtch/myparsing.cpp}, 
-		\hyperpage{42}
+		\hyperpage{41}
   \item {/home/sylvain/Documents/Travail/ajc-\/akkodis/formation/LinuxEmbarque/Projet/devel/AIrQualityWAtch/myparsing.h}, 
-		\hyperpage{42}
+		\hyperpage{41}
   \item {/home/sylvain/Documents/Travail/ajc-\/akkodis/formation/LinuxEmbarque/Projet/devel/AIrQualityWAtch/myregex.cpp}, 
-		\hyperpage{44}
+		\hyperpage{43}
   \item {/home/sylvain/Documents/Travail/ajc-\/akkodis/formation/LinuxEmbarque/Projet/devel/AIrQualityWAtch/myregex.h}, 
-		\hyperpage{44}
+		\hyperpage{43}
+  \item {$\sim$myGraphics}
+    \subitem {myGraphics}, \hyperpage{14}
 
   \indexspace
 
@@ -32,7 +32,7 @@
   \item {ambeeDataGetDateTime}
     \subitem {myRegex}, \hyperpage{31}
   \item {appendDataVector}
-    \subitem {myGraphics}, \hyperpage{14}
+    \subitem {myGraphics}, \hyperpage{15}
   \item {appendFileToDatas}
     \subitem {myParsing}, \hyperpage{27}
   \item {appendToDatas}
@@ -47,8 +47,6 @@
 
   \item {calcRatioPourcent}
     \subitem {myGraphics}, \hyperpage{15}
-  \item {chunk}
-    \subitem {myCurl}, \hyperpage{12}
   \item {Color}, \hyperpage{5}
     \subitem {blue}, \hyperpage{5}
     \subitem {green}, \hyperpage{5}
@@ -59,13 +57,13 @@
     \subitem {CurveChartParams}, \hyperpage{6}
     \subitem {dataSet}, \hyperpage{9}
   \item {createColor}
-    \subitem {myGraphics}, \hyperpage{15}
+    \subitem {myGraphics}, \hyperpage{16}
   \item {curveChart}
-    \subitem {myGraphics}, \hyperpage{15}
+    \subitem {myGraphics}, \hyperpage{16}
   \item {curveChartAddCurves}
     \subitem {myGraphics}, \hyperpage{16}
   \item {curveChartInit}
-    \subitem {myGraphics}, \hyperpage{16}
+    \subitem {myGraphics}, \hyperpage{17}
   \item {CurveChartParams}, \hyperpage{6}
     \subitem {colorIndex}, \hyperpage{6}
     \subitem {dataSets}, \hyperpage{6}
@@ -79,7 +77,7 @@
     \subitem {title}, \hyperpage{7}
     \subitem {titleHeight}, \hyperpage{7}
   \item {curveChartSetLegend}
-    \subitem {myGraphics}, \hyperpage{16}
+    \subitem {myGraphics}, \hyperpage{17}
 
   \indexspace
 
@@ -101,21 +99,20 @@
     \subitem {CurveChartParams}, \hyperpage{6}
   \item {downloadDatas}
     \subitem {main.cpp}, \hyperpage{35}
-    \subitem {mainUpdatePeriod.cpp}, \hyperpage{36}
 
   \indexspace
 
   \item {exec}
-    \subitem {myCurl}, \hyperpage{10}
+    \subitem {myCurl}, \hyperpage{11}
 
   \indexspace
 
   \item {ficOut}
-    \subitem {myGraphics}, \hyperpage{19}
+    \subitem {myGraphics}, \hyperpage{20}
   \item {fonts}
-    \subitem {myGraphics}, \hyperpage{19}
+    \subitem {myGraphics}, \hyperpage{20}
   \item {fromChar}
-    \subitem {myParsing}, \hyperpage{27}
+    \subitem {myParsing}, \hyperpage{28}
   \item {fromDatasFile}
     \subitem {myParsing}, \hyperpage{28}
   \item {fromFile}
@@ -124,9 +121,9 @@
   \indexspace
 
   \item {gdColors}
-    \subitem {myGraphics}, \hyperpage{19}
+    \subitem {myGraphics}, \hyperpage{20}
   \item {getApiKeyHeader}
-    \subitem {myOptions}, \hyperpage{22}
+    \subitem {myOptions}, \hyperpage{23}
   \item {getData}
     \subitem {myCurl}, \hyperpage{11}
   \item {getDataPathName}
@@ -140,7 +137,7 @@
   \item {getFullCurveChartFileName}
     \subitem {myOptions}, \hyperpage{23}
   \item {getFullDataFileName}
-    \subitem {myOptions}, \hyperpage{23}
+    \subitem {myOptions}, \hyperpage{24}
   \item {getFullHistoChartFileName}
     \subitem {myOptions}, \hyperpage{24}
   \item {getFullLogFileName}
@@ -148,9 +145,9 @@
   \item {getFullPieChartFileName}
     \subitem {myOptions}, \hyperpage{24}
   \item {getFullUrl}
-    \subitem {myOptions}, \hyperpage{24}
+    \subitem {myOptions}, \hyperpage{25}
   \item {getMyJson}
-    \subitem {myParsing}, \hyperpage{28}
+    \subitem {myParsing}, \hyperpage{29}
   \item {globalMax}
     \subitem {CurveChartParams}, \hyperpage{7}
   \item {globalMin}
@@ -160,8 +157,6 @@
 
   \indexspace
 
-  \item {headers}
-    \subitem {myCurl}, \hyperpage{12}
   \item {hnd}
     \subitem {myCurl}, \hyperpage{12}
   \item {hour}
@@ -170,15 +165,15 @@
   \indexspace
 
   \item {im}
-    \subitem {myGraphics}, \hyperpage{19}
+    \subitem {myGraphics}, \hyperpage{20}
   \item {imageSize}
     \subitem {myGraphics}, \hyperpage{20}
   \item {indice}
     \subitem {Color}, \hyperpage{5}
   \item {initFonts}
-    \subitem {myGraphics}, \hyperpage{17}
+    \subitem {myGraphics}, \hyperpage{18}
   \item {initPalette}
-    \subitem {myGraphics}, \hyperpage{17}
+    \subitem {myGraphics}, \hyperpage{18}
   \item {isDisplay}
     \subitem {myOptions}, \hyperpage{25}
 
@@ -186,7 +181,7 @@
 
   \item {json}
     \subitem {myoptions.h}, \hyperpage{41}
-    \subitem {myparsing.h}, \hyperpage{43}
+    \subitem {myparsing.h}, \hyperpage{42}
 
   \indexspace
 
@@ -201,72 +196,68 @@
 
   \item {main}
     \subitem {main.cpp}, \hyperpage{35}
-    \subitem {mainUpdatePeriod.cpp}, \hyperpage{36}
   \item {main.cpp}
     \subitem {downloadDatas}, \hyperpage{35}
     \subitem {main}, \hyperpage{35}
-  \item {mainUpdatePeriod.cpp}
-    \subitem {downloadDatas}, \hyperpage{36}
-    \subitem {main}, \hyperpage{36}
   \item {marginBottom}
     \subitem {CurveChartParams}, \hyperpage{7}
   \item {marginLeft}
     \subitem {CurveChartParams}, \hyperpage{7}
   \item {mem\_cb}
-    \subitem {myCurl}, \hyperpage{11}
-  \item {memory}
-    \subitem {response}, \hyperpage{33}
+    \subitem {myCurl}, \hyperpage{12}
+  \item {memory}, \hyperpage{9}
+    \subitem {response}, \hyperpage{10}
+    \subitem {size}, \hyperpage{10}
   \item {minute}
-    \subitem {updatedAt}, \hyperpage{34}
+    \subitem {updatedAt}, \hyperpage{33}
   \item {month}
-    \subitem {updatedAt}, \hyperpage{34}
-  \item {myCurl}, \hyperpage{9}
-    \subitem {chunk}, \hyperpage{12}
-    \subitem {exec}, \hyperpage{10}
+    \subitem {updatedAt}, \hyperpage{33}
+  \item {myCurl}, \hyperpage{10}
+    \subitem {exec}, \hyperpage{11}
     \subitem {getData}, \hyperpage{11}
-    \subitem {headers}, \hyperpage{12}
     \subitem {hnd}, \hyperpage{12}
-    \subitem {mem\_cb}, \hyperpage{11}
-    \subitem {myCurl}, \hyperpage{10}
-  \item {myGraphics}, \hyperpage{12}
-    \subitem {appendDataVector}, \hyperpage{14}
+    \subitem {mem\_cb}, \hyperpage{12}
+    \subitem {myCurl}, \hyperpage{11}
+  \item {myGraphics}, \hyperpage{13}
+    \subitem {$\sim$myGraphics}, \hyperpage{14}
+    \subitem {appendDataVector}, \hyperpage{15}
     \subitem {calcRatioPourcent}, \hyperpage{15}
-    \subitem {createColor}, \hyperpage{15}
-    \subitem {curveChart}, \hyperpage{15}
+    \subitem {createColor}, \hyperpage{16}
+    \subitem {curveChart}, \hyperpage{16}
     \subitem {curveChartAddCurves}, \hyperpage{16}
-    \subitem {curveChartInit}, \hyperpage{16}
-    \subitem {curveChartSetLegend}, \hyperpage{16}
-    \subitem {ficOut}, \hyperpage{19}
-    \subitem {fonts}, \hyperpage{19}
-    \subitem {gdColors}, \hyperpage{19}
+    \subitem {curveChartInit}, \hyperpage{17}
+    \subitem {curveChartSetLegend}, \hyperpage{17}
+    \subitem {ficOut}, \hyperpage{20}
+    \subitem {fonts}, \hyperpage{20}
+    \subitem {gdColors}, \hyperpage{20}
     \subitem {getDataVectorMaxValue}, \hyperpage{17}
     \subitem {getDataVectorMinValue}, \hyperpage{17}
-    \subitem {im}, \hyperpage{19}
+    \subitem {im}, \hyperpage{20}
     \subitem {imageSize}, \hyperpage{20}
-    \subitem {initFonts}, \hyperpage{17}
-    \subitem {initPalette}, \hyperpage{17}
+    \subitem {initFonts}, \hyperpage{18}
+    \subitem {initPalette}, \hyperpage{18}
     \subitem {myGraphics}, \hyperpage{14}
     \subitem {myPalette}, \hyperpage{20}
     \subitem {pieChart}, \hyperpage{18}
-    \subitem {pieChartDraw}, \hyperpage{18}
-    \subitem {pieChartInit}, \hyperpage{18}
+    \subitem {pieChartDraw}, \hyperpage{19}
+    \subitem {pieChartInit}, \hyperpage{19}
     \subitem {setVector}, \hyperpage{19}
     \subitem {titre}, \hyperpage{20}
   \item {myJson}
     \subitem {myParsing}, \hyperpage{30}
-  \item {myOptions}, \hyperpage{20}
-    \subitem {getApiKeyHeader}, \hyperpage{22}
+  \item {myOptions}, \hyperpage{21}
+    \subitem {getApiKeyHeader}, \hyperpage{23}
     \subitem {getDataPathName}, \hyperpage{23}
     \subitem {getFilesOwner}, \hyperpage{23}
     \subitem {getFullCurveChartFileName}, \hyperpage{23}
-    \subitem {getFullDataFileName}, \hyperpage{23}
+    \subitem {getFullDataFileName}, \hyperpage{24}
     \subitem {getFullHistoChartFileName}, \hyperpage{24}
     \subitem {getFullLogFileName}, \hyperpage{24}
     \subitem {getFullPieChartFileName}, \hyperpage{24}
-    \subitem {getFullUrl}, \hyperpage{24}
+    \subitem {getFullUrl}, \hyperpage{25}
     \subitem {isDisplay}, \hyperpage{25}
     \subitem {myOptions}, \hyperpage{22}
-    \subitem {options}, \hyperpage{25}
+    \subitem {options}, \hyperpage{26}
     \subitem {readFromFile}, \hyperpage{25}
   \item {myoptions.h}
     \subitem {json}, \hyperpage{41}
@@ -275,22 +266,22 @@
   \item {myParsing}, \hyperpage{26}
     \subitem {appendFileToDatas}, \hyperpage{27}
     \subitem {appendToDatas}, \hyperpage{27}
-    \subitem {fromChar}, \hyperpage{27}
+    \subitem {fromChar}, \hyperpage{28}
     \subitem {fromDatasFile}, \hyperpage{28}
     \subitem {fromFile}, \hyperpage{28}
-    \subitem {getMyJson}, \hyperpage{28}
+    \subitem {getMyJson}, \hyperpage{29}
     \subitem {myJson}, \hyperpage{30}
     \subitem {myParsing}, \hyperpage{27}
     \subitem {setMyJson}, \hyperpage{29}
     \subitem {toFile}, \hyperpage{29}
-    \subitem {toString}, \hyperpage{29}
+    \subitem {toString}, \hyperpage{30}
   \item {myparsing.h}
-    \subitem {json}, \hyperpage{43}
+    \subitem {json}, \hyperpage{42}
   \item {myRegex}, \hyperpage{30}
     \subitem {ambeeDataGetDateTime}, \hyperpage{31}
     \subitem {myRegex}, \hyperpage{31}
     \subitem {toFormatDDMMYY}, \hyperpage{31}
-    \subitem {toFormatDDMMYYHHMM}, \hyperpage{31}
+    \subitem {toFormatDDMMYYHHMM}, \hyperpage{32}
     \subitem {toFormatHHMM}, \hyperpage{32}
 
   \indexspace
@@ -303,16 +294,16 @@
   \indexspace
 
   \item {options}
-    \subitem {myOptions}, \hyperpage{25}
+    \subitem {myOptions}, \hyperpage{26}
 
   \indexspace
 
   \item {pieChart}
     \subitem {myGraphics}, \hyperpage{18}
   \item {pieChartDraw}
-    \subitem {myGraphics}, \hyperpage{18}
+    \subitem {myGraphics}, \hyperpage{19}
   \item {pieChartInit}
-    \subitem {myGraphics}, \hyperpage{18}
+    \subitem {myGraphics}, \hyperpage{19}
 
   \indexspace
 
@@ -320,20 +311,19 @@
     \subitem {myOptions}, \hyperpage{25}
   \item {red}
     \subitem {Color}, \hyperpage{6}
-  \item {response}, \hyperpage{32}
-    \subitem {memory}, \hyperpage{33}
-    \subitem {size}, \hyperpage{33}
+  \item {response}
+    \subitem {memory}, \hyperpage{10}
 
   \indexspace
 
   \item {second}
-    \subitem {updatedAt}, \hyperpage{34}
+    \subitem {updatedAt}, \hyperpage{33}
   \item {setMyJson}
     \subitem {myParsing}, \hyperpage{29}
   \item {setVector}
     \subitem {myGraphics}, \hyperpage{19}
   \item {size}
-    \subitem {response}, \hyperpage{33}
+    \subitem {memory}, \hyperpage{10}
 
   \indexspace
 
@@ -348,20 +338,20 @@
   \item {toFormatDDMMYY}
     \subitem {myRegex}, \hyperpage{31}
   \item {toFormatDDMMYYHHMM}
-    \subitem {myRegex}, \hyperpage{31}
+    \subitem {myRegex}, \hyperpage{32}
   \item {toFormatHHMM}
     \subitem {myRegex}, \hyperpage{32}
   \item {toString}
-    \subitem {myParsing}, \hyperpage{29}
+    \subitem {myParsing}, \hyperpage{30}
 
   \indexspace
 
   \item {updatedAt}, \hyperpage{33}
     \subitem {day}, \hyperpage{33}
     \subitem {hour}, \hyperpage{33}
-    \subitem {minute}, \hyperpage{34}
-    \subitem {month}, \hyperpage{34}
-    \subitem {second}, \hyperpage{34}
+    \subitem {minute}, \hyperpage{33}
+    \subitem {month}, \hyperpage{33}
+    \subitem {second}, \hyperpage{33}
     \subitem {year}, \hyperpage{34}
 
   \indexspace

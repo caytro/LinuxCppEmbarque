@@ -1,0 +1,6 @@
+#!/bin/sh
+cd /home/sylvain
+/home/sylvain/reformDatas
+/home/sylvain/airQualityWatch-qemu
+
+

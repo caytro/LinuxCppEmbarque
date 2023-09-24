@@ -24,15 +24,16 @@ int downloadDatas(char** data, myOptions* options){
 
 int main()
 {
-    char **data = (char**) malloc(sizeof(char*));
-    *data=(char *)nullptr;
+    char** data = (char**) malloc(sizeof(char*));
+
 
     myOptions* options = new(myOptions);
     options->readFromFile("AIQWA.conf");
     downloadDatas(data, options);
 
     myParsing* parser = new myParsing();
-    parser->fromChar(*data);
+    string jsonData = string(*data);
+    parser->fromChar(jsonData);
     parser->toFile(options);
     parser->appendToDatas(options);
     system("./reformDatas");

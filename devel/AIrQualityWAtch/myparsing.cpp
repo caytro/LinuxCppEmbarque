@@ -11,9 +11,9 @@ void myParsing::setMyJson(const json &newMyJson)
     myJson = newMyJson;
 }
 
-myParsing* myParsing::fromChar(char *str)
+myParsing* myParsing::fromChar(string str)
 {
-    myJson = json::parse<char *>(str, str + string(str).length());
+    myJson = json::parse(str);
     return this;
 }
 

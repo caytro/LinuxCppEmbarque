@@ -2,30 +2,21 @@
 \label{classmy_curl}\index{myCurl@{myCurl}}
 
 
-\# The \mbox{\hyperlink{classmy_curl}{my\+Curl}} class  
+The \mbox{\hyperlink{classmy_curl}{my\+Curl}} class.  
 
 
 
 
 {\ttfamily \#include $<$mycurl.\+h$>$}
 
-
-
-Collaboration diagram for my\+Curl\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=144pt]{classmy_curl__coll__graph}
-\end{center}
-\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classmy_curl_a6138f437e18194f4b5c4cae50682d90d}{my\+Curl}} ()
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classmy_curl}{my\+Curl}} \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classmy_curl_a5d9d737edc2db4d0e723b49e5ab88603}{get\+Data}} (char $\ast$$\ast$\mbox{\hyperlink{structresponse}{response}})
+void \mbox{\hyperlink{classmy_curl_a5d9d737edc2db4d0e723b49e5ab88603}{get\+Data}} (char $\ast$$\ast$response)
 \begin{DoxyCompactList}\small\item\em get\+Data \end{DoxyCompactList}\item 
-CURLcode \mbox{\hyperlink{classmy_curl_aa1903e257624c5f29061c9d1fd6fde36}{exec}} (\mbox{\hyperlink{classmy_options}{my\+Options}} $\ast$options)
+CURLcode \mbox{\hyperlink{classmy_curl_acb06d9b75695a9eb7cd1049cf0857b3d}{exec}} (\mbox{\hyperlink{classmy_options}{my\+Options}} $\ast$options, char $\ast$$\ast$data)
 \begin{DoxyCompactList}\small\item\em exec \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Static Private Member Functions}
 \begin{DoxyCompactItemize}
@@ -36,15 +27,11 @@ static size\+\_\+t \mbox{\hyperlink{classmy_curl_a5cbeaef16766c1d4e608d17828e19b
 \begin{DoxyCompactItemize}
 \item 
 CURL $\ast$ \mbox{\hyperlink{classmy_curl_aae58d4a13c2c10fc5a254b0b6aa1765d}{hnd}}
-\item 
-struct \mbox{\hyperlink{structresponse}{response}} \mbox{\hyperlink{classmy_curl_aecaca298ab0c7475cd965d80499a01b6}{chunk}}
-\item 
-struct curl\+\_\+slist $\ast$ \mbox{\hyperlink{classmy_curl_aaab76a51fca4003d16a372144bda500d}{headers}} = nullptr
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-\# The \mbox{\hyperlink{classmy_curl}{my\+Curl}} class 
+The \mbox{\hyperlink{classmy_curl}{my\+Curl}} class. 
 
 Manage {\bfseries{API access}}
 
@@ -68,11 +55,11 @@ Requires {\itshape -\/lcurl} flag
 constructor 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classmy_curl_aa1903e257624c5f29061c9d1fd6fde36}\label{classmy_curl_aa1903e257624c5f29061c9d1fd6fde36}} 
+\mbox{\Hypertarget{classmy_curl_acb06d9b75695a9eb7cd1049cf0857b3d}\label{classmy_curl_acb06d9b75695a9eb7cd1049cf0857b3d}} 
 \index{myCurl@{myCurl}!exec@{exec}}
 \index{exec@{exec}!myCurl@{myCurl}}
 \doxysubsubsection{\texorpdfstring{exec()}{exec()}}
-{\footnotesize\ttfamily CURLcode my\+Curl\+::exec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmy_options}{my\+Options}} $\ast$}]{options }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily CURLcode my\+Curl\+::exec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmy_options}{my\+Options}} $\ast$}]{options,  }\item[{char $\ast$$\ast$}]{data }\end{DoxyParamCaption})}
 
 
 
@@ -130,18 +117,6 @@ static size\+\_\+t
 
 
 \doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{classmy_curl_aecaca298ab0c7475cd965d80499a01b6}\label{classmy_curl_aecaca298ab0c7475cd965d80499a01b6}} 
-\index{myCurl@{myCurl}!chunk@{chunk}}
-\index{chunk@{chunk}!myCurl@{myCurl}}
-\doxysubsubsection{\texorpdfstring{chunk}{chunk}}
-{\footnotesize\ttfamily struct \mbox{\hyperlink{structresponse}{response}} my\+Curl\+::chunk\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{classmy_curl_aaab76a51fca4003d16a372144bda500d}\label{classmy_curl_aaab76a51fca4003d16a372144bda500d}} 
-\index{myCurl@{myCurl}!headers@{headers}}
-\index{headers@{headers}!myCurl@{myCurl}}
-\doxysubsubsection{\texorpdfstring{headers}{headers}}
-{\footnotesize\ttfamily struct curl\+\_\+slist$\ast$ my\+Curl\+::headers = nullptr\hspace{0.3cm}{\ttfamily [private]}}
-
 \mbox{\Hypertarget{classmy_curl_aae58d4a13c2c10fc5a254b0b6aa1765d}\label{classmy_curl_aae58d4a13c2c10fc5a254b0b6aa1765d}} 
 \index{myCurl@{myCurl}!hnd@{hnd}}
 \index{hnd@{hnd}!myCurl@{myCurl}}
